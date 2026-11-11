@@ -1,0 +1,3709 @@
+{
+  "commit": "5b61028187528a9b7918715e1661bb6a7d50a723",
+  "referencia_docente": "9e6fc30a7028c9398641d187b30da98117a5fc76",
+  "archivos": [
+    {
+      "ruta": ".github/workflows/ci.yml",
+      "etapa": 18,
+      "bytes": 955,
+      "sha256": "0ca00757840c725eec7059be1c867f542c8a9927dbd32ea990eee081d47d58db",
+      "impreso": true
+    },
+    {
+      "ruta": ".gitignore",
+      "etapa": 1,
+      "bytes": 222,
+      "sha256": "682e8666a84108e32d668e2f0b72a05cd1f7a7d305e4a7645a7e7a0c0afe9566",
+      "impreso": true
+    },
+    {
+      "ruta": ".java-version",
+      "etapa": 1,
+      "bytes": 3,
+      "sha256": "6e2ae11dad0616f66bbb2b6e6556f580bb987fd911d7132aa6bee2bfc7cc7b52",
+      "impreso": true
+    },
+    {
+      "ruta": ".nvmrc",
+      "etapa": 1,
+      "bytes": 3,
+      "sha256": "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53",
+      "impreso": true
+    },
+    {
+      "ruta": "README.md",
+      "etapa": 1,
+      "bytes": 10537,
+      "sha256": "56c4e0208fdab757087692a70f1d36141decdcf3a8b922989df608c1cc405af3",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/.dockerignore",
+      "etapa": 16,
+      "bytes": 27,
+      "sha256": "c4aabf938f8b0e5bb1762a55eafd7f759a146c34a9a4470417c9c51b1ce7a31a",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/Dockerfile",
+      "etapa": 16,
+      "bytes": 248,
+      "sha256": "dbd88269bfc6498a177675935b8fbaa3b2fc0b0e59f8b5b846b7b52d084aad0d",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/Dockerfile.prebuilt",
+      "etapa": 16,
+      "bytes": 128,
+      "sha256": "8c030bd0d24d52223dd1c410cd10233181fdffb24e940d1319a20abc5a629265",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/Dockerfile.prebuilt.dockerignore",
+      "etapa": 16,
+      "bytes": 30,
+      "sha256": "a9195adeaafd302e24392f7910f01fd2cb3f9d11ee448286842cacd251714282",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/angular.json",
+      "etapa": 16,
+      "bytes": 1932,
+      "sha256": "d44f9b76a835aeefca29506ceb73eb0febb5c8b345db84db07a0e03d1f289374",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/nginx.conf",
+      "etapa": 16,
+      "bytes": 192,
+      "sha256": "bfaa9100461936a7ab29a0ae8cbb5ba7d2c4b5b976cdfb8044313ad17b05f37f",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/package-lock.json",
+      "etapa": 16,
+      "bytes": 227369,
+      "sha256": "dadd5919c152fe39185c209a144fc8e8b7b79fd6e40159722d0f92275bb45ca4",
+      "impreso": false
+    },
+    {
+      "ruta": "clients/garritas-frontend/package.json",
+      "etapa": 16,
+      "bytes": 852,
+      "sha256": "85610567e447ea3b0dea41f2ac09e5a94cc85ea69e18af731cb7cf46b71b2acc",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/public/config.dev.json",
+      "etapa": 16,
+      "bytes": 139,
+      "sha256": "ac6ac24dd308445a1b9bb2966b146335a2d1203550a61fac236e829bfe9e4691",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/public/config.json",
+      "etapa": 16,
+      "bytes": 117,
+      "sha256": "fd368eb8f795853bbb259915d34deb28682f78f2fc0664074031fa2d5ac183bb",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/app.config.ts",
+      "etapa": 16,
+      "bytes": 518,
+      "sha256": "5cc2447e6ea56bd54bb36528e71e4169ad417d982513ab79e14763731b81e8cd",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/app.html",
+      "etapa": 16,
+      "bytes": 10216,
+      "sha256": "c38cd84fd81e3ba1f163796730c47fcd64af8ba89418f9b5cc1e7dc525a4362f",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/app.ts",
+      "etapa": 16,
+      "bytes": 8822,
+      "sha256": "72d1d98e110ffc1402441ad48d5a2c58ff381f4211d67b95c56a470d013aecd0",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/core/api.spec.ts",
+      "etapa": 16,
+      "bytes": 424,
+      "sha256": "681ee505c019e639a7ed94988e40da709868825328a2a81b282a9cdc7ab8cb9b",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/core/api.ts",
+      "etapa": 16,
+      "bytes": 2213,
+      "sha256": "095147706727fc9c20d33a150446903f250c55cbb7aa510500ab422ee9a1f070",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/core/auth.ts",
+      "etapa": 16,
+      "bytes": 1890,
+      "sha256": "8a6ab40bff6bda15ad37ba0cb0d9bc428c132b1d8c6bcab74f5b68cbb47cb5a0",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/core/config.ts",
+      "etapa": 16,
+      "bytes": 500,
+      "sha256": "d0090b21fb921fc2362e2bdf52692e7d9d072072412436eae443857a28877c56",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/core/domain-api.ts",
+      "etapa": 16,
+      "bytes": 5677,
+      "sha256": "68afa06e3bb3a3725b782bdbc40a7b411c2be2f026389a0b07d1d7e62254e415",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/core/interceptor.ts",
+      "etapa": 16,
+      "bytes": 717,
+      "sha256": "0536a974ced2ce1a1019d170c99a2bd735f6495751ef0afb8499309430d731e4",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/admin/clientes.component.html",
+      "etapa": 16,
+      "bytes": 14811,
+      "sha256": "5efb9e2ae3fdceb1b54e907ea85b5e369da7123061d060e8d30ab26cbfa8df7d",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/admin/clientes.component.ts",
+      "etapa": 16,
+      "bytes": 6444,
+      "sha256": "f2eff9b6d9ea0ccc9296d61271d11ad6d3460b21b8c8e296de493b50d67088f7",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/admin/productos.component.html",
+      "etapa": 16,
+      "bytes": 10804,
+      "sha256": "c9313348a2168bc571d48d53442e4bf3efb6d95e84b14c03546f014ee132d891",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/admin/productos.component.ts",
+      "etapa": 16,
+      "bytes": 4066,
+      "sha256": "35f966771b743d038c89dda43e1f67efd84f9701c34f9ba4349cdcdaec7ebea1",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/admin/roles.component.html",
+      "etapa": 16,
+      "bytes": 4691,
+      "sha256": "c1b00a10fafdc1e2e93a75192b9a3a2fb1ee882a65bb2dad8ade203536d9547d",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/admin/roles.component.ts",
+      "etapa": 16,
+      "bytes": 2037,
+      "sha256": "dcec333152c735ccf96ad03d7f5b935ee77f0287e37bc7f4a30fb14ea3f409a0",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/admin/usuarios-roles.component.html",
+      "etapa": 16,
+      "bytes": 17290,
+      "sha256": "118d9f94a4eda45a695fe31e87e618ce88d69d41618939bc4a86176af1298f54",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/admin/usuarios-roles.component.ts",
+      "etapa": 16,
+      "bytes": 5099,
+      "sha256": "a92534fa817fca9d0298ad19a798bd7d46225dc49dd59c10ff211b3bdecc1e80",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/bienestar/especialistas.component.html",
+      "etapa": 16,
+      "bytes": 5179,
+      "sha256": "c437f1ab4d7c415a86670db2f9f4c6be1ddfbf006cd96c16d24105094df0570a",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/bienestar/especialistas.component.ts",
+      "etapa": 16,
+      "bytes": 3467,
+      "sha256": "b9fcee75d7126e3ef84235a7f467f88759c4efde1c0d4b15ac6d1b976874b5a5",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/cart/cart-panel.html",
+      "etapa": 16,
+      "bytes": 5458,
+      "sha256": "0997a5c7dd9428678e19ae730fd4882f2b96ec952a99b33e73e387df67464463",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/cart/cart-panel.ts",
+      "etapa": 16,
+      "bytes": 1470,
+      "sha256": "6e20762e7b165cff7ed0561a2aeba7d3ba8e6ac84d1e3f1d4f253b14b2908e12",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/cart/cart-store.spec.ts",
+      "etapa": 16,
+      "bytes": 7400,
+      "sha256": "d4c2e7fb3f2c968595943bbc97b827d0be8c0cd26d371a76d64d402178cb0e8b",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/cart/cart-store.ts",
+      "etapa": 16,
+      "bytes": 8230,
+      "sha256": "cd1210b97a8076fe5b1d61bb4627e3b3c50dd1a4d64e89f647d9eed11f225546",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/catalogo/product-catalog.html",
+      "etapa": 16,
+      "bytes": 3091,
+      "sha256": "cc09c066f7b55b6aca4fa8539e68e4307af0488bbbcc96366d3b3752a157cc63",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/catalogo/product-catalog.ts",
+      "etapa": 16,
+      "bytes": 2700,
+      "sha256": "171ab4691fce24addc50ab5d274dc84616c569df2117122f16557ac44ada2b69",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/citas/citas.component.html",
+      "etapa": 16,
+      "bytes": 5941,
+      "sha256": "5891826def589ff69b306dfffaf60421b0ec18c34dfb76ab5df725167d4eb3fb",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/citas/citas.component.ts",
+      "etapa": 16,
+      "bytes": 5050,
+      "sha256": "060a4945594dc25493c9501532af84f5d6f99c0abc546bf76fa2e933cb5b8421",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/cuenta/cuenta.component.html",
+      "etapa": 16,
+      "bytes": 5157,
+      "sha256": "62a95dd8357d354bbd3f52236754277c97a9cbb36461420c6e6234965b9497c8",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/cuenta/cuenta.component.spec.ts",
+      "etapa": 16,
+      "bytes": 4441,
+      "sha256": "339ac8186b223abeac1e421e158e0aa263f85845b4990ed8d928af82532f4c14",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/cuenta/cuenta.component.ts",
+      "etapa": 16,
+      "bytes": 3692,
+      "sha256": "3cd1dfaa2fed5adb136b5f88cfa3b970576badc367d04f71f4c2f909f795224c",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/envios/envios.component.html",
+      "etapa": 16,
+      "bytes": 1557,
+      "sha256": "9221527ac61c80a29980cffb2804109888795169a5e67a032d3b1de8e81c363e",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/envios/envios.component.ts",
+      "etapa": 16,
+      "bytes": 2318,
+      "sha256": "c2212556bf4019f28988e2b3a2b1a0be53127d7c7230d975f0fe9aab0d0cbed5",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/logistica/logistica.component.html",
+      "etapa": 16,
+      "bytes": 6062,
+      "sha256": "440c168b36af09a656d0f3b057cc8cd8ac897107b3cf17b81b1aa1980555fa76",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/logistica/logistica.component.ts",
+      "etapa": 16,
+      "bytes": 2684,
+      "sha256": "fb376594fec5aa31c9995aaf120548d2f33bf824adf064a028f53aac45d55c26",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/pagos/pagos.component.ts",
+      "etapa": 16,
+      "bytes": 1979,
+      "sha256": "c86bc4a5c30664aa2d9c5128d65c878d90c2ca0dbe7f10e33e0f88ac497e356c",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/planes/planes.component.html",
+      "etapa": 16,
+      "bytes": 5111,
+      "sha256": "edd5ac0e7250f0fce1936f03ccf5e13ed2aa23212ada8da33807654062a9361e",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/planes/planes.component.ts",
+      "etapa": 16,
+      "bytes": 4098,
+      "sha256": "8d7c1112cc41cbfeb86b1641d74cce66146591b35a6be99d4723376a7b5c3bb8",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.html",
+      "etapa": 16,
+      "bytes": 5963,
+      "sha256": "8dca6348a9ee2a59e2248515701d901b429b8f34068ef78512a4787e532ccb26",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.ts",
+      "etapa": 16,
+      "bytes": 3572,
+      "sha256": "4cc1748a5352899a037a68f63f6a7722858597355ce0afc4a914bc50aee87347",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/sedes/sedes.component.html",
+      "etapa": 16,
+      "bytes": 3069,
+      "sha256": "de0463dc74542bb2b75dc73edf0bd0c3a05e193609c3d0c2d5520277fca87548",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/app/features/sedes/sedes.component.ts",
+      "etapa": 16,
+      "bytes": 1837,
+      "sha256": "93cdd9800142bff1d1894727b3adc056c0d96da3a569cbaf2a244252d3f87b0d",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/index.html",
+      "etapa": 16,
+      "bytes": 219,
+      "sha256": "c6dde7d0fdc1dfd1d1c350297158024d9af923c187749c3ce6818bc65e687d4f",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/main.ts",
+      "etapa": 16,
+      "bytes": 203,
+      "sha256": "c202bec5f5094a73cf1a387c048509908ec091dc074702d11d7a83475d1b294b",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/src/styles.css",
+      "etapa": 16,
+      "bytes": 12308,
+      "sha256": "c52bf265a376fd4dc6599f6561595a99291b16a40b45c8a10223b8b01afd9717",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/tsconfig.app.json",
+      "etapa": 16,
+      "bytes": 398,
+      "sha256": "12e2786b56cc873a4e91f822894cc541082d16b90c0d7280aa5512469627d23f",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/tsconfig.json",
+      "etapa": 16,
+      "bytes": 908,
+      "sha256": "3c3b6c2138f0a910f5284e1d64e9fc213af2b91409fdeaf5598ff495c28f79c2",
+      "impreso": true
+    },
+    {
+      "ruta": "clients/garritas-frontend/tsconfig.spec.json",
+      "etapa": 16,
+      "bytes": 409,
+      "sha256": "958fd251a505c5d54d94d2694b8fde3d1c71aa244b522e3e053db1ac5b987dd0",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/README.md",
+      "etapa": 1,
+      "bytes": 644,
+      "sha256": "1d9bb04bf9217627abe392162ddf98daa92bdbaa8af8af51399a998d64e84921",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/compose.yml",
+      "etapa": 1,
+      "bytes": 1628,
+      "sha256": "a8c73cd4f16f38d41ef51984c8df85c5477022d018fb6b04eec31da1cfd29a18",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/pom.xml",
+      "etapa": 2,
+      "bytes": 1822,
+      "sha256": "9f097b47472cdc5301b94ebf3d3c25ee52c1171da5d2d9e0ddccddeee324ca87",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java",
+      "etapa": 2,
+      "bytes": 729,
+      "sha256": "82f6282ae6da5c406324d1551ec919a8de7c107defe725623277b837fe6da7aa",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/DomainErrors.java",
+      "etapa": 2,
+      "bytes": 1606,
+      "sha256": "9bc26bacc9c5041f07d09700e144a1ec49d222460e4eae43b82031eccc00937f",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/HttpServices.java",
+      "etapa": 2,
+      "bytes": 843,
+      "sha256": "5df1bcba7976da514240f4fc8cb15074c890a1209e883528959c64f3757c8b57",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Inbox.java",
+      "etapa": 2,
+      "bytes": 652,
+      "sha256": "4b9f5f97fcc833ebf8ae0b10e3303a1f6fe32a372934d497d5e4139d6791e45b",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/MessagingConfiguration.java",
+      "etapa": 2,
+      "bytes": 1506,
+      "sha256": "189d5c15d7113dcde0d7025bb657b9090d28d49ee226338302e99787d083e0fb",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Outbox.java",
+      "etapa": 2,
+      "bytes": 2731,
+      "sha256": "1bb7bbd8b58205852167506a2b376a41271061af12926db2dc1a52ca85e1ec5d",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Reference.java",
+      "etapa": 2,
+      "bytes": 233,
+      "sha256": "0d4281c662ed3cc1a013dd205c23f05716b9aa263a60a3f3058cadc9510cbb92",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SagaEvent.java",
+      "etapa": 2,
+      "bytes": 1471,
+      "sha256": "ab1d6535c043a8145cd529b3e4b2d1daeba10fe8807622ef386937d3550dfe39",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java",
+      "etapa": 2,
+      "bytes": 5353,
+      "sha256": "bd029aecafc3ba8e5348703c96d6b0f04d3b16ffa3e20ca193564fdbd995a853",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/ServiceClient.java",
+      "etapa": 2,
+      "bytes": 2124,
+      "sha256": "b42e03aa2d6261902310649d90fd14d019e5b1957de3b395ff373d8066b58e47",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-common/src/test/java/pe/edu/upeu/garritas/common/SagaContractTest.java",
+      "etapa": 2,
+      "bytes": 2366,
+      "sha256": "48817da3424b57a2744daefa22f26d3f7f9e6ff75bbc2466da203e10bfbc6cea",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/.gitattributes",
+      "etapa": 3,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/.gitignore",
+      "etapa": 3,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 3,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-config/Dockerfile",
+      "etapa": 3,
+      "bytes": 630,
+      "sha256": "dd29fa00d8179f865437cb216e1d5ac7addc0066fc7d9dc0d949759f01ac4ec4",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-bienestar-ms-dev.yml",
+      "etapa": 3,
+      "bytes": 1426,
+      "sha256": "edb15e3222352cd68a2398c8bcf61f7c43eb80d46ade43203d5960d66aa8557f",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-bienestar-ms-prod.yml",
+      "etapa": 3,
+      "bytes": 1289,
+      "sha256": "cc4ba47ab03cc538c51607f2f2eb0dfa91c4109d6840b515fb7534541bf7897e",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-catalogo-ms-dev.yml",
+      "etapa": 3,
+      "bytes": 2276,
+      "sha256": "47f59fe83ce5e2ed166514de7d64ced652dc8cedc5d308911d697a507d386ef7",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-catalogo-ms-prod.yml",
+      "etapa": 3,
+      "bytes": 2141,
+      "sha256": "c1261635c52eada35098c1a76e90ff77110bebe62588417a3be114d0a2c4e676",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-citas-ms-dev.yml",
+      "etapa": 3,
+      "bytes": 1388,
+      "sha256": "9c752e33f879a25c6a61807f023532b7117b909a585903fb6487a169fdffd168",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-citas-ms-prod.yml",
+      "etapa": 3,
+      "bytes": 1289,
+      "sha256": "0dc4ab1a872dff285b2b1915807db6b1f55ce1a20d3358fe3208e0f926c0e83e",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-envio-ms-dev.yml",
+      "etapa": 3,
+      "bytes": 1406,
+      "sha256": "9cc1f84775cbb138c824e7635a6a1cee53315e34cfbd26eae1d72f4bccb39bb7",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-envio-ms-prod.yml",
+      "etapa": 3,
+      "bytes": 1289,
+      "sha256": "2bc9cd3c45efdd43a6e72075c86421a6c698e399b99b7d7aff0fc6d965ef0b17",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-eureka-dev.yml",
+      "etapa": 3,
+      "bytes": 522,
+      "sha256": "687003446f97d3a555784c8706edae51828240ee37ffee391374442cdce9994d",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-eureka-prod.yml",
+      "etapa": 3,
+      "bytes": 519,
+      "sha256": "b390bcedea99d8397010848bfae3b56c26ae6a9fd6d84f768224b8207489bd88",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-gateway-dev.yml",
+      "etapa": 3,
+      "bytes": 3048,
+      "sha256": "3b01ae6f2c7f59a9b8474fce6bbd7a58ae7207e27c9484c365bf74e35141c7c1",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-gateway-prod.yml",
+      "etapa": 3,
+      "bytes": 3048,
+      "sha256": "3b01ae6f2c7f59a9b8474fce6bbd7a58ae7207e27c9484c365bf74e35141c7c1",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-institucion-ms-dev.yml",
+      "etapa": 3,
+      "bytes": 1430,
+      "sha256": "b849d83fdce5fca145239beab4c280589029d60a66d9d2b08da1500fe7a0e693",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-institucion-ms-prod.yml",
+      "etapa": 3,
+      "bytes": 1289,
+      "sha256": "bc76487810bd9e19f29417de8e036538598858ca219d9335d0eefd83a9b4dac7",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-pago-ms-dev.yml",
+      "etapa": 3,
+      "bytes": 2234,
+      "sha256": "ca2407feebe16b56efc09ca7341eb16cc421c67a259e011d542d609aedaa0a65",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-pago-ms-prod.yml",
+      "etapa": 3,
+      "bytes": 2137,
+      "sha256": "3b2ff5199add749785824f530fdf57770cf11bf21f97de30250e558abd4529e2",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-usuario-ms-dev.yml",
+      "etapa": 3,
+      "bytes": 1410,
+      "sha256": "bcd9fe114733f5d5f20a5d0b848d2f9568501681aaeaf70bf3b15a096ac8bccb",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-usuario-ms-prod.yml",
+      "etapa": 3,
+      "bytes": 1289,
+      "sha256": "6fb96254736080e4b12503b7a96c93346c6a52cba4738f629f9dab80eb3b4d05",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-venta-ms-dev.yml",
+      "etapa": 3,
+      "bytes": 2860,
+      "sha256": "0252f739dd906d8eb26ddd35de808e2a056fc51e337547c54bdfd131cdf283c3",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/config-repo/garritas-venta-ms-prod.yml",
+      "etapa": 3,
+      "bytes": 2761,
+      "sha256": "65563cc9025d136f603297a917042b80c749005f0deed982e5d9c9cd72c920cf",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/mvnw",
+      "etapa": 3,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-config/mvnw.cmd",
+      "etapa": 3,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-config/pom.xml",
+      "etapa": 3,
+      "bytes": 2185,
+      "sha256": "9ee4fc25b6abee78e5b9d41cf015c867550b8780aff05d8790623d1bba9e087e",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/src/main/java/pe/edu/upeu/garritas/config/GarritasConfigApplication.java",
+      "etapa": 3,
+      "bytes": 433,
+      "sha256": "756fbd1f905fc1955156aaf9340e6328b643c0058ce51a1efc5d770efaad5998",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/src/main/resources/application.yml",
+      "etapa": 3,
+      "bytes": 409,
+      "sha256": "3daf71bdce0b9385b50f995757296c94ecacf637310e339522cf41b1b7480885",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-config/src/test/java/pe/edu/upeu/garritas/config/GarritasConfigApplicationTests.java",
+      "etapa": 3,
+      "bytes": 227,
+      "sha256": "bdeccd1afe57020e45bc11a45a79ab05335c73f8c7c7e2929e5ddb74c33f5c4b",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-eureka/.gitattributes",
+      "etapa": 4,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-eureka/.gitignore",
+      "etapa": 4,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-eureka/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 4,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-eureka/Dockerfile",
+      "etapa": 4,
+      "bytes": 630,
+      "sha256": "72b69922f9c046525a6b78e8b90cfea2d55bf618ab557ac45da7aab30d5eaa23",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-eureka/mvnw",
+      "etapa": 4,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-eureka/mvnw.cmd",
+      "etapa": 4,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-eureka/pom.xml",
+      "etapa": 4,
+      "bytes": 2336,
+      "sha256": "55a2e57bfee32f11eb6c39096f3ea069e0f34f80cc00ef596258f8dccce91e53",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-eureka/src/main/java/pe/edu/upeu/garritas/eureka/GarritasEurekaApplication.java",
+      "etapa": 4,
+      "bytes": 440,
+      "sha256": "d7d891a83de243c04a33617aaba0a2fc9966cb09a5c66a21fe382ad5025dc673",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-eureka/src/main/resources/application.yml",
+      "etapa": 4,
+      "bytes": 157,
+      "sha256": "62ae49620236f1ebe4229c724bc1e0665befa106be51de47981c85be52241142",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-eureka/src/test/java/pe/edu/upeu/garritas/eureka/GarritasEurekaApplicationTests.java",
+      "etapa": 4,
+      "bytes": 227,
+      "sha256": "641bde7d204937e9973a3ae5e1251c47034c87b3e60884141a7ae42c79b741c9",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-gateway/.gitattributes",
+      "etapa": 15,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-gateway/.gitignore",
+      "etapa": 15,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-gateway/.gitkeep",
+      "etapa": 15,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-gateway/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 15,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-gateway/Dockerfile",
+      "etapa": 15,
+      "bytes": 631,
+      "sha256": "40b63a4f791375b402cc8d31765fe3cc41a42639fb42ab142e75134e4555cf38",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-gateway/mvnw",
+      "etapa": 15,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-gateway/mvnw.cmd",
+      "etapa": 15,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "infra/garritas-gateway/pom.xml",
+      "etapa": 15,
+      "bytes": 2854,
+      "sha256": "28173b5c0c811ae0b273630825533f8b9851a1a25a0bba0f717b357a71e36fce",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-gateway/src/main/java/pe/edu/upeu/garritas/gateway/GarritasGatewayApplication.java",
+      "etapa": 15,
+      "bytes": 451,
+      "sha256": "cb12f09ec9be8cf77e946c143e0f7c7d71698b5c7c11658075ed9031ed91bd65",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-gateway/src/main/java/pe/edu/upeu/garritas/gateway/filter/CorrelationIdFilter.java",
+      "etapa": 15,
+      "bytes": 1150,
+      "sha256": "022f469cfcdcfc635594078b450a6e7af2d3faf7348f0e253f9e6f8c0030ae72",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-gateway/src/main/resources/application.yml",
+      "etapa": 15,
+      "bytes": 159,
+      "sha256": "de1206c08e81b5edfeb5aed01753119030c8d3f89c233af9015210211db82ea7",
+      "impreso": true
+    },
+    {
+      "ruta": "infra/garritas-gateway/src/test/java/pe/edu/upeu/garritas/gateway/GarritasGatewayApplicationTests.java",
+      "etapa": 15,
+      "bytes": 229,
+      "sha256": "8311c29d2c9b244580d181adc7491ce8b5ace41a0bb7dcfa80a658543f895ac0",
+      "impreso": true
+    },
+    {
+      "ruta": "kafka/README.md",
+      "etapa": 6,
+      "bytes": 664,
+      "sha256": "37b9f9dd46d219b6262e02142efc3e7a84e1906d9f48f63ab7ba9521e531b30a",
+      "impreso": true
+    },
+    {
+      "ruta": "kafka/compose-dev.yml",
+      "etapa": 6,
+      "bytes": 1717,
+      "sha256": "feca4cbcc9cb44d9c52d27573bbe3309c2c1ec2ed1ce94b71b6cf3c2060b3853",
+      "impreso": true
+    },
+    {
+      "ruta": "keycloak/README.md",
+      "etapa": 5,
+      "bytes": 895,
+      "sha256": "9fcb61ce161c13ee2925bcab47187099232f40c0b0f6ffa893aeaf00c47629e3",
+      "impreso": true
+    },
+    {
+      "ruta": "keycloak/compose-dev.yml",
+      "etapa": 5,
+      "bytes": 1759,
+      "sha256": "09c591dbd8b619e5449ab8cd6d1934756004e446ab0e8f3492654a80721150fb",
+      "impreso": true
+    },
+    {
+      "ruta": "keycloak/garritas-realm.json",
+      "etapa": 5,
+      "bytes": 1751,
+      "sha256": "d9d050dfb11f5fbfd069aa272a41a6b87bccdf3864b194cd2f0fc308c671befe",
+      "impreso": true
+    },
+    {
+      "ruta": "mkdocs.yml",
+      "etapa": 1,
+      "bytes": 788,
+      "sha256": "1404adce2dea055eeb857e1991701c049feeefb8cd2f8c3a6588f105c683e8bd",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/.gitkeep",
+      "etapa": 17,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "obs/compose-dev.yml",
+      "etapa": 17,
+      "bytes": 2627,
+      "sha256": "9ed0fddd7a4919c4f9100a7b189dbc618f670c6d999da2e12a7a3363da74a295",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/compose.yml",
+      "etapa": 17,
+      "bytes": 2625,
+      "sha256": "1857572055bb0f428d3dd595501cdaa85e5c3ac2130d4a97bb0b914e9e623106",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/grafana/provisioning/alerting/garritas-alertas.yml",
+      "etapa": 17,
+      "bytes": 2423,
+      "sha256": "690b58952ec660f56195bb558464460e392010a277e10e9eb5dad9b0ac8fc2c3",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/grafana/provisioning/dashboards/dashboards.yml",
+      "etapa": 17,
+      "bytes": 143,
+      "sha256": "68250a24de691b6463cb0557767e8f8383551c7aa6a62d354b37fb4c481a0aed",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/grafana/provisioning/dashboards/garritas-catalogo.json",
+      "etapa": 17,
+      "bytes": 1653,
+      "sha256": "448c72246b1baa3455ab16c28b7b749c5dcc80fd70ef9b6279425180b848d0d3",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/grafana/provisioning/dashboards/garritas-infraestructura.json",
+      "etapa": 17,
+      "bytes": 3389,
+      "sha256": "e6b5564f5e26fe7857f7bb7b3d5c4d877ee3822f7eda4673b68522de54b676ab",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/grafana/provisioning/datasources/datasources.yml",
+      "etapa": 17,
+      "bytes": 285,
+      "sha256": "4fe275ec82692a68367d10750459bbb3319d0fb0245956272c6b419273987900",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/prometheus/prometheus-dev.yml",
+      "etapa": 17,
+      "bytes": 700,
+      "sha256": "c6d51eee26b449a021d2ad9c382f18a4f4487f55b718244e1456d5cbc6c0ce82",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/prometheus/prometheus.yml",
+      "etapa": 17,
+      "bytes": 539,
+      "sha256": "86f49866cbdb2d7563e94b807d61b9bf9a7c7db48caf0b0cfd3c947cb841a517",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/promtail/promtail-config-dev.yml",
+      "etapa": 17,
+      "bytes": 2275,
+      "sha256": "e25ad91c55d7262f495740e65164f2086ac224cc4420be7359b7e309db973d7d",
+      "impreso": true
+    },
+    {
+      "ruta": "obs/promtail/promtail-config.yml",
+      "etapa": 17,
+      "bytes": 1705,
+      "sha256": "0a8bdf1483ce7b7a12a860d83c4d14f429467b5981cc4881cd7c83f02f84ddaf",
+      "impreso": true
+    },
+    {
+      "ruta": "services/.gitkeep",
+      "etapa": 1,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/README.md",
+      "etapa": 1,
+      "bytes": 874,
+      "sha256": "e1ac6d27916ca40c7cb983fa6bb18d3b1a44df64763590bee735613cabc1335b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/.gitattributes",
+      "etapa": 10,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/.gitignore",
+      "etapa": 10,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 10,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/Dockerfile",
+      "etapa": 10,
+      "bytes": 639,
+      "sha256": "480e768bcb706aba07a5dd694698c1e28fe55966a70885f172ed3b64a41d60df",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/README.md",
+      "etapa": 10,
+      "bytes": 702,
+      "sha256": "46b7075c3506e1f87d75434b53561a43749e334ba0c139f1d0f4c5905f26bfcc",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/compose-dev.yml",
+      "etapa": 10,
+      "bytes": 445,
+      "sha256": "750de23d3411066992e204528f17792efdf787174b2955d17ae75f89218b04b7",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/compose.yml",
+      "etapa": 10,
+      "bytes": 1610,
+      "sha256": "1d731be4a333bdd81a6bb9e1d0299012ff83402a370d8ba93cde3066953c16b6",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/mvnw",
+      "etapa": 10,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/mvnw.cmd",
+      "etapa": 10,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/pom.xml",
+      "etapa": 10,
+      "bytes": 5260,
+      "sha256": "72c4fba6f7068937740c73c2a86689e6d9b359f8e62cc2fd79ce2ac65cd8bce2",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/GarritasBienestarMsApplication.java",
+      "etapa": 10,
+      "bytes": 403,
+      "sha256": "916b4fcb746ef1b25aef4c614a058f7fc4167bb9117fef6dbfe33e0989ff8167",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/controller/BienestarController.java",
+      "etapa": 10,
+      "bytes": 2066,
+      "sha256": "380a5f1f2dc9c8684401c8ed542255eb71e8056f6a3adb964d627d71ba5bea4d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/dto/EspecialidadRequest.java",
+      "etapa": 10,
+      "bytes": 241,
+      "sha256": "64d8ef5d3cab8e4b33331e53dc4b72ec559762be51f5ae883d9533a5fe1f385e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/dto/ProfesionalRequest.java",
+      "etapa": 10,
+      "bytes": 568,
+      "sha256": "d11e446e508cdc38efec58a640357a501d7d665d03c3e9677c422e4dfbb18325",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/dto/ProfesionalResponse.java",
+      "etapa": 10,
+      "bytes": 313,
+      "sha256": "6e8674c0865b053f608709cbc833605f6adb76f2f92078d09497da99063048aa",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/entity/Especialidad.java",
+      "etapa": 10,
+      "bytes": 473,
+      "sha256": "a5bbb2cb9fc44d9b9d661ccf85f6c8e093e38a31b6ea2e7aba45d36dc4d36454",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/entity/Profesional.java",
+      "etapa": 10,
+      "bytes": 862,
+      "sha256": "9380c7ecdce1334bb0a5f97ecd58ad7f22ea2b1866b7195c47421bf9403826c6",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/filter/CorrelationIdFilter.java",
+      "etapa": 10,
+      "bytes": 1433,
+      "sha256": "caffffdc5c578c79440b2d9416f5be24bb8f1900cc2d5819e7e9511a19098cb9",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/repository/EspecialidadRepository.java",
+      "etapa": 10,
+      "bytes": 228,
+      "sha256": "01f6101d19e747d89873c1d5333a745a7c5f51d4a5170c748da17f06fd5247a0",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/repository/ProfesionalRepository.java",
+      "etapa": 10,
+      "bytes": 507,
+      "sha256": "6ed6c0f8167b859c8b30afbf1c670fd767ec2a10eed376d591a8f38f104cbbe2",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/java/pe/edu/upeu/garritas/bienestar/service/BienestarService.java",
+      "etapa": 10,
+      "bytes": 4310,
+      "sha256": "573fc828a85ca834acaa39b1a141a1320ac7f2fcb0db96abc42b6add0035d722",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/resources/application.yml",
+      "etapa": 10,
+      "bytes": 164,
+      "sha256": "cf67593ca8182862ac0ca379ae17691d4e7d54701ddcf397d24710d991e40a11",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/resources/db/demo/R__bienestar_demo.sql",
+      "etapa": 10,
+      "bytes": 1313,
+      "sha256": "0bc214f2f56908abba073b69fd2f417593012e60dcfae1e55b87fba4417ef68f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/resources/db/migration/V1__bienestar.sql",
+      "etapa": 10,
+      "bytes": 584,
+      "sha256": "f76ef8e1017d0ba4ee15c93c8549e3471fecd5026d0087a43c492869f53bd234",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/main/resources/logback-spring.xml",
+      "etapa": 10,
+      "bytes": 1043,
+      "sha256": "d4d0b764df39fa65f5b90583b52015a8c43a21d3611600767dfd991d8ca710ad",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/test/java/pe/edu/upeu/garritas/bienestar/EspecialidadesIntegrationTests.java",
+      "etapa": 10,
+      "bytes": 2982,
+      "sha256": "c01e144bf7d7c0f07a662c85f976c9755d44131fa35b5e2193a3b1b3e37d392a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-bienestar-ms/src/test/java/pe/edu/upeu/garritas/bienestar/GarritasBienestarMsApplicationTests.java",
+      "etapa": 10,
+      "bytes": 196,
+      "sha256": "9062e77bfeeeee839602d1a28cff97c7a4cb61c00193cdef71fc5b83bf80c2d3",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/.env.example",
+      "etapa": 7,
+      "bytes": 138,
+      "sha256": "3324465515bb4489759032038e440c4265edc48d17ea8e8c6ea9bf6a9c019ba5",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/.gitattributes",
+      "etapa": 7,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/.gitignore",
+      "etapa": 7,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 7,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/Dockerfile",
+      "etapa": 7,
+      "bytes": 638,
+      "sha256": "68cc70233871735248ffbbbb3ec3d80c8ccc0cdf3ebf03430d3704f49f43f0c5",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/README.md",
+      "etapa": 7,
+      "bytes": 313,
+      "sha256": "0af9cc8d2572e002c4f51a15edb735eb48d0126552128b7a14a47141e1327ddd",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/compose-dev.yml",
+      "etapa": 7,
+      "bytes": 439,
+      "sha256": "3568d514af5becc270903120021eb24865bc13fe45c84d66ce85820bb117106e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/compose.yml",
+      "etapa": 7,
+      "bytes": 1597,
+      "sha256": "964b11ab9e2596dae7326cc6864a7c0de07f758db0150c92c952ca962f9116d5",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/logs/.gitkeep",
+      "etapa": 7,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/mvnw",
+      "etapa": 7,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/mvnw.cmd",
+      "etapa": 7,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/pom.xml",
+      "etapa": 7,
+      "bytes": 4994,
+      "sha256": "8a82b6da3a5853e624e1dc61a016e4a7e82b664adb56abe069c0e1f79c48d046",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/GarritasCatalogoMsApplication.java",
+      "etapa": 7,
+      "bytes": 868,
+      "sha256": "fd82f9ab9c6d8c0334fe0faa64193c2aaf3d524282081f4d524633b558758641",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/config/.gitkeep",
+      "etapa": 7,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/controller/CategoriaController.java",
+      "etapa": 7,
+      "bytes": 1406,
+      "sha256": "e8e02bed796ea3026f1b836578e9e7c3a4cff1f108e38b75235e427e283d01df",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/controller/ProductoController.java",
+      "etapa": 7,
+      "bytes": 2183,
+      "sha256": "56b7fde793474ec336b3b424ff3670fc71aecbfed7c3270f55ef69d8af3f7bfb",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/dto/CategoriaRequest.java",
+      "etapa": 7,
+      "bytes": 348,
+      "sha256": "800a221e5c9397f3bf36f1630482061bb48e7ec58730f82b84414637f112215c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/dto/CategoriaResponse.java",
+      "etapa": 7,
+      "bytes": 358,
+      "sha256": "3a860e8b3414dbcd360567496b0611f6ac086648e98f64b47a87055315e2748e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/dto/ProductoRequest.java",
+      "etapa": 7,
+      "bytes": 763,
+      "sha256": "c3a42a87f68de74cd7afba7696ca8f52e43d92d68ccbe6ee3d08850624bae533",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/dto/ProductoResponse.java",
+      "etapa": 7,
+      "bytes": 566,
+      "sha256": "e8fc6e9c351a63a6594ab9225020adac543a2219489b450089868e43064f2c66",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/entity/Categoria.java",
+      "etapa": 7,
+      "bytes": 478,
+      "sha256": "8250ed696c0795e6966f1ace6ecc0735bb51195dbe0b279d4da630299dc3474c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/entity/Producto.java",
+      "etapa": 7,
+      "bytes": 1203,
+      "sha256": "9cd269212f31b6ea6754441936f1e8be263535a9455bddd94ed945dde76bdac6",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/exception/GlobalExceptionHandler.java",
+      "etapa": 7,
+      "bytes": 2408,
+      "sha256": "8a0b1fe2f2cd48b62f7d3fef770bcb0b31fdaf4f15c03bc8ae2ce6a55ac40b56",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/exception/ResourceNotFoundException.java",
+      "etapa": 7,
+      "bytes": 203,
+      "sha256": "c76cf63174af0fa972269b3b45a5cfe503edbc27d7c7c7f43738a67b0e78ed17",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/filter/CorrelationIdFilter.java",
+      "etapa": 7,
+      "bytes": 1432,
+      "sha256": "e6afa45f78473d6e819a74319186dfaedad9045a0ff2316f5292f1dc758496b4",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/mapper/CategoriaMapper.java",
+      "etapa": 7,
+      "bytes": 823,
+      "sha256": "f0a37fa18a978e4157a94cfc7ccf65bdd5b2ee18e7abc792132f5d990cd04641",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/mapper/ProductoMapper.java",
+      "etapa": 7,
+      "bytes": 2040,
+      "sha256": "c5e8487bac694a7e1dd58f7557911fee65ae7d157dec22a34265a30ba5a683cf",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java",
+      "etapa": 7,
+      "bytes": 3832,
+      "sha256": "4baecbfed38dfbab4239bb44123484daf62ed96129e0ce65852b1a05627ed446",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/repository/CategoriaRepository.java",
+      "etapa": 7,
+      "bytes": 249,
+      "sha256": "094847ee904537e9bee7422a5d448be3a5378963e63ff5bf7f33f3e19ce10668",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/repository/ProductoRepository.java",
+      "etapa": 7,
+      "bytes": 1656,
+      "sha256": "f1e08d1697b2d05a462d6babedf19abee8df8428fa581e039b22fb03cbfc2c9a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/service/CategoriaService.java",
+      "etapa": 7,
+      "bytes": 1812,
+      "sha256": "0a1494378f8f65d85e26ae1313d51112917c95b16f4a9e4eaf56912faede3e89",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/service/ProductoService.java",
+      "etapa": 7,
+      "bytes": 4068,
+      "sha256": "fb6fbc2a1c8b5f31e13036d16ce9c27acd0f98d4ede1be266a46a4423c6e9524",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/resources/application.yml",
+      "etapa": 7,
+      "bytes": 163,
+      "sha256": "12618ac69a3a6413dde662e972dbd584d5c91d3abdf515a13b1e8f27c0170a50",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/resources/db/demo/R__pet_store_catalog.sql",
+      "etapa": 7,
+      "bytes": 3080,
+      "sha256": "7458765c98e9a2b30f65568f14b15615e2fb197338387757f83940dcbd090dd9",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/resources/db/migration/V1__create_catalogo_tables.sql",
+      "etapa": 7,
+      "bytes": 527,
+      "sha256": "87387a4e51d4da4b483fe58cc80d1050dc2b5a9a43424fad116893df2ab23972",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/resources/db/migration/V2__inventory_reservations.sql",
+      "etapa": 7,
+      "bytes": 189,
+      "sha256": "c349e7f9fc54d39c51d371942d1a651a7241548c9f09c8b29122d4b0d3a96a9f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/resources/db/migration/V3__transactional_messaging.sql",
+      "etapa": 7,
+      "bytes": 465,
+      "sha256": "46d7b5f7e71da82dfdbd46c32fe18eac6ec254f5db0c50393dd05a8e6e5d4d55",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/resources/db/migration/V4__product_version.sql",
+      "etapa": 7,
+      "bytes": 68,
+      "sha256": "a0f1057a1f9f87b7d279b5e028d001908c60879f0687a6df5bf22ca30b04f6a1",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/resources/db/migration/V5__producto_categorias_many_to_many.sql",
+      "etapa": 7,
+      "bytes": 651,
+      "sha256": "5db94f7bc9c433ac78cf147a2cda0f4cae272be89302e8be1b54604f641f2b38",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/main/resources/logback-spring.xml",
+      "etapa": 7,
+      "bytes": 1041,
+      "sha256": "04829a98d2f804febf61fe15aab5fc2898ae7144551c185bdb0b432e283c2724",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-catalogo-ms/src/test/java/pe/edu/upeu/garritas/catalogo/GarritasCatalogoMsApplicationTests.java",
+      "etapa": 7,
+      "bytes": 233,
+      "sha256": "a1649b6d6374aa20622910b7f483bb7fbd4e00d14936cc0fbd1e7b50adeb2ec3",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/.env.example",
+      "etapa": 14,
+      "bytes": 135,
+      "sha256": "8e9e2e9ef3809823fd4a303430c5455b7cdb49539f0d3b8001bd8d17951975e4",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/.gitattributes",
+      "etapa": 14,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/.gitignore",
+      "etapa": 14,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 14,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-citas-ms/Dockerfile",
+      "etapa": 14,
+      "bytes": 635,
+      "sha256": "9698e548da23a90d9c1d145a12be0b36f61b2ecd338cdb38d4b8b1bc84a18942",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/README.md",
+      "etapa": 14,
+      "bytes": 304,
+      "sha256": "550be1ccc8f7d93c583819c785deb0d4134092082f710bcea1f54eb2b3f096f4",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/compose-dev.yml",
+      "etapa": 14,
+      "bytes": 421,
+      "sha256": "c6aef3609cb14a9c550a96c32680fa6f1a39ccc29ba0d2ac72d3fc7a3fc93f7b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/compose.yml",
+      "etapa": 14,
+      "bytes": 1558,
+      "sha256": "2264446b26cd3eed997d080fe1acfa17cc97e716836ff436afda5bc4e4eff737",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/logs/.gitkeep",
+      "etapa": 14,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-citas-ms/mvnw",
+      "etapa": 14,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-citas-ms/mvnw.cmd",
+      "etapa": 14,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-citas-ms/pom.xml",
+      "etapa": 14,
+      "bytes": 5238,
+      "sha256": "d74a480a54f36fe032d6d411c3bf7bf78734d80334bcec54e595516d94829a6b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/GarritasCitasMsApplication.java",
+      "etapa": 14,
+      "bytes": 798,
+      "sha256": "1d2fa709aa384d6b06f3c3ed4291cf1f9836c503338b5ff706d48005f8ee02a4",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/config/.gitkeep",
+      "etapa": 14,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/controller/CitaController.java",
+      "etapa": 14,
+      "bytes": 1380,
+      "sha256": "1358370e43678c76d5851eb91c7d8683bfe8a8a8601874b411a913d6d77394c1",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/dto/CitaRequest.java",
+      "etapa": 14,
+      "bytes": 532,
+      "sha256": "e5818b6bdd1b6b6f0cb30ccb4782394599881233f4321ffa7fc53c6632e82c34",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/dto/CitaResponse.java",
+      "etapa": 14,
+      "bytes": 784,
+      "sha256": "c76f5721aa2a1b948f038e0bab74f626bfee36db2e852b731dc3fc3d9a377f7f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/dto/DetalleCitaResponse.java",
+      "etapa": 14,
+      "bytes": 227,
+      "sha256": "4f132fe3c9e1c056efec6b53a2ae50e633ebb306e08d534dbf2c47918f7ca3d6",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/dto/OfertaReferencia.java",
+      "etapa": 14,
+      "bytes": 505,
+      "sha256": "ac80fa74893bfd0f328f8949a75832aef0d29eb26c857b8251c1d7f13bd579da",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/entity/Cita.java",
+      "etapa": 14,
+      "bytes": 1585,
+      "sha256": "2c5a0c9421cda2de7e4534ad56229b8cc84210d4f6c49a15a27d330d766a5f03",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/entity/DetalleCita.java",
+      "etapa": 14,
+      "bytes": 794,
+      "sha256": "c72a00b6c4c73a059557b7327f181f4aa14e4bd0699ffae1939f5d9ed4a7bc0d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/entity/EstadoCita.java",
+      "etapa": 14,
+      "bytes": 131,
+      "sha256": "4868b7a43b504b7bda0e2143c7b26f201f3a5203ab7bc6f867c665b64d7e9bee",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/exception/GlobalExceptionHandler.java",
+      "etapa": 14,
+      "bytes": 2075,
+      "sha256": "999ae81185202e07e74f2be36eba777722fa47243dd02a6216afa3b80b0920c5",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/exception/ResourceNotFoundException.java",
+      "etapa": 14,
+      "bytes": 200,
+      "sha256": "fdce5a0296b99872682a35803c7ba25abe94b22060e1f5db7273e47d48d881d2",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/filter/CorrelationIdFilter.java",
+      "etapa": 14,
+      "bytes": 1429,
+      "sha256": "945d5d60e772ccf841c27bbc8bdfa414a19be0c5ce262b2ebc1e85e35feaf799",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/mapper/CitaMapper.java",
+      "etapa": 14,
+      "bytes": 1829,
+      "sha256": "e84ca91bf8068252c6d08217635e0b9f87ea8d3d493dddf1b33dae64bfa1921c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/repository/CitaRepository.java",
+      "etapa": 14,
+      "bytes": 356,
+      "sha256": "72bc7c7a177de15f36b53bf047470fcabca3adc61f1090e422dca939b4a74768",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/java/pe/edu/upeu/garritas/citas/service/CitaService.java",
+      "etapa": 14,
+      "bytes": 6846,
+      "sha256": "067ff93e15be4750f85eb10e98e6198c68adfda9606517588e4bfd185d699257",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/resources/application.yml",
+      "etapa": 14,
+      "bytes": 160,
+      "sha256": "a2886ef8e7df3cbedeea970a5f1efc8e57e57b27778947ca56329d31a47c5ba1",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/resources/db/migration/V1__create_citas_tables.sql",
+      "etapa": 14,
+      "bytes": 293,
+      "sha256": "901738abce0b4843f51f4e855d6fba9799c6a7306302fff47a1d1e704bbea05f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/resources/db/migration/V2__citas_identity.sql",
+      "etapa": 14,
+      "bytes": 437,
+      "sha256": "f0547461912f247d8082344e500c6f46eae817377422a8fa321fe9e13adfd50a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/resources/db/migration/V3__cita_cabecera_detalle.sql",
+      "etapa": 14,
+      "bytes": 609,
+      "sha256": "db5a2074f1f63405a0b09c5cf7b01cdd47657c78ced0d9d3f41cac49fded7d59",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/resources/db/migration/V4__paquetes_snapshot.sql",
+      "etapa": 14,
+      "bytes": 64,
+      "sha256": "ea3c896b9e971cf25f2962d7e5e6f6ea7bbf07824aa02495018920106beabc16",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/main/resources/logback-spring.xml",
+      "etapa": 14,
+      "bytes": 1035,
+      "sha256": "a32b538751d200d63a08a64b66dc0dc0a09cd79efcaeb6461074cf1245b32c5c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/test/java/pe/edu/upeu/garritas/citas/CitasDetalleIntegrationTests.java",
+      "etapa": 14,
+      "bytes": 3105,
+      "sha256": "31a73919c60553536d1b95d235ab46df9b866cf1c002eedf70826b212d230b56",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-citas-ms/src/test/java/pe/edu/upeu/garritas/citas/GarritasCitasMsApplicationTests.java",
+      "etapa": 14,
+      "bytes": 227,
+      "sha256": "2091e785399c0fcb0379c59d70689eda43c51fe2deb609f1de988dcf1d620d17",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/.env.example",
+      "etapa": 11,
+      "bytes": 135,
+      "sha256": "8986e2e902e9b148499244446ecd7f11c33b6e5a10f24a04a7d3ec8c7a3c7e7d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/.gitattributes",
+      "etapa": 11,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/.gitignore",
+      "etapa": 11,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 11,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-envio-ms/Dockerfile",
+      "etapa": 11,
+      "bytes": 635,
+      "sha256": "63189ed6800351cdbfffb7c27005bffb56e02263a2444e177d4686bf5aabc8f6",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/README.md",
+      "etapa": 11,
+      "bytes": 306,
+      "sha256": "dfe2ad0c8ec8c85ca451450dbd2f1097a968e9d79ddf48054b5f8e9b59ff2253",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/compose-dev.yml",
+      "etapa": 11,
+      "bytes": 421,
+      "sha256": "fe88233261cfccaadd2bf314d0a6cc3ce3aacbcc4208ae8c15a8b882dd2cdcde",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/compose.yml",
+      "etapa": 11,
+      "bytes": 1558,
+      "sha256": "9cbb912bcbaf5a7d116bd7492808930094a6e61e763ad57135a9ade55f1f6e03",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/logs/.gitkeep",
+      "etapa": 11,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-envio-ms/mvnw",
+      "etapa": 11,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-envio-ms/mvnw.cmd",
+      "etapa": 11,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-envio-ms/pom.xml",
+      "etapa": 11,
+      "bytes": 5240,
+      "sha256": "aac10a1f3c01e866898f3398573834ec1bb46238d46098eb79bf1a701e192cc8",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/GarritasEnvioMsApplication.java",
+      "etapa": 11,
+      "bytes": 798,
+      "sha256": "370ac0c13a6801a7b7d746a8dcdc2050767d6ed5cf3a85c21acb2b6d500b6aed",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/config/.gitkeep",
+      "etapa": 11,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/controller/LogisticaController.java",
+      "etapa": 11,
+      "bytes": 2432,
+      "sha256": "e73eca99bd5b36a5b47be739341c8cdd733c1a2da1cbc3634732df30f274fd47",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/dto/CoberturaRequest.java",
+      "etapa": 11,
+      "bytes": 397,
+      "sha256": "7ab4dac1a9202c20466d0e0aef2b1570130b1f05b81cf3dde11436c1837e5e9f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/dto/CoberturaResponse.java",
+      "etapa": 11,
+      "bytes": 276,
+      "sha256": "4c0bb9e8c67a4f268904461d15b1b79d89899e318761f030a77d9432a279701e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/dto/TransportistaRequest.java",
+      "etapa": 11,
+      "bytes": 387,
+      "sha256": "5322d5fb774b0a81fba7e2208d22b6a70d5235f1584945479af2c6554e040aee",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/dto/TransportistaResponse.java",
+      "etapa": 11,
+      "bytes": 137,
+      "sha256": "d63f164e99259391788945f1354b19c79f99c4cc201d07175948a709cf10d2bb",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/dto/ZonaRequest.java",
+      "etapa": 11,
+      "bytes": 234,
+      "sha256": "e2a1ac220e81760e9a2936f1fa811a5fa3e35801cdf9792cc16693fd4285ad02",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/dto/ZonaResponse.java",
+      "etapa": 11,
+      "bytes": 126,
+      "sha256": "13b3fba3a35bdf6e4fd03fcddfb3213c14a49941a60871a6c025ddab4d880eb5",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/entity/Cobertura.java",
+      "etapa": 11,
+      "bytes": 777,
+      "sha256": "fb13e43d0c6d0895c9239d15ea77c7ccc5ed27637b76fd0faa7471ed3d25f619",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/entity/Transportista.java",
+      "etapa": 11,
+      "bytes": 458,
+      "sha256": "77cf6f52b4ece0a4cef70b5812a8e87b7333304897446e1555af8a4134fb3370",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/entity/Zona.java",
+      "etapa": 11,
+      "bytes": 457,
+      "sha256": "5c577c6ed20592cdbf268e35f5e254c48f730e6423d52cd4cc0ad9b3d4d91b19",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/exception/GlobalExceptionHandler.java",
+      "etapa": 11,
+      "bytes": 2075,
+      "sha256": "d94a034bd95bf4658c398aae2c01f6e5d3ef4112cb031e1c78f67e6818b6d791",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/exception/ResourceNotFoundException.java",
+      "etapa": 11,
+      "bytes": 200,
+      "sha256": "b4f2a970ea2a0a8a492ded7913237063bf1e28aee1d4feba586d5efa177c3889",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/filter/CorrelationIdFilter.java",
+      "etapa": 11,
+      "bytes": 1429,
+      "sha256": "5fbee42ec60ed282ae824be61247ce97a241e10ba1b5241ab47201e9988ab276",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/repository/CoberturaRepository.java",
+      "etapa": 11,
+      "bytes": 469,
+      "sha256": "23f36eccf52dd29e207f253cf52c0a389ce18503623fffffe8f05336d64976fe",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/repository/TransportistaRepository.java",
+      "etapa": 11,
+      "bytes": 254,
+      "sha256": "55901adbb5ebc89ec52b455860092d5036848db62b3bb32b955623f14a5b7a63",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/repository/ZonaRepository.java",
+      "etapa": 11,
+      "bytes": 227,
+      "sha256": "e278da9dd36b7dd14040fb100c64886110d46b0b2c945e390d37356b20b9f84d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/java/pe/edu/upeu/garritas/envio/service/LogisticaService.java",
+      "etapa": 11,
+      "bytes": 4439,
+      "sha256": "c4e3054843177ba028f1746a1557b91035a97427e2673b071f72efc8a5dca85c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/resources/application.yml",
+      "etapa": 11,
+      "bytes": 160,
+      "sha256": "92866813bb8a37b3c95c5a12101b88e7010634a0647c3674198403acbd9e2677",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/resources/db/demo/R__logistica_peru.sql",
+      "etapa": 11,
+      "bytes": 881,
+      "sha256": "ec0b0fa7c623d2c80195463c8573093ec2ccdd6605822fe4114e527b6dbb735e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/resources/db/migration/V1__create_envio_tables.sql",
+      "etapa": 11,
+      "bytes": 313,
+      "sha256": "07f945909a991314e7929d257b321126c364ad561c65df544c84b55b01733fba",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/resources/db/migration/V2__envio_identity.sql",
+      "etapa": 11,
+      "bytes": 122,
+      "sha256": "f4575914f3ad598876dea78a07049ed1a3a9f1bfd18c4d2cea185e5b5de95589",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/resources/db/migration/V3__maestros_logisticos.sql",
+      "etapa": 11,
+      "bytes": 695,
+      "sha256": "db6106f9b0f62f9a0a100f1dfc912f2eabd0111032154575382a7943411de5b9",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/main/resources/logback-spring.xml",
+      "etapa": 11,
+      "bytes": 1035,
+      "sha256": "939a597c12432e8447a9646dea4eaa5d5ed93fcc6883cc12203c0668ef11c5b2",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/test/java/pe/edu/upeu/garritas/envio/GarritasEnvioMsApplicationTests.java",
+      "etapa": 11,
+      "bytes": 227,
+      "sha256": "1f492d11dc378b6f86f986f601a070c80fc3041bf9f62155851b7cac70ad2b9c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-envio-ms/src/test/java/pe/edu/upeu/garritas/envio/LogisticaIntegrationTests.java",
+      "etapa": 11,
+      "bytes": 2402,
+      "sha256": "905d89b094fb54f00e3d64aaee301bbb591f12d8dd71b52de0316a2238eedd1d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/.env.example",
+      "etapa": 8,
+      "bytes": 141,
+      "sha256": "5a15ae35d8cebfa2d1649b3dbd40fda752b1020eb197336b1a3f02f0ac207f0c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/.gitattributes",
+      "etapa": 8,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/.gitignore",
+      "etapa": 8,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 8,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/Dockerfile",
+      "etapa": 8,
+      "bytes": 641,
+      "sha256": "b8b46ed1ae91b3a9fb1b25398a99a86bb41e1d2faa8f4590051e0e3603472a51",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/README.md",
+      "etapa": 8,
+      "bytes": 312,
+      "sha256": "964b3c2cdefe40331f7ca4fac53a662e2dc9a57c2e49133d42a25ab035720744",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/compose-dev.yml",
+      "etapa": 8,
+      "bytes": 457,
+      "sha256": "9e51440eaf8674ffd24f6a817a4781cf9ec896f32ec30610e4fe37ab16286b57",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/compose.yml",
+      "etapa": 8,
+      "bytes": 1636,
+      "sha256": "32007aab7636d5b42692f500e9a58f8250be37dcbbcb41be01e645f0723d7034",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/logs/.gitkeep",
+      "etapa": 8,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/mvnw",
+      "etapa": 8,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/mvnw.cmd",
+      "etapa": 8,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/pom.xml",
+      "etapa": 8,
+      "bytes": 5252,
+      "sha256": "db1b1b456b62f3d97a043744447d253ae2ee773dc5bb1edf39df9e52132004ae",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplication.java",
+      "etapa": 8,
+      "bytes": 816,
+      "sha256": "2333c638b976908a787c3680616183a9f74198d9b847cd2751890b7e15e7a9ee",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/config/.gitkeep",
+      "etapa": 8,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/PrestacionController.java",
+      "etapa": 8,
+      "bytes": 1462,
+      "sha256": "b6f42e7b78c2fcf998537bbaf2ca21b5bf04a5a64c79dc08267378613b116a5b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/SedeController.java",
+      "etapa": 8,
+      "bytes": 1328,
+      "sha256": "0be71c239f4b7fd07db39497b2ece39b790a250b3b0f193be006a855b71858e5",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/ComponenteResponse.java",
+      "etapa": 8,
+      "bytes": 107,
+      "sha256": "49e750447628f40345a51f36a305eff4f2d8f3dcc1f60cd67f530fd925435473",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaRequest.java",
+      "etapa": 8,
+      "bytes": 365,
+      "sha256": "2c34c38a123e33d6dcd343aec6cba4e94a005494d109b12e71ed267cf290ef9d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaResponse.java",
+      "etapa": 8,
+      "bytes": 306,
+      "sha256": "0bfddbfe240919b69d794d20be11e5b2003802ce7006c2c346f3ffa8a852216d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionRequest.java",
+      "etapa": 8,
+      "bytes": 458,
+      "sha256": "761cfe629f0d93ff0a19d6c27515d594f2b0f4617ce8ff27d20e3e05cb0ccfe4",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionResponse.java",
+      "etapa": 8,
+      "bytes": 212,
+      "sha256": "1285822efacb63016ddc738453f28432ee84b41569b17bbe9a3938b149977d5d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeRequest.java",
+      "etapa": 8,
+      "bytes": 683,
+      "sha256": "503ce8bc1763a53cac74338f0df94937f5d6aa74b75a6469da570bcf0f605bff",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeResponse.java",
+      "etapa": 8,
+      "bytes": 438,
+      "sha256": "cbaafb06096e5de6bc1e30238d18f6a0e98ddd24568d31e11ba6c8e59e999af5",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java",
+      "etapa": 8,
+      "bytes": 750,
+      "sha256": "67e9de92cc9d2f892f8e67f44b829fa40528582789dc1bf0f683588bcfe77b78",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Sede.java",
+      "etapa": 8,
+      "bytes": 724,
+      "sha256": "31777ea0ecfc20460d0f11c640cca3d7c54a248ef13c38f4f9d53ee9d7bd3317",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java",
+      "etapa": 8,
+      "bytes": 788,
+      "sha256": "d5fe2fa26c2f3dae5ab912a09e7586ede3130822e6d4e7451aba45228937289e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/GlobalExceptionHandler.java",
+      "etapa": 8,
+      "bytes": 2081,
+      "sha256": "c284f0a72738ee1689ff28640b7150435c1990576e2dfc7c938ce5f900195487",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/ResourceNotFoundException.java",
+      "etapa": 8,
+      "bytes": 206,
+      "sha256": "eec9fbbf71a5d31fc14de1bcd75005d460fb191fbfc58a8a786e865d3cc5d308",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/filter/CorrelationIdFilter.java",
+      "etapa": 8,
+      "bytes": 1435,
+      "sha256": "6ff9f153578da6be51b35f6df87ddaf7ece2ee9743c7536275ea3d46beb68b36",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/mapper/SedeMapper.java",
+      "etapa": 8,
+      "bytes": 1026,
+      "sha256": "5d6af6d9e42c88aa5d556673d4e8ba52a8278f3c80a5fb6f703ca2adc539babb",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/PrestacionRepository.java",
+      "etapa": 8,
+      "bytes": 257,
+      "sha256": "22be47f82bc9d85d41d80b16fc160b8d929d2dc580cd9c8632402bb4af0ecc73",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedePrestacionRepository.java",
+      "etapa": 8,
+      "bytes": 537,
+      "sha256": "77bb4e645a8d7bb0d36aac23b01b361bf982e92f0f8024fa638dc5cd7beb3a00",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedeRepository.java",
+      "etapa": 8,
+      "bytes": 240,
+      "sha256": "31a9ff74c09bc5f9f3e7c1371b3fe9d5e1cb41afc8b29554f32fbe014b31d1ee",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "etapa": 8,
+      "bytes": 5428,
+      "sha256": "221de9fff06b2b07e697ed64848be612f6803341ef8f5adfacbe360e75d3de6b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "etapa": 8,
+      "bytes": 2277,
+      "sha256": "4d53172161dbdb1cfa0518ec26d013f60229e3c05b896bec9e6b30a3d6e700fb",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/resources/application.yml",
+      "etapa": 8,
+      "bytes": 166,
+      "sha256": "bdbc8ddbc37d8acefe2cd14044279faa8daccdc7e43ab53058618b8abbadac71",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/resources/db/demo/R__prestaciones_peru.sql",
+      "etapa": 8,
+      "bytes": 788,
+      "sha256": "23d5e6266f52d7112f3d3e938277266309d322964f8215a25c108cdb12dd5231",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/resources/db/demo/R__sedes_peru.sql",
+      "etapa": 8,
+      "bytes": 739,
+      "sha256": "c7c5d352cf8f03b726a0927f938e34e438ac9409c11eeb3bb84727af7fb84113",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/resources/db/demo/R__zz_paquetes_peru.sql",
+      "etapa": 8,
+      "bytes": 1117,
+      "sha256": "8c1c72084c6ee30103ae75c1149026e4ea55308b3ea624ca2744a241f59cbdd6",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/resources/db/migration/V1__create_institucion_tables.sql",
+      "etapa": 8,
+      "bytes": 280,
+      "sha256": "36917edfa78b854224c145017b03e417de0b769779e96f0040c09fb3d18611ea",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/resources/db/migration/V2__prestaciones_sede.sql",
+      "etapa": 8,
+      "bytes": 576,
+      "sha256": "854ad1a49355f8dae0659827ab0a6c0c16be7a7519cd7123cd5049561426e1b7",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/resources/db/migration/V3__paquetes_servicios.sql",
+      "etapa": 8,
+      "bytes": 277,
+      "sha256": "b3bbffb1217b7c8ceff4530a19a320b2c28d608dc61dc97abb781bf329011bf6",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/main/resources/logback-spring.xml",
+      "etapa": 8,
+      "bytes": 1047,
+      "sha256": "98cad98c293fc9d8a699697559a839a13bbd713bb0c3ad86a55db89ef6e4925d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplicationTests.java",
+      "etapa": 8,
+      "bytes": 239,
+      "sha256": "1965b321fae06a52b286ccc06dfad02b317ddfe1d7b63fa724b8b949b03fc26a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/PrestacionesIntegrationTests.java",
+      "etapa": 8,
+      "bytes": 3863,
+      "sha256": "2e44785ceb08c691cca4b2e492c2e7929f5c54727c89eec6b8c35667839b2cf8",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/.env.example",
+      "etapa": 13,
+      "bytes": 134,
+      "sha256": "1e3a6062015e770ecd13856293c221ddfad92044c3eeaac0faa5fdea85b89c20",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/.gitattributes",
+      "etapa": 13,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/.gitignore",
+      "etapa": 13,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 13,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-pago-ms/Dockerfile",
+      "etapa": 13,
+      "bytes": 634,
+      "sha256": "fb893c57c2e05f69496b070e76f957ea8bfd78c2ba4bcfd033701c4dcc19cbbc",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/README.md",
+      "etapa": 13,
+      "bytes": 304,
+      "sha256": "f226ceaf338dba0452267b6ed42635c325d0be5804f562d24133859008bde4c1",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/compose-dev.yml",
+      "etapa": 13,
+      "bytes": 415,
+      "sha256": "aa6404a6ffdeab3c36e6302ca26f67a91bd0ffae9e23d0e4b1c8216e8518183d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/compose.yml",
+      "etapa": 13,
+      "bytes": 1545,
+      "sha256": "28ebd452c4b37ee559725f5a5e302b1a423450e380fbabbdff44eb06473914d5",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/logs/.gitkeep",
+      "etapa": 13,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-pago-ms/mvnw",
+      "etapa": 13,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-pago-ms/mvnw.cmd",
+      "etapa": 13,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-pago-ms/pom.xml",
+      "etapa": 13,
+      "bytes": 4981,
+      "sha256": "e256b3dde984e7e7424311157d1f18aa6582771ad26f32c64286bea4690b8fe2",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/GarritasPagoMsApplication.java",
+      "etapa": 13,
+      "bytes": 856,
+      "sha256": "9458ec5c542e803e383302545cf93d60e6ed20dab5c48663d5406fd8f11be72d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/config/.gitkeep",
+      "etapa": 13,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/controller/PagoController.java",
+      "etapa": 13,
+      "bytes": 733,
+      "sha256": "684c8683c1754ca0e3f40b00dc517677314409d483ec6ecd27ff9e55e6d4a211",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/dto/PagoRequest.java",
+      "etapa": 13,
+      "bytes": 488,
+      "sha256": "0606d841033900d2a0953358ca324717e2f3c3c109377c3c48b0127811842a49",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/dto/PagoResponse.java",
+      "etapa": 13,
+      "bytes": 637,
+      "sha256": "f335098e028b3ba6500b729046d47a32b51368df40fb0e95a55cb483ff64c611",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/entity/EstadoPago.java",
+      "etapa": 13,
+      "bytes": 130,
+      "sha256": "54f2ad6a756167e903e2e53fa185470a32468a71cd2f4edc7f1542b9c8f95f19",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/entity/MetodoPago.java",
+      "etapa": 13,
+      "bytes": 121,
+      "sha256": "099083ff4271345d420818629ca2c134d0623f5403b7659dd2eb27986e403ff9",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/entity/Pago.java",
+      "etapa": 13,
+      "bytes": 982,
+      "sha256": "3c6f3885eceda95c03704cf5ca909b2e9ff98352c1bb347705a553db67eef78e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/exception/GlobalExceptionHandler.java",
+      "etapa": 13,
+      "bytes": 2074,
+      "sha256": "132a9f157bac28e19b81a44ec8cea31e1493f9ccda1673e412812453c9455bff",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/exception/ResourceNotFoundException.java",
+      "etapa": 13,
+      "bytes": 199,
+      "sha256": "b215d58415bff0b1dc9ab2cbc91c563be0894e52ee1176f171eec172853ecf07",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/filter/CorrelationIdFilter.java",
+      "etapa": 13,
+      "bytes": 1428,
+      "sha256": "5f19e61c86c646e743f97154f90aed9774c980797b90e318984dfc80c7fdf160",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/mapper/PagoMapper.java",
+      "etapa": 13,
+      "bytes": 1125,
+      "sha256": "1e88f73e5bc2df011265af8b9d6a83f62192e931ec46092fd22b2d85fd82d8c9",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/messaging/PagoEvents.java",
+      "etapa": 13,
+      "bytes": 1996,
+      "sha256": "724684ff715e4f3c8368fa002c885d29342fe423674849ad9cbb5d671e0601ae",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/repository/PagoRepository.java",
+      "etapa": 13,
+      "bytes": 340,
+      "sha256": "ce51cded9b8b48489be7643e5f7a86b9ef37885cb2402ea401d606537afc074f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/service/PagoService.java",
+      "etapa": 13,
+      "bytes": 1631,
+      "sha256": "0bae732a92ca5ec86b20a2098b8e690d06de8607fceb6c91ab5a40d598524563",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/resources/application.yml",
+      "etapa": 13,
+      "bytes": 159,
+      "sha256": "f267e69c1a6c077e8eaa12bf9f277df4509aa1ca731bf20c8197a3f718e9a5a0",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/resources/db/migration/V1__create_pago_tables.sql",
+      "etapa": 13,
+      "bytes": 309,
+      "sha256": "3966233142320c85cc2c6fd94bdd1983511afd909378204743637e1ad72e2bba",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/resources/db/migration/V2__saga_identity.sql",
+      "etapa": 13,
+      "bytes": 222,
+      "sha256": "e0029b1f756a395230604a634a4895dadcf127f38a30195b711148be589bfd4e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/resources/db/migration/V3__transactional_messaging.sql",
+      "etapa": 13,
+      "bytes": 465,
+      "sha256": "46d7b5f7e71da82dfdbd46c32fe18eac6ec254f5db0c50393dd05a8e6e5d4d55",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/main/resources/logback-spring.xml",
+      "etapa": 13,
+      "bytes": 1033,
+      "sha256": "8ba695d904f91b9b9e22548cbed1c4f5a12fdb0fefe2158de67507c9be45fec6",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-pago-ms/src/test/java/pe/edu/upeu/garritas/pago/GarritasPagoMsApplicationTests.java",
+      "etapa": 13,
+      "bytes": 225,
+      "sha256": "e019bcf4ec71834376965a48de4583b0510b23273da28cf34ef1155e4113794d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/.env.example",
+      "etapa": 9,
+      "bytes": 137,
+      "sha256": "d708fb374e87ddcada4e8868dacd47a0aa2245ec13cfbb670383d20875453094",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/.gitattributes",
+      "etapa": 9,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/.gitignore",
+      "etapa": 9,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 9,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/Dockerfile",
+      "etapa": 9,
+      "bytes": 637,
+      "sha256": "ad7abda9ad55a564ebb69ac3297c2e25e905f420d83efd883c1736e2818f2840",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/README.md",
+      "etapa": 9,
+      "bytes": 309,
+      "sha256": "dde7efbb447b13175ebe6a8e07bbb125fe79bcad8311bf1d123aea74a47c994e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/compose-dev.yml",
+      "etapa": 9,
+      "bytes": 433,
+      "sha256": "57f219bd606a7ee2606f3d3a82714e7c758864f257877fec335ccb30917dc8dd",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/compose.yml",
+      "etapa": 9,
+      "bytes": 1584,
+      "sha256": "f7dc71b12b97fe266c5bf161ca8962c6cb373f101f6d44147f3ba9d983e60d52",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/logs/.gitkeep",
+      "etapa": 9,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/mvnw",
+      "etapa": 9,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/mvnw.cmd",
+      "etapa": 9,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/pom.xml",
+      "etapa": 9,
+      "bytes": 5245,
+      "sha256": "133b2bf40ff285f610f415460023c03299e4f84cdfc6dbdb2b1b93fb2784b96d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/GarritasUsuarioMsApplication.java",
+      "etapa": 9,
+      "bytes": 804,
+      "sha256": "9acf09827923398972c459c7cc5525b31525647d04dabcacaaf45126221ae1d0",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/config/.gitkeep",
+      "etapa": 9,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/controller/MascotaController.java",
+      "etapa": 9,
+      "bytes": 1483,
+      "sha256": "68b4e39d55e94735dd73326c79fcf3f91eda9445f142bcb4c55f54c01d78b172",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/controller/MiCuentaController.java",
+      "etapa": 9,
+      "bytes": 1745,
+      "sha256": "4c34579689bc6ca3ab6bf4d8336e8cfcb14fb0488e74b821a010aceca0426a78",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/controller/RolController.java",
+      "etapa": 9,
+      "bytes": 1266,
+      "sha256": "4abf72d2217822acf895457292e938e4eadd9c52329aba77b6c7dce285395cb6",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/controller/SuscripcionController.java",
+      "etapa": 9,
+      "bytes": 1945,
+      "sha256": "fb8b862d3d6ff7f587194638abbc09fbdeb4373f6353d41123cf4396d9aa278b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/controller/UsuarioController.java",
+      "etapa": 9,
+      "bytes": 2498,
+      "sha256": "56c8cc9595b73c78309d329467bb13d5fc013fd7cd96960557f5d7b2f4133998",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/MascotaRequest.java",
+      "etapa": 9,
+      "bytes": 827,
+      "sha256": "070f4f6f59c38c55603d73e889ddf5a2550d8d1be0395118b8c345e55906280a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/MascotaResponse.java",
+      "etapa": 9,
+      "bytes": 461,
+      "sha256": "1cc244f280126c3f6f81a2ff8f447b8b48fbd7c9e03ba464a99734a9732c624e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/PlanRequest.java",
+      "etapa": 9,
+      "bytes": 400,
+      "sha256": "df49a26cf8944879053157fac203998572c9b77aa665d8cd0894d74fd0f088f8",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/PlanResponse.java",
+      "etapa": 9,
+      "bytes": 209,
+      "sha256": "976480141acf81d58689819cf606a845598ce57f90c4c3cdc02e91a85393bfaf",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/RolRequest.java",
+      "etapa": 9,
+      "bytes": 351,
+      "sha256": "82aeae5127893ee4e8096e23111903981a3d2b908ba964ae9b4cc3f7d240055d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/RolResponse.java",
+      "etapa": 9,
+      "bytes": 228,
+      "sha256": "de852f6031d2cbcc23694f623a3a6bdaf32742cbfcba32300b20039bd21dc30a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/SuscripcionRequest.java",
+      "etapa": 9,
+      "bytes": 153,
+      "sha256": "02741513329230a62d356b37769ea3131844b52844082c87c9468847022e7027",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/SuscripcionResponse.java",
+      "etapa": 9,
+      "bytes": 507,
+      "sha256": "4cb14272fe5a522ba8a059e492a6de6fec90a529bd9917a67b159a4a2382d37a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/UsuarioRequest.java",
+      "etapa": 9,
+      "bytes": 854,
+      "sha256": "abf06dddfc027fa7c5aa7d356b8a9101a2b1deda743e0cd188105451bdf63397",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/dto/UsuarioResponse.java",
+      "etapa": 9,
+      "bytes": 520,
+      "sha256": "a476942abd66bc9b1f86051c5a3c2ccc34618631c714ea23ea63c4fd47a598e7",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/entity/Mascota.java",
+      "etapa": 9,
+      "bytes": 864,
+      "sha256": "53ef2bd114202451c789234fe56d56e945ed13aa64cbae7e900feda2d2321f78",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/entity/PeriodoSuscripcion.java",
+      "etapa": 9,
+      "bytes": 1012,
+      "sha256": "e7793101d1059ac11693df745cfda564ff3434b5fae12ea764ca968e22fb429f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/entity/Plan.java",
+      "etapa": 9,
+      "bytes": 646,
+      "sha256": "3d36394d87b94af77feb9ada47b3b9d7f520032aa37dbf0db3f22d33297fbbd0",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/entity/Rol.java",
+      "etapa": 9,
+      "bytes": 815,
+      "sha256": "6ca01380eded80ec5d567ed646305c8eb287b02fc6d7df2e01d3f25c67786b72",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/entity/Suscripcion.java",
+      "etapa": 9,
+      "bytes": 1057,
+      "sha256": "e9859ad85f65d3e9ee734da37ce231c191c38ef9796c6e22ea20b25639ef89e8",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/entity/UnidadEdad.java",
+      "etapa": 9,
+      "bytes": 89,
+      "sha256": "f0f5a75f99a5caf75c77b498bafd37d2a3e49d1a825858e189832006b9d14f7e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/entity/Usuario.java",
+      "etapa": 9,
+      "bytes": 1328,
+      "sha256": "a6c51b7f6f074b18a06029ea2b24a95f08f8914292fd9b4013223962211babad",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/exception/GlobalExceptionHandler.java",
+      "etapa": 9,
+      "bytes": 2077,
+      "sha256": "246b40db5749e65de92f91c3a0c709c85a284a548e23a7743c2dbd12a6e9ea68",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/exception/ResourceNotFoundException.java",
+      "etapa": 9,
+      "bytes": 202,
+      "sha256": "f5ae9a001d693882881d393c110a085865eeb1df33cade444141752c8df3381b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/filter/CorrelationIdFilter.java",
+      "etapa": 9,
+      "bytes": 1431,
+      "sha256": "8d84390919e40c4e9f0941dd4f284315194b45535cdf5a6e65ca2fd14b1e37d1",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/mapper/MascotaMapper.java",
+      "etapa": 9,
+      "bytes": 941,
+      "sha256": "659fc24cd111010939cf71022cc6704deb20168137410c9f862e4420798efd6d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/mapper/RolMapper.java",
+      "etapa": 9,
+      "bytes": 708,
+      "sha256": "84a35b670b2f418b12cc116d5c6ab776b89ca7489060b366d182bd2420cd593c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/mapper/UsuarioMapper.java",
+      "etapa": 9,
+      "bytes": 1551,
+      "sha256": "3b90e82280525515452ad646ed45d0467a13481242f82e77bd838ffac8c13bcc",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/repository/MascotaRepository.java",
+      "etapa": 9,
+      "bytes": 316,
+      "sha256": "f0c82b39a5a85bbdd48193a77aa5954ed47647a1e5a59c48adb3dd59e6a7e894",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/repository/PeriodoSuscripcionRepository.java",
+      "etapa": 9,
+      "bytes": 390,
+      "sha256": "c0c3d53ee7a8d26d09ce97e08fb75fe702579c85a543399ac9563ed9208e0e1b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/repository/PlanRepository.java",
+      "etapa": 9,
+      "bytes": 231,
+      "sha256": "071c7ab33fd023d2bbcc93259cabee92e06d27f6d4f093d5c3af2eb5ff356e9c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/repository/RolRepository.java",
+      "etapa": 9,
+      "bytes": 357,
+      "sha256": "afd5d811351946daebb1e02983264244b2c12d616fc68dcc072c59b2a408dbf8",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/repository/SuscripcionRepository.java",
+      "etapa": 9,
+      "bytes": 435,
+      "sha256": "81f0d0586bccb134fc6b750607efb97f999bb5812199071277f6519fcaec1caa",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/repository/UsuarioRepository.java",
+      "etapa": 9,
+      "bytes": 1087,
+      "sha256": "398e44171966466dedc5e201c881743f0db3cacd4f23fed9c466047ff646e2c9",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/service/MascotaService.java",
+      "etapa": 9,
+      "bytes": 2606,
+      "sha256": "c0ef5fd0612468a19d841390d8550145f1ad9bfc5cad1a73be8904ae1613c4dc",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/service/RolService.java",
+      "etapa": 9,
+      "bytes": 3195,
+      "sha256": "4dbd0a3edd9f89383028b651182b09be96bb267add07e9d7e629958927a518aa",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/service/SuscripcionService.java",
+      "etapa": 9,
+      "bytes": 7784,
+      "sha256": "d43ae2992c90bbd14e07895f42cebcd6d850a9404d6c1df0a97d12e4c33cca42",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/java/pe/edu/upeu/garritas/usuario/service/UsuarioService.java",
+      "etapa": 9,
+      "bytes": 9618,
+      "sha256": "2292b54ce1baa1c3e4115eb4d16ab9bedb6fc5ff014b22d4423f69e94d220c27",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/application.yml",
+      "etapa": 9,
+      "bytes": 162,
+      "sha256": "c9e04bdfc3b74037ff1dd8e7c5aa6b85d57902c2e5315371aeed8db783cc85f7",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/db/demo/R__planes_cuidado.sql",
+      "etapa": 9,
+      "bytes": 346,
+      "sha256": "08a0562dcb2bb048502bdc56b25c0f1ee2f6795579424c7bac74e2a13652c37f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/db/migration/V1__create_usuario_tables.sql",
+      "etapa": 9,
+      "bytes": 514,
+      "sha256": "25a8ff9b48ad92ae3798059eff7022fd7027db7e865a0b384116e0eb8f044bb5",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/db/migration/V2__profile_identity.sql",
+      "etapa": 9,
+      "bytes": 145,
+      "sha256": "6b9ebdcc3e947e854ad6bea77ca4202a1b00b10bb8f36fd82033fd71c8e1e1fa",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/db/migration/V3__mascota_edad_unidad.sql",
+      "etapa": 9,
+      "bytes": 345,
+      "sha256": "11e331006d0d87d9804fa1c87f8d0cc916490abedaec06f8469a40a9b5cb1c7a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/db/migration/V4__suscripciones_periodos.sql",
+      "etapa": 9,
+      "bytes": 1279,
+      "sha256": "c9b744b2c3f37e90236c602a9aa9191f1dc5d8ebc52313e2e9e12f02bfce672d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/db/migration/V5__create_roles_tables.sql",
+      "etapa": 9,
+      "bytes": 610,
+      "sha256": "e7074664951ce52a3abddb097a98d6b7e656b3645d56b8f04780bf384b9ba124",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/db/migration/V6__add_dni_to_usuarios.sql",
+      "etapa": 9,
+      "bytes": 126,
+      "sha256": "b5a08fb7f0f8c1cfa3822b20f74a0e7989e18d154fc548d6ca184595a8a131d7",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/db/migration/V7__seed_roles_from_user_design.sql",
+      "etapa": 9,
+      "bytes": 688,
+      "sha256": "e8d1a330ba5e7304d73b8a73a0617b602d4812483c6195855976f217e5796434",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/main/resources/logback-spring.xml",
+      "etapa": 9,
+      "bytes": 1039,
+      "sha256": "621f1318904cc5c9ec74d3c58755258827f87be75eef149efdc1d8e03ca0ce27",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/test/java/pe/edu/upeu/garritas/usuario/GarritasUsuarioMsApplicationTests.java",
+      "etapa": 9,
+      "bytes": 345,
+      "sha256": "9b31a2688586df86bdd60a7f318a3bdcbfbc63d2db7522096211e974820fb63e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/test/java/pe/edu/upeu/garritas/usuario/MascotaEdadValidationTest.java",
+      "etapa": 9,
+      "bytes": 980,
+      "sha256": "6fddc28b652d49afcc5724d9d9f2fb90c80df5c41f77b349e06ea60c71e0b9a2",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/test/java/pe/edu/upeu/garritas/usuario/SuscripcionesIntegrationTests.java",
+      "etapa": 9,
+      "bytes": 4505,
+      "sha256": "79e136a5d1abaf4443106a004e6314aecb0b4fb2da634cd0c3fb3d1356c8ee98",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/test/java/pe/edu/upeu/garritas/usuario/UsuarioRolIntegrationTests.java",
+      "etapa": 9,
+      "bytes": 4215,
+      "sha256": "04658e4479e3495db4eb36269fb5ae192342051c72dc01809160933a4b562077",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-usuario-ms/src/test/resources/application.yml",
+      "etapa": 9,
+      "bytes": 748,
+      "sha256": "e2a33bf847e7bdad327363888be8c92da919d4ae5634099f8745091147d18c21",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/.env.example",
+      "etapa": 12,
+      "bytes": 135,
+      "sha256": "46431eb16e6d876516a1becdec70b0db8c779596d02c134f9cf4ddf167bf9d44",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/.gitattributes",
+      "etapa": 12,
+      "bytes": 38,
+      "sha256": "5775a77ad2f6d12dde053a3fb0cca4309189163f0888f4e7e984cd0ab327028b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/.gitignore",
+      "etapa": 12,
+      "bytes": 394,
+      "sha256": "089382e4d7944ab6cb6900a1269678ebff93c00d441ada788cd05a8da182b22b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/.mvn/wrapper/maven-wrapper.properties",
+      "etapa": 12,
+      "bytes": 168,
+      "sha256": "488e1b3f2e641779d4636abf9390845f901e64607261bc3c0b0bfe4fe96e6706",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-venta-ms/Dockerfile",
+      "etapa": 12,
+      "bytes": 635,
+      "sha256": "f1c846a0c1f14cd273a5f2f5541a3d1792a8ea9611e34280c845327f92340a82",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/README.md",
+      "etapa": 12,
+      "bytes": 304,
+      "sha256": "fd0ea8e90f2245d3e9e19e3ba36642e205be4f3de1bb6cc70053b6816510a97c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/compose-dev.yml",
+      "etapa": 12,
+      "bytes": 421,
+      "sha256": "25e2ded8d85463fc8449dc5d1e1c592f7963f40487769855918b69e15516f817",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/compose.yml",
+      "etapa": 12,
+      "bytes": 1558,
+      "sha256": "148fd020eb8e480e7656e140405f1d5db43401ca0027c2102acaaa14814b9896",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/logs/.gitkeep",
+      "etapa": 12,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-venta-ms/mvnw",
+      "etapa": 12,
+      "bytes": 11790,
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-venta-ms/mvnw.cmd",
+      "etapa": 12,
+      "bytes": 8292,
+      "sha256": "4a361e1374a3e5ad6d03e18e9adc0cf181ac5058ac6203b76f0ba3b456b56481",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-venta-ms/pom.xml",
+      "etapa": 12,
+      "bytes": 5248,
+      "sha256": "db2420e6ed4941071a32067beb4d686c20b690fc56b6eb04a922687565ad1842",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java",
+      "etapa": 12,
+      "bytes": 915,
+      "sha256": "b34f6be7329d37e968aff0cd6fe8f45dfd01129acc25c0436805aecc02a75534",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java",
+      "etapa": 12,
+      "bytes": 1040,
+      "sha256": "40ed62f3452f46e0bcef2578e21bed0b4418a784a92718293c3a14a89a91fdbc",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/FeignConfiguration.java",
+      "etapa": 12,
+      "bytes": 399,
+      "sha256": "70643844cfa43e980fa71d100f3b1b6a1e8522e2e3628bb7f2c24343c23edf7c",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaClient.java",
+      "etapa": 12,
+      "bytes": 501,
+      "sha256": "8fe26b65498d9b3a2b2bbad900ffc2f33ab11ed80ab403ccd5b5c403e090360a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaConsulta.java",
+      "etapa": 12,
+      "bytes": 1162,
+      "sha256": "815c0ef10ff86dbced48c44a2fb686a1e7a7d1bfe004e02274ca4fb0737e470e",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/ProductoClient.java",
+      "etapa": 12,
+      "bytes": 439,
+      "sha256": "5553a71040d6061b5a9a06e1bb5716e4bb324f744339653e484115e190aa5725",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/config/.gitkeep",
+      "etapa": 12,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "impreso": false
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java",
+      "etapa": 12,
+      "bytes": 904,
+      "sha256": "666686fce2797730af07025aeb62034b5106df60b7e2c3b08cc4980bd5d56b70",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/controller/DespachoController.java",
+      "etapa": 12,
+      "bytes": 1464,
+      "sha256": "e1d16f208133452cf58767dabed3d3dbd4ae4ba3899d2aacd8f11cbcb59e3107",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoRequest.java",
+      "etapa": 12,
+      "bytes": 699,
+      "sha256": "006d0446766967882f72af162aa48c01f5f362fc11c5b43163809b504be3659d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoResponse.java",
+      "etapa": 12,
+      "bytes": 682,
+      "sha256": "2c28a88babecd5e6ae82f0aae33c4989bbb6a6bcee85fbb168147590cb9908a4",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/Despacho.java",
+      "etapa": 12,
+      "bytes": 1167,
+      "sha256": "a7cb5f2c786d31a6ddf74d085ca3137402e6334f8523727925fe38af3395336f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/EstadoDespacho.java",
+      "etapa": 12,
+      "bytes": 137,
+      "sha256": "75c8b1910f3a434cca391d3d8ea135c7567932bda91d5ff3cc49496a30fbf14d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/mapper/DespachoMapper.java",
+      "etapa": 12,
+      "bytes": 1371,
+      "sha256": "3d92366df5b6bc0edea864cc309ef6c4177fa46c5f68d74b13c74643deb7061f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/repository/DespachoRepository.java",
+      "etapa": 12,
+      "bytes": 390,
+      "sha256": "497aac98a7478346f63db7d2ea17caf639ec0007d55b5baa9442e50a84ab8adc",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/service/DespachoService.java",
+      "etapa": 12,
+      "bytes": 4385,
+      "sha256": "69996ea1361a3a45fe16fc59e32eafdf0c2189c4d1990b2c5c0c70135b4a4a7f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaRequest.java",
+      "etapa": 12,
+      "bytes": 290,
+      "sha256": "2bf3e063539be07ead5885313456e91706b193eb8895e38b42d325f1fb98f699",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaResponse.java",
+      "etapa": 12,
+      "bytes": 459,
+      "sha256": "7c5bd14bf2636630570f0ef47c6bc4387dc922bc9d0c10fb9651b5cbe58fee17",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaRequest.java",
+      "etapa": 12,
+      "bytes": 780,
+      "sha256": "bd94140d34bbdd82125aad05d4686f7c1fe220ad82dedfe396df1d34b3fdac4a",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaResponse.java",
+      "etapa": 12,
+      "bytes": 788,
+      "sha256": "0f8e905691681bec81f77417861b90239956ef9af916ec827ec6d15b2bd3683d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/DetalleVenta.java",
+      "etapa": 12,
+      "bytes": 855,
+      "sha256": "4d8872f9dbd651849abc5456be57dc0bb2762e90cb3d5a6021c8b4b73651d575",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/EstadoVenta.java",
+      "etapa": 12,
+      "bytes": 171,
+      "sha256": "41d90f42eef0e099c405a3f1ce374625f591e88ed8774c3996cb051f293bb4ef",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java",
+      "etapa": 12,
+      "bytes": 1578,
+      "sha256": "ffd7b2809722ac8ed8d8976435c280d288160f8bb9f4e3c764dcc24f866f2dba",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/GlobalExceptionHandler.java",
+      "etapa": 12,
+      "bytes": 2075,
+      "sha256": "550e8424533b6c2a444017f6bebaa05131958e132f9339a137dcb98ec496491b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/ResourceNotFoundException.java",
+      "etapa": 12,
+      "bytes": 200,
+      "sha256": "af2b3c04c9351b146293d22617ebcd3727b4779e1d2c1f3eaa7e13e6ca9c43dc",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/filter/CorrelationIdFilter.java",
+      "etapa": 12,
+      "bytes": 1429,
+      "sha256": "1022ccf3b590bd91aaaa58a5d1401689e04a8a86b32422e953bfe3d06cfd4deb",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/DetalleVentaMapper.java",
+      "etapa": 12,
+      "bytes": 595,
+      "sha256": "8fa3c0a9787cb2487fa57ed5f15bcc3e3c3bdf2edea990a7a9ac1c33054391bd",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/VentaMapper.java",
+      "etapa": 12,
+      "bytes": 1058,
+      "sha256": "87f5159aa77c0bac311c0ca3ea4e517ff5482695fa4b7f0b071cf43a0ed589c3",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "etapa": 12,
+      "bytes": 2684,
+      "sha256": "0bbf3e9e88ae28c928d4e8b7ffebfabb36f1b06f70aa61c063d80aff30117522",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/repository/VentaRepository.java",
+      "etapa": 12,
+      "bytes": 462,
+      "sha256": "1df7be15bd3eabaaa89a6c1c5101066ad11f468bab1e54acf555f65693a394ed",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "etapa": 12,
+      "bytes": 8111,
+      "sha256": "d29cf9bdd33aba9e0644f6ccfe9f70526f5307a7d8ba78d8017a90fda06a847b",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/resources/application.yml",
+      "etapa": 12,
+      "bytes": 160,
+      "sha256": "dc38915bba43b774639285d57f921ac20c1a0639891b73417b7daf3c251234db",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/resources/db/migration/V1__create_venta_tables.sql",
+      "etapa": 12,
+      "bytes": 551,
+      "sha256": "df80717c4afd60b902a0b3049b06f71b118791b069f614c87fd9173ad94188aa",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/resources/db/migration/V2__saga_identity.sql",
+      "etapa": 12,
+      "bytes": 377,
+      "sha256": "d3e6a85b17512ea82729da2a3a3ec08a084b52bff436556cce61b2167a270338",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/resources/db/migration/V3__transactional_messaging.sql",
+      "etapa": 12,
+      "bytes": 465,
+      "sha256": "46d7b5f7e71da82dfdbd46c32fe18eac6ec254f5db0c50393dd05a8e6e5d4d55",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/resources/db/migration/V4__sede_venta.sql",
+      "etapa": 12,
+      "bytes": 46,
+      "sha256": "8534385ce9ddae3613bc1363cc3cd503dedae0d837883c3bebe05b67a8a6266f",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/resources/db/migration/V5__despachos.sql",
+      "etapa": 12,
+      "bytes": 402,
+      "sha256": "73d23b6abee23d1253951ea8be167192dc18199f82c4200200c8368aae8e2c0d",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/resources/db/migration/V6__delivery_checkout.sql",
+      "etapa": 12,
+      "bytes": 693,
+      "sha256": "3b2fba3ee9f38da75b94cdccf5c0d9821acb385d4d297c8a1bc0d6060812c6fa",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/main/resources/logback-spring.xml",
+      "etapa": 12,
+      "bytes": 1035,
+      "sha256": "b8b37722ff319e6920c2502b831c5acd23c2795260ed796f8d08252978afd842",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DeliveryCheckoutIntegrationTests.java",
+      "etapa": 12,
+      "bytes": 4143,
+      "sha256": "bc6931c8a032bea24ada44fd07a3a81339749ace06ededd6d87c74a6ec747a63",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DespachoOwnershipTest.java",
+      "etapa": 12,
+      "bytes": 2102,
+      "sha256": "e0bfb70fd273ef0ee84012b75277a4c1b50b2ee52c5f4bc6808ec448fecfd5ed",
+      "impreso": true
+    },
+    {
+      "ruta": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplicationTests.java",
+      "etapa": 12,
+      "bytes": 227,
+      "sha256": "1484608f96df11e907372dd3cb4c261ea31faea5b38a7a1b4ecbd9f163511a54",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/CONSULTAR-ESTADO.bat",
+      "etapa": 18,
+      "bytes": 226,
+      "sha256": "06129fdb923427fd844f1d604ade39278787f7d6249ef210385ef939a5435ddd",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/DETENER-GARRITAS.bat",
+      "etapa": 18,
+      "bytes": 217,
+      "sha256": "90805a559eec0cf49567bc46e234618aaaa0294ecc8f81df7c061a82751b2d73",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/INICIAR-GARRITAS.bat",
+      "etapa": 18,
+      "bytes": 334,
+      "sha256": "63ca7eb80ee2e9afc80b4a038a0210574993bce020f5079016110e04a6f6e093",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/README.md",
+      "etapa": 18,
+      "bytes": 793,
+      "sha256": "bb1051a90ab7d29d7d4290f92655e929dae0cbc8e5b3f9c8579d02a4931b176f",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/arrancar-todo.ps1",
+      "etapa": 18,
+      "bytes": 213,
+      "sha256": "deda3c7a4c57904ff9e0e5d2cc9d49080a5fa813015032f2ad562402577c687d",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/docker/.env.example",
+      "etapa": 18,
+      "bytes": 190,
+      "sha256": "1d3f5ccdfbde56fafd1df7b6396c0e5f423121431aeb9447bdad2c7e5097d30a",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/docker/Dockerfile",
+      "etapa": 18,
+      "bytes": 547,
+      "sha256": "34918d4a4f1ca3b01ef81344daf78723ceb2c556031a469703152d03e55c1e38",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/docker/Dockerfile.dockerignore",
+      "etapa": 18,
+      "bytes": 48,
+      "sha256": "9edd9dd54058a0b51fe7960944291c968162e32855bfbe100222e1be74be9014",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/docker/Dockerfile.runtime",
+      "etapa": 18,
+      "bytes": 407,
+      "sha256": "b844d2ffd156636297857057882a731b21f353d767bb098090c3d08e288a584b",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/docker/Dockerfile.runtime.dockerignore",
+      "etapa": 18,
+      "bytes": 214,
+      "sha256": "199d3580322e9b7d45cd5ccabe714b4d51e1ca23c1eb82b0de59b2d29388ab54",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/docker/README.md",
+      "etapa": 18,
+      "bytes": 1313,
+      "sha256": "3ea6eaabbde0caba29f79d4bf6438668ad94a8973274dc35267d1e94ba468402",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/docker/compose.observability.yml",
+      "etapa": 18,
+      "bytes": 2928,
+      "sha256": "3b12a0c1182d395a386a0967c794a15b60f5d34ea995bdc5ec7a2aa474a5f58a",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/docker/compose.prebuilt.yml",
+      "etapa": 18,
+      "bytes": 1037,
+      "sha256": "2ec6703555e1336a6675a34ab16f9bf62a647063cb8c8c127c71bc0aa5862f4a",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/docker/compose.yml",
+      "etapa": 18,
+      "bytes": 22706,
+      "sha256": "a091347bf49638252a957441e1a41cb0c02e9dfbbf045c12c75065e6674c9217",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/garritas-eventos-py/Dockerfile",
+      "etapa": 18,
+      "bytes": 163,
+      "sha256": "2839fe30474ddde1eb7ebad2b78e2adec1006f07d47524ec23398332933c5d3b",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/garritas-eventos-py/README.md",
+      "etapa": 18,
+      "bytes": 1038,
+      "sha256": "35973aaf4725b6a7665a5e105bc394e45aa056f9bccfc31e6d97ed49f625219e",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/garritas-eventos-py/app/consumer_eventos.py",
+      "etapa": 18,
+      "bytes": 1354,
+      "sha256": "729e21879e497e46deb604982d7ace62e7800ab68a99eff82164406995361066",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/garritas-eventos-py/app/producer_eventos.py",
+      "etapa": 18,
+      "bytes": 1727,
+      "sha256": "d8e6dac7418ba9604233bea8a5ee1043e4794a1e50b1e3fb2008dcfab256a3e8",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/garritas-eventos-py/app/requirements.txt",
+      "etapa": 18,
+      "bytes": 21,
+      "sha256": "af3f6074474fbc028f15ed1aa2ae14db36b582f9c261f9cb6d6b8c6484be06aa",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/garritas-eventos-py/compose.yml",
+      "etapa": 18,
+      "bytes": 264,
+      "sha256": "637d6cd9b5b6c61c58187da0d66b128f39499c423e1208f7726428eca609e9b9",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/garritas.ps1",
+      "etapa": 18,
+      "bytes": 6485,
+      "sha256": "b8aaa460c80535168060adf881d11aadd0e46d9fe5599cca413f97da4f3fc8f8",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/pom.xml",
+      "etapa": 18,
+      "bytes": 1059,
+      "sha256": "743948cb8c41c476183e000e219d5ea1df2cf6e6bddce08269739d4c36f7e222",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/academic_smoke.py",
+      "etapa": 18,
+      "bytes": 7060,
+      "sha256": "e4e968f527d990d47c7b7b718d1a53e94df0b2b9f4950c8b948c8eab70f64ca8",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/consoles.py",
+      "etapa": 18,
+      "bytes": 3477,
+      "sha256": "36cc1c56625d698502aa8559745b46e0bedae2084c4ffef5af8a99cdf6a090b4",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/dev.sh",
+      "etapa": 18,
+      "bytes": 6289,
+      "sha256": "67582d985139bd60cb8c38d58c27589d01525641268747013a8c92ad208f0b86",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/domain_smoke.py",
+      "etapa": 18,
+      "bytes": 15354,
+      "sha256": "a05f1862474036c1ecc5a3d0eea2b5c4e3f7a073c4eee124706ddaa2fdbd0127",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/faults.py",
+      "etapa": 18,
+      "bytes": 5053,
+      "sha256": "cec5aadb82a83ffb507891b4a23e4c383b51ee4e2b03a3386a1a00f9e9058ca7",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/frontend_review.py",
+      "etapa": 18,
+      "bytes": 5251,
+      "sha256": "91dbece57167211a114075d2f230536886ff9bd016954827e7a9b70fd54587b9",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/integracion_fio_smoke.py",
+      "etapa": 18,
+      "bytes": 17530,
+      "sha256": "3f36491da8db75fda28b4b01310ecf5c5f400ad130831ed5a9b970ce54314219",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/migrar-despachos.ps1",
+      "etapa": 18,
+      "bytes": 1358,
+      "sha256": "1a1cc4b2d2ef3a4442c8faab9ca8766d8b54e97e05178ab023eeed73b0d0f6b8",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/migrar-despachos.sql",
+      "etapa": 18,
+      "bytes": 801,
+      "sha256": "39ff362c0e4f1745bf6a493976a68bb69507fa97d52db0f65484664af63e05d5",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/migrar_despachos.py",
+      "etapa": 18,
+      "bytes": 1545,
+      "sha256": "5ae70053eb764b41d83cffd062cbcc3e317b6b316d6a34593b89e078ca0f90b4",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/observability.sh",
+      "etapa": 18,
+      "bytes": 1184,
+      "sha256": "6ad8bb962159c1b5e045547b459387f2772fe2a54bc863684aeaf9289446cecb",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/paquetes_frontend_smoke.py",
+      "etapa": 18,
+      "bytes": 5676,
+      "sha256": "ecac1d7f167bf91eda9dd571fb16c5fd8e93ba8139f4a8b77d074d7c3b76f4b5",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/requirements-test.txt",
+      "etapa": 18,
+      "bytes": 19,
+      "sha256": "cfa2186c0470feac813f1ac67c71e54a53021ec949026946255874958d245e82",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/resiliencia_logistica.py",
+      "etapa": 18,
+      "bytes": 3629,
+      "sha256": "e90921bcd2607ba9053d0c72c73b231a2885fec05c765fe9a8edd36bff8232ef",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/scaling.py",
+      "etapa": 18,
+      "bytes": 2606,
+      "sha256": "d1a2fa62218354975664a735cf18b6eb8b831af8f24bbadd259e7eb39ca0fbbd",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/smoke.py",
+      "etapa": 18,
+      "bytes": 9417,
+      "sha256": "2ba718bc0eb2711c8571dc709c6f59e3c05a11a9b8090d1afe99d941740c2dd9",
+      "impreso": true
+    },
+    {
+      "ruta": "uso-rapido/scripts/status.py",
+      "etapa": 18,
+      "bytes": 2635,
+      "sha256": "729135bda98325262660b3431845f64a84e3759d76cd477bd6763f17b7101459",
+      "impreso": true
+    }
+  ]
+}

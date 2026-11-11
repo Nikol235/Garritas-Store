@@ -26,14 +26,14 @@ Los Compose y Dockerfiles de integración que estaban en la raíz se movieron a 
 
 | Pantalla | Cliente | Administrador |
 |---|---|---|
-| Catálogo, nueva orden y carrito | Buscar, filtrar, seleccionar sede y comprar | Igual; además gestionar productos y categorías |
+| Catálogo, nueva orden y carrito | Buscar, filtrar, seleccionar sede y comprar | Gestionar productos y categorías; no comprar |
 | Sedes | Consultar sedes activas del Perú y seleccionar una | Crear, editar, activar y desactivar sedes |
 | Especialistas | Consultar profesionales y sus especialidades; reservar cita | Gestionar profesionales y asignar varias especialidades |
 | Mi cuenta y mascotas | Editar su perfil y gestionar sus propias mascotas | Perfil propio y administración de clientes |
 | Citas | Reservar una o varias prestaciones para sus mascotas | Ver todas, confirmar y marcar atención; revisar detalle, total y duración |
-| Envíos de pedidos (Venta) | Seleccionar cobertura y solicitar entrega de un pedido pagado | Gestionar tránsito y entrega |
+| Envíos de pedidos (Venta) | Elegir y pagar el envío al comprar; consultar su despacho | Gestionar tránsito y entrega |
 | Servicios por sede (Institución) | Consultar prestaciones, precios y duración | Gestionar prestaciones y ofertas por sede |
-| Logística (Envío) | Consultar coberturas durante una solicitud de entrega | Gestionar transportistas, zonas y coberturas |
+| Logística (Envío) | Consultar coberturas durante el checkout | Gestionar transportistas, zonas y coberturas |
 | Planes y suscripciones (Usuario) | Contratar, renovar, cancelar y consultar períodos propios | Administrar planes y auditar suscripciones |
 | Pagos y pedidos | Ver únicamente los suyos | Consultar todos |
 
@@ -52,6 +52,10 @@ Los permisos se verifican también en el Gateway y los microservicios. Ocultar b
 [Asignación, reglas, migración y demo por integrante](docs/asignacion-y-sustentacion.md). [Contraste con las sesiones 1–11 del ingeniero](docs/alineacion-pagatu.md).
 
 El perfil confirma su guardado leyendo nuevamente la API. La edad de mascotas se registra en **días o meses**, con unidad explícita; las edades históricas en años se convierten a meses mediante migración. El despacho operativo pasa a Venta; el archivo histórico de Envío se conserva y el lanzador DEV lo migra sin duplicar ventas. Las N:M con atributos se implementan con entidades de asociación y claves foráneas locales.
+
+## Manual de construcción desde cero
+
+[Guía paso a paso, HTML copiable, PDF y fuentes por etapas](docs/manual-construccion-completa/README.md). Explica cómo crear y conectar todos los componentes desde una carpeta vacía.
 
 ## Inicio rápido
 

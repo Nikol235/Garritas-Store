@@ -1,0 +1,45 @@
+{
+  "commit": "5b61028187528a9b7918715e1661bb6a7d50a723",
+  "fuentes": 529,
+  "bloques_completos": 478,
+  "etapas": 18,
+  "pdf": [
+    {
+      "archivo": "00-Manual-paso-a-paso.pdf",
+      "paginas": 86,
+      "marcadores": 59,
+      "texto_seleccionable": true
+    },
+    {
+      "archivo": "02-Codigo-infraestructura.pdf",
+      "paginas": 94,
+      "marcadores": 8,
+      "texto_seleccionable": true
+    },
+    {
+      "archivo": "03-Codigo-maestros.pdf",
+      "paginas": 129,
+      "marcadores": 4,
+      "texto_seleccionable": true
+    },
+    {
+      "archivo": "04-Codigo-transacciones.pdf",
+      "paginas": 168,
+      "marcadores": 4,
+      "texto_seleccionable": true
+    },
+    {
+      "archivo": "05-Codigo-Angular-y-herramientas.pdf",
+      "paginas": 195,
+      "marcadores": 2,
+      "texto_seleccionable": true
+    }
+  ],
+  "html": {
+    "copia_exacta": true,
+    "busqueda_por_ruta": true,
+    "navegacion": true,
+    "sin_desbordamiento_horizontal": true
+  },
+  "alcance": "Verificación documental; no ejecuta PowerShell ni repite pruebas funcionales Java/Angular."
+}

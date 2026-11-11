@@ -15,6 +15,7 @@ nav:
   - Explicación y preguntas: sustentacion/Guia-de-sustentacion-Garritas.md
   - Resumen oral: sustentacion/Resumen-para-exponer.md
   - Estudio C4 Catálogo y Usuario: guia-estudio-catalogo-usuario/README.md
+  - Construir desde cero: manual-construccion-completa/README.md
   - Manuales PDF: manuales/README.md
 markdown_extensions:
   - tables

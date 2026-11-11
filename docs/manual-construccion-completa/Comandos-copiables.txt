@@ -1,0 +1,15 @@
+GARRITAS STORE — CONSTRUIR Y EJECUTAR
+Referencia 5b61028187528a9b7918715e1661bb6a7d50a723
+
+cd "$HOME\proyectos\Garritas-desde-cero"
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+$env:NG_CLI_ANALYTICS = "false"
+.\uso-rapido\garritas.ps1 -Accion build
+.\uso-rapido\garritas.ps1 -Accion iniciar
+.\uso-rapido\garritas.ps1 -Accion estado
+docker compose -f obs/compose-dev.yml up -d
+Start-Process "http://localhost:4200"
+Start-Process "http://localhost:13000"
+
+# Detener
+.\uso-rapido\garritas.ps1 -Accion detener
