@@ -1,5 +1,22 @@
 # Garritas Store
 
+Repositorio de continuidad para preparar el despliegue del proyecto. Conserva el historial de [Garritas-](https://github.com/Nikol235/Garritas-/tree/feat/garritas-store) hasta la versión `8944d5a`, incluidas Ventas por rol, fotos locales y constancias PDF. La rama principal de este repositorio es **main**.
+
+**Estado:** ejecución local verificada; despliegue en Railway/Supabase por preparar. Los pagos siguen simulados: Mercado Pago aún no está integrado. Los manuales históricos mantienen enlaces a los commits originales como referencia; los comandos de clonación actuales son los siguientes.
+
+Campus Juliaca · Sistemas Distribuidos · semestre 2026-2. [Descripción y temas del repositorio](docs/configuracion-del-repositorio.md).
+
+## Clonar este repositorio
+
+```powershell
+git clone https://github.com/Nikol235/Garritas-Store.git
+cd Garritas-Store
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+$env:NG_CLI_ANALYTICS = "false"
+```
+
+Continúa con la compilación y el arranque de la sección **Inicio rápido**. Clonar no copia bases de datos ni las fotos locales: su persistencia y respaldo se explican en la [guía de imágenes y comprobantes](docs/ventas-imagenes-y-comprobantes.md).
+
 Tienda y bienestar para mascotas en el Perú. Microservicios con **Java 21 / Spring Boot 4**, PostgreSQL/Flyway, Config Server, Eureka, Gateway, Kafka, Keycloak y un cliente **Angular 22**.
 
 La organización sigue el [proyecto de referencia Pagatu](https://github.com/262dist/pagatu): infraestructura, servicios, Kafka, identidad, observabilidad, clientes y casos de uso rápido tienen sus propias carpetas.
@@ -7,7 +24,7 @@ La organización sigue el [proyecto de referencia Pagatu](https://github.com/262
 ## Estructura
 
 ```text
-Garritas-/
+Garritas-Store/
 ├── .github/          # CI: compilación Java y pruebas/build de Angular
 ├── clients/          # garritas-frontend
 ├── docs/             # Arquitectura, ejecución y evidencia de validación
