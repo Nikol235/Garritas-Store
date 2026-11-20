@@ -4,7 +4,7 @@ Repositorio de continuidad para preparar el despliegue del proyecto. Conserva el
 
 **Estado:** ejecución local verificada; despliegue en Railway/Supabase por preparar. Los pagos siguen simulados: Mercado Pago aún no está integrado. Los manuales históricos mantienen enlaces a los commits originales como referencia; los comandos de clonación actuales son los siguientes.
 
-Campus Juliaca · Sistemas Distribuidos · semestre 2026-2. [Descripción y temas del repositorio](docs/configuracion-del-repositorio.md).
+Campus Juliaca · Sistemas Distribuidos · semestre 2026-2 · Grupo 2 · Ciclo 5 G · Sección única. [Descripción y temas del repositorio](docs/configuracion-del-repositorio.md).
 
 ## Clonar este repositorio
 

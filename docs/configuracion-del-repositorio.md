@@ -12,7 +12,7 @@ La conexión de GitHub usada para copiar el código permite el push, pero rechaz
 2. En **Description** pega:
 
 ```text
-Tienda de mascotas con microservicios: Spring Boot, Angular, PostgreSQL, Kafka y Keycloak. Proyecto de Sistemas Distribuidos.
+Tienda de mascotas con microservicios: Spring Boot, Angular, PostgreSQL, Kafka y Keycloak. Proyecto de Sistemas Distribuidos del Grupo 2, ciclo 5 G, sección única.
 ```
 
 3. En **Topics**, agrega estos temas, confirmando cada uno con Enter:
@@ -20,6 +20,9 @@ Tienda de mascotas con microservicios: Spring Boot, Angular, PostgreSQL, Kafka y
 ```text
 campus-juliaca
 dist
+grupo-2
+ciclo-5-g
+seccion-u
 linea-software
 semestre-2026-2
 tipo-ps
@@ -34,7 +37,7 @@ keycloak
 
 4. Guarda los cambios.
 
-El grupo y la sección deben ser los reales del equipo. No se copian `grupo-0-pagatu` ni `seccion-u` de la referencia sin confirmar esos datos. Los temas son etiquetas de GitHub, no carpetas ni configuración de Spring.
+`grupo-2` identifica al equipo, `ciclo-5-g` al ciclo y `seccion-u` a la sección única.
 
 El campo **Website** se completará cuando exista una dirección pública real. Copiar a GitHub todavía no despliega la tienda ni conecta Mercado Pago. No activar GitHub Pages como sustituto del backend Java.
 
