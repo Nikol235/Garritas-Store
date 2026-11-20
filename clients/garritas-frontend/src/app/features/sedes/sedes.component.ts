@@ -1,14 +1,18 @@
-import { Component, inject, signal, output } from "@angular/core";
+import { ImageEditor } from "../../shared/image-editor";
+import { ResourceImage } from "../../shared/resource-image";
+import { concatMap, map, of } from "rxjs";
+import { Component, viewChild, inject, signal, output } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { Auth } from "../../core/auth";
 import { DomainApi, Feedback, Sede } from "../../core/domain-api";
 import { CartStore } from "../cart/cart-store";
 @Component({
   selector: "app-sedes",
-  imports: [FormsModule],
+  imports: [FormsModule, ImageEditor, ResourceImage],
   templateUrl: "./sedes.component.html",
 })
 export class SedesComponent extends Feedback {
+  readonly imageEditor = viewChild(ImageEditor);
   readonly auth = inject(Auth);
   readonly cart = inject(CartStore);
   private readonly api = inject(DomainApi);
@@ -31,6 +35,7 @@ export class SedesComponent extends Feedback {
     });
   }
   edit(s: Sede) {
+    this.imageEditor()?.reset();
     this.id = s.id;
     this.model = {
       nombre: s.nombre,
@@ -41,6 +46,7 @@ export class SedesComponent extends Feedback {
     };
   }
   reset() {
+    this.imageEditor()?.reset();
     this.id = undefined;
     this.model = {
       nombre: "",
@@ -52,9 +58,17 @@ export class SedesComponent extends Feedback {
   }
   save() {
     this.send(
-      this.id
+      (this.id
         ? this.api.put<Sede>("/sedes/" + this.id, this.model)
-        : this.api.post<Sede>("/sedes", this.model),
+        : this.api.post<Sede>("/sedes", this.model)
+      ).pipe(
+        concatMap((saved) => {
+          this.id = saved.id; // Si falla la imagen, el reintento no duplica el registro.
+          return (this.imageEditor()?.persist(saved.id) ?? of(void 0)).pipe(
+            map(() => saved),
+          );
+        }),
+      ),
       () => {
         this.reset();
         this.load();

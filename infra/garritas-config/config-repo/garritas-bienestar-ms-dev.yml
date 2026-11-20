@@ -1,6 +1,10 @@
 server:
   port: 8088
 spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 6MB
   datasource:
     url: jdbc:postgresql://localhost:15448/garritas_bienestar_db
     username: garritas

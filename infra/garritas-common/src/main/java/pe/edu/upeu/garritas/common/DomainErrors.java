@@ -11,6 +11,11 @@ import org.springframework.web.server.ResponseStatusException;
 
 @RestControllerAdvice
 public class DomainErrors {
+  @ExceptionHandler(org.springframework.web.multipart.MaxUploadSizeExceededException.class)
+  ProblemDetail imageTooLarge(Exception ex) {
+    return ProblemDetail.forStatusAndDetail(HttpStatus.PAYLOAD_TOO_LARGE, "La imagen no puede superar 5 MB");
+  }
+
   @ExceptionHandler(ResponseStatusException.class)
   ProblemDetail status(ResponseStatusException ex) {
     return ProblemDetail.forStatusAndDetail(

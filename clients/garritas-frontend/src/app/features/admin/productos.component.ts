@@ -1,4 +1,7 @@
-import { Component, inject, signal } from "@angular/core";
+import { ImageEditor } from "../../shared/image-editor";
+import { ResourceImage } from "../../shared/resource-image";
+import { concatMap, map, of } from "rxjs";
+import { Component, viewChild, inject, signal } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { CurrencyPipe } from "@angular/common";
 import { DomainApi, Feedback, PageResponse } from "../../core/domain-api";
@@ -6,10 +9,11 @@ import { Producto, Categoria } from "../../core/api";
 
 @Component({
   selector: "app-admin-productos",
-  imports: [FormsModule, CurrencyPipe],
+  imports: [FormsModule, CurrencyPipe, ImageEditor, ResourceImage],
   templateUrl: "./productos.component.html",
 })
 export class ProductosComponent extends Feedback {
+  readonly imageEditor = viewChild(ImageEditor);
   private readonly api = inject(DomainApi);
   readonly productos = signal<Producto[]>([]);
   readonly categorias = signal<Categoria[]>([]);
@@ -116,6 +120,7 @@ export class ProductosComponent extends Feedback {
   }
 
   edit(p: Producto) {
+    this.imageEditor()?.reset();
     this.id = p.id;
     const catIds =
       p.categorias && p.categorias.length > 0
@@ -135,6 +140,7 @@ export class ProductosComponent extends Feedback {
   }
 
   reset() {
+    this.imageEditor()?.reset();
     this.id = undefined;
     this.model = {
       nombre: "",
@@ -153,9 +159,17 @@ export class ProductosComponent extends Feedback {
     };
 
     this.send(
-      this.id
+      (this.id
         ? this.api.put<Producto>("/productos/" + this.id, payload)
-        : this.api.post<Producto>("/productos", payload),
+        : this.api.post<Producto>("/productos", payload)
+      ).pipe(
+        concatMap((saved) => {
+          this.id = saved.id; // Si falla la imagen, el reintento no duplica el registro.
+          return (this.imageEditor()?.persist(saved.id) ?? of(void 0)).pipe(
+            map(() => saved),
+          );
+        }),
+      ),
       () => {
         this.closeProductModal();
         this.load();

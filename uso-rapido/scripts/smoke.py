@@ -82,7 +82,7 @@ def main():
             page.get_by_role('combobox', name='Categoría', exact=True).select_option(label='Todas las categorías')
             page.get_by_role('searchbox', name='Buscar productos').fill('gato adulto')
             expect(page.locator('.product-card')).to_have_count(1)
-            page.get_by_role('searchbox', name='Buscar productos').fill('')
+            page.get_by_role('searchbox', name='Buscar productos').fill(suffix)
             page.get_by_role('button', name='Añadir ' + producto['nombre'] + ' al carrito', exact=True).click()
             page.get_by_role('button', name='Añadir ' + toy['nombre'] + ' al carrito', exact=True).click()
             quantity = page.get_by_label('Cantidad de ' + producto['nombre'], exact=True)
@@ -108,8 +108,8 @@ def main():
             assert created.value.status==201
             current=next(v for v in request('/ventas',cliente) if any(d['idProducto']==producto['id'] for d in v['detalles']))
             wait_state(current['id'],cliente,'PAGADA')
-            expect(page.get_by_role('heading', name='Mis pedidos', exact=True)).to_be_visible()
-            current_row=page.locator('article.order').filter(has=page.get_by_role('heading',name='Pedido #'+str(current['id']),exact=True))
+            expect(page.get_by_role('heading', name='Mis compras', exact=True)).to_be_visible()
+            current_row=page.locator('app-ventas tbody tr').filter(has=page.get_by_role('cell',name='#'+str(current['id']),exact=True))
             expect(current_row.locator('.badge')).to_have_text('Pagada', timeout=45000)
             expect(page.get_by_role('button', name='Carrito, 0 unidades', exact=True)).to_be_visible()
             assert request('/productos/' + str(producto['id']))['stock'] == 9

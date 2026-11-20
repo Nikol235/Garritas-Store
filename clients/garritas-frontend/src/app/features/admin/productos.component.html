@@ -2,10 +2,7 @@
   <div>
     <p class="eyebrow">ADMINISTRACIÓN</p>
     <h1>Catálogo de Productos</h1>
-    <p>
-      Gestiona productos, asigna múltiples categorías (Muchos a Muchos), precios
-      y stock disponible.
-    </p>
+    <p>Gestiona productos, asigna categorías, precios y stock disponible.</p>
   </div>
   <div class="actions">
     <button (click)="load()">Actualizar</button>
@@ -74,7 +71,7 @@
     <thead>
       <tr>
         <th>Producto</th>
-        <th>Categorías (Muchos a Muchos)</th>
+        <th>Categorías</th>
         <th>Precio</th>
         <th>Stock</th>
         <th>Estado</th>
@@ -85,7 +82,12 @@
       @for (p of productos(); track p.id) {
         <tr>
           <td>
-            <strong>{{ p.nombre }}</strong>
+            <app-resource-image
+              class="product-thumbnail"
+              resource="productos"
+              [id]="p.id"
+              [label]="p.nombre"
+            /><strong>{{ p.nombre }}</strong>
             @if (p.descripcion) {
               <div class="muted" style="font-size: 0.8rem; margin-top: 0.2rem">
                 {{ p.descripcion }}
@@ -197,7 +199,7 @@
 
 <!-- MODAL FLOTANTE: CREAR / EDITAR PRODUCTO -->
 @if (showProductModal()) {
-  <div class="modal-backdrop" (click)="closeProductModal()">
+  <div class="modal-backdrop" (click)="!busy() && closeProductModal()">
     <div
       class="modal-card"
       role="dialog"
@@ -213,7 +215,7 @@
         <button
           type="button"
           class="modal-close"
-          (click)="closeProductModal()"
+          (click)="!busy() && closeProductModal()"
           aria-label="Cerrar modal"
         >
           ✕
@@ -221,6 +223,7 @@
       </div>
 
       <form #f="ngForm" (ngSubmit)="save()">
+        <app-image-editor resource="productos" [id]="id" [disabled]="busy()" />
         <div class="field-grid">
           <label>
             Nombre del producto
@@ -284,7 +287,7 @@
           "
         >
           <legend style="font-weight: 600; color: #23523e; padding: 0 0.5rem">
-            Categorías del Producto (Muchos a Muchos: Producto ↔ Categoria)
+            Categorías del producto
           </legend>
           <p
             class="muted"
@@ -339,7 +342,9 @@
           class="actions"
           style="margin-top: 1.4rem; justify-content: flex-end"
         >
-          <button type="button" (click)="closeProductModal()">Cancelar</button>
+          <button type="button" (click)="!busy() && closeProductModal()">
+            Cancelar
+          </button>
           <button
             class="primary"
             [disabled]="f.invalid || model.categoriaIds.length === 0 || busy()"

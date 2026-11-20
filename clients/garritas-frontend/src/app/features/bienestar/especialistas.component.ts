@@ -1,4 +1,7 @@
-import { Component, inject, signal, output } from "@angular/core";
+import { ImageEditor } from "../../shared/image-editor";
+import { ResourceImage } from "../../shared/resource-image";
+import { concatMap, map, of } from "rxjs";
+import { Component, viewChild, inject, signal, output } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { forkJoin } from "rxjs";
 import { Auth } from "../../core/auth";
@@ -11,10 +14,11 @@ import {
 } from "../../core/domain-api";
 @Component({
   selector: "app-especialistas",
-  imports: [FormsModule],
+  imports: [FormsModule, ImageEditor, ResourceImage],
   templateUrl: "./especialistas.component.html",
 })
 export class EspecialistasComponent extends Feedback {
+  readonly imageEditor = viewChild(ImageEditor);
   readonly auth = inject(Auth);
   private readonly api = inject(DomainApi);
   readonly reservar = output<number>();
@@ -57,6 +61,7 @@ export class EspecialistasComponent extends Feedback {
     );
   }
   edit(p: Profesional) {
+    this.imageEditor()?.reset();
     this.id = p.id;
     this.model = {
       nombre: p.nombre,
@@ -75,9 +80,17 @@ export class EspecialistasComponent extends Feedback {
   save() {
     const data = { ...this.model, sedeId: this.model.sedeId || null };
     this.send(
-      this.id
+      (this.id
         ? this.api.put<Profesional>("/especialistas/" + this.id, data)
-        : this.api.post<Profesional>("/especialistas", data),
+        : this.api.post<Profesional>("/especialistas", data)
+      ).pipe(
+        concatMap((saved) => {
+          this.id = saved.id; // Si falla la imagen, el reintento no duplica el registro.
+          return (this.imageEditor()?.persist(saved.id) ?? of(void 0)).pipe(
+            map(() => saved),
+          );
+        }),
+      ),
       () => {
         this.id = undefined;
         this.model = {

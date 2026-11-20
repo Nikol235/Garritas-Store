@@ -57,6 +57,10 @@ El perfil confirma su guardado leyendo nuevamente la API. La edad de mascotas se
 
 [Guía paso a paso, HTML copiable, PDF y fuentes por etapas](docs/manual-construccion-completa/README.md). Explica cómo crear y conectar todos los componentes desde una carpeta vacía.
 
+## Ventas, fotos y comprobantes
+
+[Guía de funciones y código](docs/ventas-imagenes-y-comprobantes.md): Ventas para ADMIN, Mis compras para CLIENTE, filtros y detalle; imagen principal local para productos/profesionales/sedes; constancia PDF imprimible para compras pagadas. El pago continúa simulado.
+
 ## Inicio rápido
 
 Requisitos: **JDK 21 completo, Node 24, Docker Compose, Git** y Python 3 para las herramientas Linux/pruebas. Los ejemplos son locales; no se hacen cobros bancarios reales.

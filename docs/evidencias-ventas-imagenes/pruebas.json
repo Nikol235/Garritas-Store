@@ -1,0 +1,156 @@
+{
+  "java": {
+    "tests": 36,
+    "failures": 0,
+    "errors": 0,
+    "suites": [
+      {
+        "suite": "pe.edu.upeu.garritas.common.LocalImagesTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.common.SagaContractTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.config.GarritasConfigApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.eureka.GarritasEurekaApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.gateway.GarritasGatewayApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.bienestar.GarritasBienestarMsApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.bienestar.EspecialidadesIntegrationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.catalogo.GarritasCatalogoMsApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.citas.GarritasCitasMsApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.citas.CitasDetalleIntegrationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.envio.LogisticaIntegrationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.envio.GarritasEnvioMsApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.institucion.GarritasInstitucionMsApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.institucion.PrestacionesIntegrationTests",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.pago.GarritasPagoMsApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.usuario.UsuarioRolIntegrationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.usuario.SuscripcionesIntegrationTests",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.usuario.MascotaEdadValidationTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.usuario.GarritasUsuarioMsApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.venta.DespachoOwnershipTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.venta.GarritasVentaMsApplicationTests",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.venta.DeliveryCheckoutIntegrationTests",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "pe.edu.upeu.garritas.venta.ComprobanteTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0
+      }
+    ]
+  },
+  "angular": {
+    "tests": 19,
+    "failures": 0,
+    "productionBuild": "OK"
+  },
+  "integracion": "resultado.json y capturas; compra desde Angular en smoke.py",
+  "compose": "base y prebuilt config válidos; volúmenes persistentes para imágenes",
+  "alcance": "DEV Linux con PostgreSQL, Kafka, Keycloak y Gateway reales; no se ejecutó PowerShell en Windows ni se conectó Mercado Pago",
+  "observabilidad": "Grafana 13000, Prometheus 19090, Loki 13100 disponibles junto a todos los servicios"
+}

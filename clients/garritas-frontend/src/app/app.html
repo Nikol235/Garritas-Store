@@ -7,7 +7,7 @@
       <p class="nav-section">TIENDA</p>
       <button
         [class.selected]="view()==='catalogo'"
-        (click)="view.set('catalogo')"
+        (click)="view.set('catalogo');refreshCatalogo()"
       >
         Catálogo
       </button>
@@ -49,12 +49,9 @@
       <button [class.selected]="view()==='cuenta'" (click)="view.set('cuenta')">
         Mi cuenta y mascotas
       </button>
-      <button
-        [class.selected]="view()==='pedidos'"
-        (click)="view.set('pedidos');refreshVentas()"
-      >
-        Mis pedidos
-      </button>
+      @if(!auth.admin()){
+      <button [class.selected]="view()==='pedidos'" (click)="view.set('pedidos')">Mis compras</button>
+      }
       <button [class.selected]="view()==='citas'" (click)="view.set('citas')">
         Citas
       </button>
@@ -66,6 +63,7 @@
       </button>
       } @if(auth.admin()){
       <p class="nav-section">ADMINISTRACIÓN</p>
+      <button [class.selected]="view()==='pedidos'" (click)="view.set('pedidos')">Ventas</button>
       <button
         [class.selected]="view()==='logistica'"
         (click)="view.set('logistica')"
@@ -140,6 +138,11 @@
         >
           Crear nueva orden</button
         >}
+        <div class="hero-features">
+          <span>🐾 Hecho para su bienestar</span
+          ><span>♡ Atención en nuestras sedes</span
+          ><span>✦ Productos para cada etapa</span>
+        </div>
       </section>
       <div class="heading">
         <h2>Encuentra su próximo favorito</h2>
@@ -201,46 +204,12 @@
           (login)="auth.login()"
         />
       </div>
-      } @if(view()==='pedidos'){
-      <div class="heading">
-        <h1>{{auth.admin() ? "Pedidos de clientes" : "Mis pedidos"}}</h1>
-        <button (click)="refreshVentas()">Actualizar</button>
-      </div>
-      <p>
-        Los pedidos pendientes se actualizan automáticamente. El pago aún puede
-        rechazarse.
-      </p>
-      @for(v of ventas();track v.id){
-      <article class="order">
-        <div>
-          <h2>Pedido #{{v.id}}</h2>
-          <p>{{v.fecha|date:'medium'}}</p>
-          <p>{{v.detalles.length}} tipos de producto</p>
-        </div>
-        <p>
-          Productos: {{(v.subtotal ?? v.total)|currency:'PEN':'S/ '}} ·
-          {{v.tipoEntrega === 'ENVIO' ? 'Delivery: S/ ' + v.costoEnvio : 'Recojo
-          en sede sin costo'}}
-        </p>
-        <strong>{{v.total|currency:'PEN':'S/ '}}</strong
-        ><span class="badge" [class.waiting]="pending(v.estado)"
-          >{{label(v.estado)}}</span
-        ><button (click)="consultarPago(v.id)">Consultar pago</button
-        >@if(pagos()[v.id];as pago){
-        <p>Pago #{{pago.id}} · {{pago.estado}}</p>
-        }
-      </article>
-      }@empty{
-      <div class="empty-state">
-        <h2>Todavía no tienes pedidos</h2>
-        @if(!auth.admin()){<button
-          class="primary"
-          (click)="view.set('nueva-orden')"
-        >
-          Crear nueva orden</button
-        >}
-      </div>
-      } } @if(view()==='categorias' && auth.admin()){
+      } @if(view()==='pedidos' && auth.loggedIn()){
+      <app-ventas
+        (settled)="refreshCatalogo()"
+        (comprar)="view.set('catalogo')"
+      />
+      } @if(view()==='categorias' && auth.admin()){
       <h1>Administrar categorías</h1>
       <form (ngSubmit)="save()">
         <label

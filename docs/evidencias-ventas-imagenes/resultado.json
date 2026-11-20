@@ -1,0 +1,11 @@
+{
+  "productos": "carga, reemplazo, borrado, idempotencia y permisos OK",
+  "sedes": "carga, reemplazo, borrado, idempotencia y permisos OK",
+  "especialistas": "carga, reemplazo, borrado, idempotencia y permisos OK",
+  "venta": 67,
+  "cancelada": 68,
+  "PDF": "descarga real desde Angular; backend rechaza no pagadas y sin JWT",
+  "stock": "compensacion y clave de reintento verificadas",
+  "pantallas": "roles, filtros, detalle, vista previa, creación, reemplazo y borrado de foto desde Angular",
+  "movil": "390px sin desbordamiento horizontal"
+}

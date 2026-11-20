@@ -16,7 +16,11 @@
 <div class="grid">
   @for (s of sedes(); track s.id) {
     <article class="location-card">
-      <span class="location-icon">📍</span><small>{{ s.ciudad }}</small>
+      <app-resource-image
+        resource="sedes"
+        [id]="s.id"
+        [label]="s.nombre"
+      /><span class="location-icon">📍</span><small>{{ s.ciudad }}</small>
       <h2>{{ s.nombre }}</h2>
       <p>{{ s.direccion }}</p>
       <p>Teléfono: {{ s.telefono }}</p>
@@ -56,6 +60,7 @@
   <section class="panel">
     <h2>{{ id ? "Editar sede" : "Nueva sede" }}</h2>
     <form #f="ngForm" (ngSubmit)="save()">
+      <app-image-editor resource="sedes" [id]="id" [disabled]="busy()" />
       <div class="field-grid">
         <label
           >Nombre de sede<input

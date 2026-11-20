@@ -32,7 +32,12 @@ export interface Venta {
   fecha: string;
   estado: string;
   total: number;
-  detalles: { idProducto: number; cantidad: number; precioUnitario: number }[];
+  detalles: {
+    idProducto: number;
+    cantidad: number;
+    precioUnitario: number;
+    subtotal?: number;
+  }[];
 }
 
 export interface Pago {
@@ -86,6 +91,12 @@ export class Api {
   ) {
     return this.http.post<Venta>(this.url + "/ventas", body, {
       headers: { "Idempotency-Key": key },
+    });
+  }
+
+  comprobante(id: number) {
+    return this.http.get(this.url + "/ventas/" + id + "/comprobante", {
+      responseType: "blob",
     });
   }
 

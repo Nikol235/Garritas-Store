@@ -1,0 +1,230 @@
+<div class="page-heading">
+  <div>
+    <p class="eyebrow">
+      {{ auth.admin() ? "ADMINISTRACIÓN · VENTA" : "TU ESPACIO" }}
+    </p>
+    <h1>{{ auth.admin() ? "Ventas" : "Mis compras" }}</h1>
+    <p>
+      {{
+        auth.admin()
+          ? "Supervisa las compras de la tienda, sus importes y su avance."
+          : "Sigue tus compras y descarga su constancia cuando el pago esté confirmado."
+      }}
+    </p>
+  </div>
+  <button (click)="refresh()" [disabled]="loading()">
+    {{ loading() ? "Actualizando…" : "Actualizar" }}
+  </button>
+</div>
+@if (error()) {
+  <p class="error" role="alert">{{ error() }}</p>
+}
+@if (message()) {
+  <p class="notice" role="status">{{ message() }}</p>
+}
+<p class="simulation-note">
+  Entorno de laboratorio: el pago actual es simulado. La constancia no es una
+  boleta o factura tributaria.
+</p>
+@if (auth.admin()) {
+  <section class="sales-summary" aria-label="Resumen de ventas">
+    <article>
+      <small>Ventas registradas</small><strong>{{ ventas().length }}</strong>
+    </article>
+    <article>
+      <small>Pagadas</small><strong>{{ pagadas().length }}</strong>
+    </article>
+    <article>
+      <small>Total confirmado · incluye envío</small
+      ><strong>{{ totalPagado() | currency: "PEN" : "S/ " }}</strong>
+    </article>
+  </section>
+}
+<section class="panel sales-filters" aria-label="Filtros de compras">
+  <label
+    >{{
+      auth.admin()
+        ? "ID de venta o identificador de cliente"
+        : "Número de compra"
+    }}
+    <input
+      type="search"
+      [ngModel]="search()"
+      (ngModelChange)="search.set($event)"
+      placeholder="Buscar…"
+  /></label>
+  <label
+    >Estado<select [ngModel]="estado()" (ngModelChange)="estado.set($event)">
+      <option value="">Todos los estados</option>
+      @for (e of estados; track e[0]) {
+        <option [value]="e[0]">{{ e[1].nombre }}</option>
+      }
+    </select></label
+  >
+  <label
+    >Desde<input
+      type="date"
+      [ngModel]="desde()"
+      (ngModelChange)="desde.set($event)"
+  /></label>
+  <label
+    >Hasta<input
+      type="date"
+      [min]="desde()"
+      [ngModel]="hasta()"
+      (ngModelChange)="hasta.set($event)"
+  /></label>
+  <button (click)="clear()">Limpiar</button>
+</section>
+@if (desde() && hasta() && desde() > hasta()) {
+  <p class="error" role="alert">
+    La fecha inicial debe ser anterior o igual a la final.
+  </p>
+}
+<p class="muted">
+  {{ filtered().length }} resultados. Las compras pendientes se actualizan cada
+  3 segundos mientras esta pantalla esté abierta.
+</p>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>{{ auth.admin() ? "Venta" : "Compra" }}</th>
+        <th>Fecha / sede</th>
+        @if (auth.admin()) {
+          <th>Cliente</th>
+        }
+        <th>Total</th>
+        <th>Estado</th>
+        <th>Detalle</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (v of filtered(); track v.id) {
+        <tr>
+          <td>
+            <strong>#{{ v.id }}</strong>
+          </td>
+          <td>
+            {{ v.fecha | date: "dd/MM/yyyy HH:mm"
+            }}<small class="block">{{ sede(v.sedeId) }}</small>
+          </td>
+          @if (auth.admin()) {
+            <td class="client-reference">{{ v.idCliente }}</td>
+          }
+          <td>{{ v.total | currency: "PEN" : "S/ " }}</td>
+          <td>
+            <span class="badge" [attr.data-state]="v.estado">{{
+              info(v.estado).nombre
+            }}</span>
+          </td>
+          <td>
+            <button
+              (click)="selected.set(v.id)"
+              [attr.aria-label]="'Ver detalle de compra ' + v.id"
+            >
+              Ver detalle
+            </button>
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td [attr.colspan]="auth.admin() ? 6 : 5">
+            No hay compras que coincidan con estos filtros.
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+@if (!auth.admin() && !ventas().length) {
+  <button class="primary" (click)="comprar.emit()">Explorar productos</button>
+}
+@if (detalle(); as v) {
+  <section class="panel sale-detail" aria-label="Detalle de compra">
+    <div class="heading">
+      <div>
+        <p class="eyebrow">
+          {{ auth.admin() ? "DETALLE DE VENTA" : "DETALLE DE TU COMPRA" }}
+        </p>
+        <h2>Garritas · #{{ v.id }}</h2>
+      </div>
+      <button (click)="selected.set(null)">Cerrar detalle</button>
+    </div>
+    <p>
+      <strong>{{ info(v.estado).nombre }}</strong> ·
+      {{ info(v.estado).descripcion }}
+    </p>
+    <p>{{ v.fecha | date: "dd/MM/yyyy HH:mm" }} · {{ sede(v.sedeId) }}</p>
+    @if (auth.admin()) {
+      <p class="client-reference">Cliente: {{ v.idCliente }}</p>
+    }
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio acordado</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (d of v.detalles; track d.idProducto) {
+            <tr>
+              <td>
+                {{ producto(d.idProducto)
+                }}<small class="block">Referencia #{{ d.idProducto }}</small>
+              </td>
+              <td>{{ d.cantidad }}</td>
+              <td>{{ d.precioUnitario | currency: "PEN" : "S/ " }}</td>
+              <td>
+                {{
+                  d.subtotal ?? d.precioUnitario * d.cantidad
+                    | currency: "PEN" : "S/ "
+                }}
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="sale-totals">
+      <p>
+        Productos <strong>{{ v.subtotal | currency: "PEN" : "S/ " }}</strong>
+      </p>
+      <p>
+        Envío <strong>{{ v.costoEnvio | currency: "PEN" : "S/ " }}</strong>
+      </p>
+      <p>
+        Total <strong>{{ v.total | currency: "PEN" : "S/ " }}</strong>
+      </p>
+    </div>
+    <p>
+      {{
+        v.tipoEntrega === "ENVIO"
+          ? "Delivery: " + v.direccionEntrega
+          : "Recojo en sede, sin cargo de envío."
+      }}
+    </p>
+    <div class="actions">
+      <button (click)="pago(v.id)">Consultar pago</button>
+      @if (v.estado === "PAGADA") {
+        <button class="primary" [disabled]="pdfBusy()" (click)="comprobante(v)">
+          {{ pdfBusy() ? "Preparando…" : "Descargar comprobante PDF" }}
+        </button>
+      }
+    </div>
+    @if (pagos()[v.id]; as p) {
+      <p>
+        Pago #{{ p.id }} · {{ p.estado }} ·
+        {{ p.monto | currency: "PEN" : "S/ " }}
+      </p>
+    }
+    <p class="muted">
+      Los importes son los acordados al comprar. Los nombres de productos y
+      sedes se consultan del catálogo actual. La constancia PDF conserva las
+      referencias y los importes de esta operación.
+    </p>
+  </section>
+}

@@ -19,7 +19,11 @@
 <div class="grid">
   @for (p of profesionales(); track p.id) {
     <article>
-      <div class="avatar">{{ p.nombre.charAt(0) }}</div>
+      <app-resource-image
+        resource="especialistas"
+        [id]="p.id"
+        [label]="p.nombre"
+      />
       <h2>{{ p.nombre }}</h2>
       <p>{{ sede(p.sedeId) }}</p>
       <p>{{ p.telefono }} · {{ p.email }}</p>
@@ -29,13 +33,15 @@
         }
       </div>
       <div class="actions">
-        <button
-          class="primary"
-          [disabled]="!p.activo"
-          (click)="reservar.emit(p.id)"
-        >
-          Reservar cita
-        </button>
+        @if (!auth.admin()) {
+          <button
+            class="primary"
+            [disabled]="!p.activo"
+            (click)="reservar.emit(p.id)"
+          >
+            Reservar cita
+          </button>
+        }
         @if (auth.admin()) {
           <button (click)="edit(p)" [attr.aria-label]="'Editar ' + p.nombre">
             Editar</button
@@ -51,6 +57,11 @@
   <section class="panel">
     <h2>{{ id ? "Editar profesional" : "Nuevo profesional" }}</h2>
     <form #f="ngForm" (ngSubmit)="save()">
+      <app-image-editor
+        resource="especialistas"
+        [id]="id"
+        [disabled]="busy()"
+      />
       <div class="field-grid">
         <label
           >Nombre del profesional<input
@@ -76,7 +87,11 @@
             name="telefono"
             [(ngModel)]="model.telefono" /></label
         ><label
-          >Sede de atención<select aria-label="Sede de atención" name="sedeId" [(ngModel)]="model.sedeId">
+          >Sede de atención<select
+            aria-label="Sede de atención"
+            name="sedeId"
+            [(ngModel)]="model.sedeId"
+          >
             <option [ngValue]="0">Todas las sedes</option>
             @for (s of sedes(); track s.id) {
               @if (s.activo) {
@@ -114,6 +129,11 @@
       >
         Guardar profesional
       </button>
+      <app-image-editor
+        resource="especialistas"
+        [id]="id"
+        [disabled]="busy()"
+      />
     </form>
   </section>
   <section class="panel">

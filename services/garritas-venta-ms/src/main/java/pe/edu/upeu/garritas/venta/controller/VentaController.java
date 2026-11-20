@@ -13,6 +13,15 @@ import pe.edu.upeu.garritas.venta.service.VentaService;
 @RequiredArgsConstructor
 public class VentaController {
   private final VentaService service;
+  private final pe.edu.upeu.garritas.venta.service.ComprobanteService comprobantes;
+
+  @GetMapping(value = "/{id}/comprobante", produces = "application/pdf")
+  public org.springframework.http.ResponseEntity<byte[]> comprobante(@PathVariable Long id) {
+    return org.springframework.http.ResponseEntity.ok()
+        .header("Content-Disposition", "attachment; filename=Garritas-compra-" + id + ".pdf")
+        .cacheControl(org.springframework.http.CacheControl.noStore())
+        .body(comprobantes.generar(id));
+  }
 
   @GetMapping
   public List<VentaResponse> listar() {

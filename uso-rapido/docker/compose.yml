@@ -354,6 +354,7 @@ services:
         MODULE: services/garritas-institucion-ms
     image: garritas/institucion:local
     environment:
+      APP_MEDIA_DIRECTORY: /app/uploads
       SPRING_PROFILES_ACTIVE: prod
       CONFIG_SERVER_URL: http://garritas-config:8888
       JAVA_TOOL_OPTIONS: -Xms64m -Xmx384m
@@ -370,6 +371,7 @@ services:
       SPRING_FLYWAY_LOCATIONS: ${DEMO_MIGRATION_LOCATIONS:-classpath:db/migration,classpath:db/demo}
     restart: on-failure
     volumes:
+    - institucion-imagenes:/app/uploads
     - institucion-logs:/app/logs
     depends_on:
       garritas-config:
@@ -491,6 +493,7 @@ services:
         MODULE: services/garritas-catalogo-ms
     image: garritas/catalogo:local
     environment:
+      APP_MEDIA_DIRECTORY: /app/uploads
       SPRING_PROFILES_ACTIVE: prod
       CONFIG_SERVER_URL: http://garritas-config:8888
       JAVA_TOOL_OPTIONS: -Xms64m -Xmx384m
@@ -507,6 +510,7 @@ services:
       SPRING_FLYWAY_LOCATIONS: ${CATALOGO_MIGRATION_LOCATIONS:-classpath:db/migration,classpath:db/demo}
     restart: on-failure
     volumes:
+    - catalogo-imagenes:/app/uploads
     - catalogo-logs:/app/logs
     depends_on:
       garritas-config:
@@ -674,6 +678,7 @@ services:
       postgres-bienestar:
         condition: service_healthy
     environment:
+      APP_MEDIA_DIRECTORY: /app/uploads
       CONFIG_SERVER_URL: http://garritas-config:8888
       DB_HOST: postgres-bienestar
       DB_NAME: garritas_bienestar_db
@@ -703,6 +708,7 @@ services:
     image: garritas/bienestar:local
     restart: on-failure
     volumes:
+    - bienestar-imagenes:/app/uploads
     - bienestar-logs:/app/logs
 volumes:
   kafka-data: {}
@@ -726,6 +732,9 @@ volumes:
   pago-logs: {}
   postgres-bienestar: {}
   bienestar-logs: {}
+  catalogo-imagenes: {}
+  institucion-imagenes: {}
+  bienestar-imagenes: {}
 networks:
   default:
     name: garritas-prod-net

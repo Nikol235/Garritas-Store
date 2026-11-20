@@ -1,3 +1,4 @@
+import { VentasComponent } from "./features/ventas/ventas.component";
 import { RolesComponent } from "./features/admin/roles.component";
 import { UsuariosRolesComponent } from "./features/admin/usuarios-roles.component";
 import { PrestacionesComponent } from "./features/prestaciones/prestaciones.component";
@@ -12,14 +13,11 @@ import { EnviosComponent } from "./features/envios/envios.component";
 import { PagosComponent } from "./features/pagos/pagos.component";
 import { ProductosComponent } from "./features/admin/productos.component";
 import { ClientesComponent } from "./features/admin/clientes.component";
-import { Component, DestroyRef, inject, signal, effect } from "@angular/core";
-import { CurrencyPipe, DatePipe } from "@angular/common";
+import { Component, inject, signal, effect } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
-import { timer, EMPTY, exhaustMap, catchError } from "rxjs";
 import { HttpErrorResponse } from "@angular/common/http";
 import { Auth } from "./core/auth";
-import { Api, Categoria, Producto, Venta, Pago, pending } from "./core/api";
+import { Api, Categoria, Producto } from "./core/api";
 import { CartStore } from "./features/cart/cart-store";
 import { CartPanel } from "./features/cart/cart-panel";
 import { ProductCatalog } from "./features/catalogo/product-catalog";
@@ -28,8 +26,7 @@ import { ProductCatalog } from "./features/catalogo/product-catalog";
   selector: "app-root",
   imports: [
     FormsModule,
-    CurrencyPipe,
-    DatePipe,
+    VentasComponent,
     CartPanel,
     ProductCatalog,
     PrestacionesComponent,
@@ -55,11 +52,8 @@ export class App {
   private readonly domain = inject(DomainApi);
   readonly label = stateLabel;
   shippingSaleId = 0;
-  private readonly destroy = inject(DestroyRef);
   readonly productos = signal<Producto[]>([]);
   readonly categorias = signal<Categoria[]>([]);
-  readonly ventas = signal<Venta[]>([]);
-  readonly pagos = signal<Record<number, Pago>>({});
   readonly error = signal("");
   readonly notice = signal("");
   readonly busy = signal(false);
@@ -68,7 +62,6 @@ export class App {
     sessionStorage.getItem("garritas-view") ||
       (this.cart.count() > 0 ? "nueva-orden" : "catalogo"),
   );
-  readonly pending = pending;
   nombre = "";
   descripcion = "";
   categoriaId: number | undefined;
@@ -94,28 +87,6 @@ export class App {
     this.refreshCatalogo();
     this.refreshSedes();
     effect(() => sessionStorage.setItem("garritas-view", this.view()));
-    if (this.auth.loggedIn()) this.refreshVentas();
-    timer(3000, 3000)
-      .pipe(
-        exhaustMap(() => {
-          if (
-            !this.auth.loggedIn() ||
-            !this.ventas().some((v) => pending(v.estado))
-          )
-            return EMPTY;
-          return this.api.ventas().pipe(
-            catchError((e) => {
-              this.fail(e);
-              return EMPTY;
-            }),
-          );
-        }),
-        takeUntilDestroyed(this.destroy),
-      )
-      .subscribe((ventas) => {
-        this.ventas.set(ventas);
-        if (!ventas.some((v) => pending(v.estado))) this.refreshCatalogo();
-      });
   }
 
   refreshSedes() {
@@ -166,12 +137,6 @@ export class App {
       error: (e) => this.fail(e),
     });
   }
-  refreshVentas() {
-    this.api.ventas().subscribe({
-      next: (v) => this.ventas.set(v),
-      error: (e) => this.fail(e),
-    });
-  }
   add(producto: Producto) {
     if (this.busy() || this.auth.admin()) return;
     this.error.set("");
@@ -208,7 +173,6 @@ export class App {
               " registrado. Estamos verificando el inventario y el pago.",
           );
           this.view.set("pedidos");
-          this.refreshVentas();
           this.refreshCatalogo();
         },
         error: (e) => {
@@ -227,12 +191,6 @@ export class App {
           }
         },
       });
-  }
-  consultarPago(id: number) {
-    this.api.pago(id).subscribe({
-      next: (p) => this.pagos.update((all) => ({ ...all, [id]: p })),
-      error: (e) => this.fail(e),
-    });
   }
   edit(c: Categoria) {
     this.categoriaId = c.id;

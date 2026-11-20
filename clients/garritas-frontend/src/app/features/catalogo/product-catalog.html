@@ -40,7 +40,7 @@
 <section class="grid product-grid">
   @for (p of paginated(); track p.id) {
   <article class="product-card">
-    <div class="product-icon" aria-hidden="true">{{ icon(p) }}</div>
+    <app-resource-image resource="productos" [id]="p.id" [label]="p.nombre" />
 
     <!-- Etiquetas de Categorías (Muchos a Muchos) -->
     <div class="tags" style="margin: 0; gap: 0.25rem">
