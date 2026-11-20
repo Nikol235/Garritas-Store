@@ -4,6 +4,7 @@ import os, uuid, time, datetime, json
 from smoke import login, request
 from playwright.sync_api import sync_playwright, expect
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 OUT = Path("docs/evidencias-integracion-fio")
 
@@ -76,11 +77,9 @@ def main():
         select_id(cp.get_by_label("Profesional", exact=True), pro["id"])
         ts = int(time.time() + 3600 * 24 * 500 + int(uuid.uuid4().hex[:3], 16) * 1800)
         ts -= ts % 1800
-        cp.get_by_label("Fecha y hora de la cita", exact=True).fill(
-            datetime.datetime.fromtimestamp(ts, datetime.timezone.utc).strftime(
-                "%Y-%m-%dT%H:%M"
-            )
-        )
+        hora_peru = datetime.datetime.fromtimestamp(ts, ZoneInfo("America/Lima"))
+        cp.get_by_label("Fecha de la cita", exact=True).fill(hora_peru.date().isoformat())
+        cp.get_by_label("Hora de la cita", exact=True).select_option(hora_peru.strftime("%H:%M"))
         cp.get_by_label("Motivo de la cita", exact=True).fill(name)
         with cp.expect_response(
             lambda r: r.url.endswith("/citas")

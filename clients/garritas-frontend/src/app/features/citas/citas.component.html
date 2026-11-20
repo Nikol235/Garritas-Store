@@ -57,17 +57,30 @@
             }
           </select></label
         ><label
-          >Fecha y hora de la cita<input
+          >Fecha de la cita<input
             name="fecha"
-            type="datetime-local"
-            step="1800"
-            [(ngModel)]="model.fechaHora"
+            type="date"
+            [min]="primeraFechaDisponible().slice(0, 10)"
+            [(ngModel)]="model.fecha"
+            (ngModelChange)="model.hora = ''"
             required
-        /></label>
+        /></label><label
+          >Hora de la cita<select
+            aria-label="Hora de la cita"
+            name="hora"
+            [(ngModel)]="model.hora"
+            [disabled]="!horarios().length"
+            required
+          >
+            <option value="">Selecciona una hora</option>
+            @for (hora of horarios(); track hora) {
+              <option [value]="hora">{{ hora }}</option>
+            }
+          </select></label>
       </div>
       <p class="muted">
-        Hora local de tu navegador. Elige una fecha futura a las :00 o :30; cada
-        prestación tiene su propia duración y no puede cruzarse con otra cita.
+        Hora de Perú. Elige una fecha futura a las :00 o :30. La cita no puede
+        cruzarse con otra reserva del profesional.
       </p>
       <fieldset class="panel">
         <legend>Prestaciones de la cita</legend>
@@ -115,6 +128,7 @@
           !model.idSede ||
           !model.idMascota ||
           !model.profesionalId ||
+          !model.hora ||
           !model.prestacionIds.length ||
           repetidos() ||
           duration() > 480 ||
@@ -133,7 +147,7 @@
         <th>Cita</th>
         <th>Mascota y profesional</th>
         <th>Sede</th>
-        <th>Fecha</th>
+        <th>Fecha y hora (Perú)</th>
         <th>Estado</th>
         <th>Acciones</th>
       </tr>
@@ -161,7 +175,7 @@
             }}</small>
           </td>
           <td>{{ c.nombreSede || c.idSede }}</td>
-          <td>{{ c.fechaHora | date: "short" }}</td>
+          <td>{{ c.fechaHora | date: "dd/MM/yyyy HH:mm" : zonaHoraria }}</td>
           <td>
             <span class="badge">{{ label(c.estado) }}</span>
           </td>

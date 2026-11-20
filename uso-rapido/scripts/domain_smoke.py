@@ -9,6 +9,7 @@ import urllib.request
 import urllib.error
 import urllib.parse
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from playwright.sync_api import sync_playwright, expect
 from smoke import API, WEB, login, request, wait_state
 TOKENS = {}
@@ -140,10 +141,16 @@ def main():
         choose_id(page,'Sede para la cita',sede['id'])
         choose_id(page,'Profesional',professional['id'])
         date = (datetime.now(timezone.utc)+timedelta(days=2)).replace(hour=15, minute=0, second=0, microsecond=0)
-        page.get_by_label('Fecha y hora de la cita', exact=True).fill(date.strftime('%Y-%m-%dT%H:%M'))
+        hora_peru = date.astimezone(ZoneInfo('America/Lima'))
+        page.get_by_label('Fecha de la cita', exact=True).fill(hora_peru.date().isoformat())
+        page.get_by_label('Hora de la cita', exact=True).select_option(hora_peru.strftime('%H:%M'))
         page.get_by_role('checkbox',name=re.compile(re.escape(prestacion['nombre']))).check()
         page.get_by_label('Motivo de la cita', exact=True).fill('Revisión de Luna '+key)
         cita = submit(page, 'Reservar cita', 'POST', '/citas', 201)
+        assert datetime.fromisoformat(cita['fechaHora']) == date
+        expect(page.get_by_role('row').filter(has_text='Revisión de Luna '+key)).to_contain_text(
+            hora_peru.strftime('%d/%m/%Y %H:%M')
+        )
         request('/citas', cliente, 'POST', {'idMascota':pet['id'],'idSede':sede['id'],'profesionalId':professional['id'],'fechaHora':date.isoformat(),'motivo':'Duplicada','prestacionIds':[prestacion['id']]}, expected=409)
         request('/citas/'+str(cita['id']), other, expected=403)
         request('/citas/'+str(cita['id'])+'/confirmar', cliente, 'POST', expected=403)

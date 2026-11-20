@@ -13,6 +13,11 @@ import {
   Oferta,
 } from "../../core/domain-api";
 import { CartStore } from "../cart/cart-store";
+
+const TURNOS = Array.from({ length: 48 }, (_, turno) =>
+  `${String(Math.floor(turno / 2)).padStart(2, "0")}:${turno % 2 ? "30" : "00"}`,
+);
+
 @Component({
   selector: "app-citas",
   imports: [FormsModule, DatePipe],
@@ -30,6 +35,7 @@ export class CitasComponent extends Feedback {
   readonly needsProfile = signal(false);
   readonly ofertas = signal<Oferta[]>([]);
   readonly label = stateLabel;
+  readonly zonaHoraria = "-0500";
   model = {
     idMascota: 0,
     idSede: Number(
@@ -37,7 +43,8 @@ export class CitasComponent extends Feedback {
     ),
     prestacionIds: [] as number[],
     profesionalId: Number(sessionStorage.getItem("garritas-profesional") ?? 0),
-    fechaHora: "",
+    fecha: "",
+    hora: "",
     motivo: "",
   };
   constructor() {
@@ -127,6 +134,18 @@ export class CitasComponent extends Feedback {
       (p) => !p.sedeId || p.sedeId === this.model.idSede,
     );
   }
+  primeraFechaDisponible(): string {
+    const mediaHora = 30 * 60 * 1000;
+    const siguienteTurno = (Math.floor(Date.now() / mediaHora) + 1) * mediaHora;
+    return new Date(siguienteTurno - 5 * 60 * 60 * 1000).toISOString().slice(0, 16);
+  }
+  horarios(): string[] {
+    const minimo = this.primeraFechaDisponible();
+    if (!this.model.fecha || this.model.fecha < minimo.slice(0, 10)) return [];
+    if (this.model.fecha === minimo.slice(0, 10))
+      return TURNOS.filter((hora) => hora >= minimo.slice(11));
+    return TURNOS;
+  }
   save() {
     if (
       !this.model.idSede ||
@@ -135,11 +154,13 @@ export class CitasComponent extends Feedback {
       !this.model.prestacionIds.length
     )
       return;
-    const date = new Date(this.model.fechaHora);
+    const { fecha, hora, ...reserva } = this.model;
+    const fechaHora = `${fecha}T${hora}`;
+    const date = new Date(`${fechaHora}:00-05:00`);
     if (
+      !/^\d{4}-\d{2}-\d{2}T\d{2}:(00|30)$/.test(fechaHora) ||
       !Number.isFinite(date.getTime()) ||
-      date.getTime() <= Date.now() ||
-      date.getMinutes() % 30 !== 0
+      date.getTime() <= Date.now()
     ) {
       this.error.set("Elige una fecha futura a las :00 o :30.");
       return;
@@ -156,12 +177,13 @@ export class CitasComponent extends Feedback {
     }
     this.send(
       this.api.post<Cita>("/citas", {
-        ...this.model,
-        fechaHora: new Date(this.model.fechaHora).toISOString(),
+        ...reserva,
+        fechaHora: date.toISOString(),
       }),
       () => {
         this.model.motivo = "";
-        this.model.fechaHora = "";
+        this.model.fecha = "";
+        this.model.hora = "";
         this.load();
       },
     );
