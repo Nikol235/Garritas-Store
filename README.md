@@ -15,13 +15,11 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
 $env:NG_CLI_ANALYTICS = "false"
 ```
 
-[Descargar la guía de arranque en una hoja PDF](docs/manuales/compartir/Garritas-Store-inicio-una-hoja.pdf) · [Comandos copiables en texto](docs/manuales/compartir/Garritas-Store-inicio-una-hoja.txt).
+[Descargar la guía de arranque manual en DEV (PDF)](docs/manuales/compartir/Garritas-Store-inicio-una-hoja.pdf) · [Comandos copiables en texto](docs/manuales/compartir/Garritas-Store-inicio-una-hoja.txt).
 
 Clonar no copia bases de datos ni las fotos locales: su persistencia y respaldo se explican en la [guía de imágenes y comprobantes](docs/ventas-imagenes-y-comprobantes.md).
 
 Tienda y bienestar para mascotas en el Perú. Microservicios con **Java 21 / Spring Boot 4**, PostgreSQL/Flyway, Config Server, Eureka, Gateway, Kafka, Keycloak y un cliente **Angular 22**.
-
-La organización sigue el [proyecto de referencia Pagatu](https://github.com/262dist/pagatu): infraestructura, servicios, Kafka, identidad, observabilidad, clientes y casos de uso rápido tienen sus propias carpetas.
 
 ## Arranque manual en DEV con PowerShell
 

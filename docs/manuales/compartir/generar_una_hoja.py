@@ -1,45 +1,102 @@
-"""Genera una hoja A4 de arranque local; no ejecuta los comandos publicados."""
+"""Exporta la guía de arranque manual en DEV a PDF y a texto seleccionable."""
+
+from html import escape
 from pathlib import Path
-from html import escape, unescape
 import re
-from reportlab.platypus import SimpleDocTemplate,Paragraph,Preformatted,Spacer,Table,TableStyle
+
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.lib import colors
-from reportlab.lib.pagesizes import A4
-import fitz
-OUT=Path(__file__).resolve().parent
-for n,f in [('Body','DejaVuSans.ttf'),('Bold','DejaVuSans-Bold.ttf'),('Code','DejaVuSansMono.ttf')]:
- pdfmetrics.registerFont(TTFont(n,'/usr/share/fonts/truetype/dejavu/'+f))
-style=ParagraphStyle('text',fontName='Body',fontSize=8.2,leading=11,spaceAfter=5)
-head=ParagraphStyle('head',fontName='Bold',fontSize=10,leading=13,textColor=colors.HexColor('#91365f'),spaceBefore=6,spaceAfter=4)
-code=ParagraphStyle('code',fontName='Code',fontSize=7.3,leading=9.5,backColor=colors.HexColor('#fff0f6'),borderPadding=5,spaceAfter=5)
-items=[];txt=[]
-def p(t):items.append(Paragraph(t,style));txt.append(unescape(re.sub(r'<[^>]+>', '', t)))
-def h(t):items.append(Paragraph(t,head));txt.append('\n'+t)
-def block(t):items.append(Preformatted(t,code));txt.append(t+'\n')
-items.append(Paragraph('GARRITAS STORE · CLONAR Y ARRANCAR TODO',ParagraphStyle('title',fontName='Bold',fontSize=15,leading=19,textColor=colors.HexColor('#91365f'),spaceAfter=6)))
-p('<b>Windows · PowerShell · ejecución local.</b> Instalar Git, JDK 21 completo, Node 24.x (24.15 o superior) y Docker Desktop con WSL2. Abrir Docker Desktop y esperar a que arranque. No requiere Maven ni Angular CLI globales.')
-h('1. Comprobar herramientas')
-block('git --version\njava -version\njavac -version\nnode --version\nnpm.cmd --version\ndocker compose version\ndocker info')
-p('docker info debe mostrar Server sin error. Si falta una herramienta, instalarla antes de continuar y abrir una PowerShell nueva.')
-h('2. Clonar el nuevo repositorio (rama main) y entrar')
-block('cd $HOME\nNew-Item -ItemType Directory -Force proyectos | Out-Null\ncd proyectos\ngit clone https://github.com/Nikol235/Garritas-Store.git\ncd Garritas-Store')
-h('3. Compilar e iniciar; ejecutar en orden y esperar cada resultado')
-block('Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force\n$env:NG_CLI_ANALYTICS = "false"\n.\\uso-rapido\\garritas.ps1 -Accion build\n.\\uso-rapido\\garritas.ps1 -Accion iniciar\n.\\uso-rapido\\garritas.ps1 -Accion estado\ndocker compose -f obs/compose-dev.yml up -d\ndocker compose -f obs/compose-dev.yml ps\nStart-Process "http://localhost:4200"')
-p('<b>Qué arranca:</b> ocho PostgreSQL, Kafka y su UI, Keycloak con su base; Config, Eureka, Gateway y los ocho servicios Java; Angular. El comando obs añade Grafana, Prometheus, Loki y Promtail. Java y Angular corren fuera de Docker.')
-h('4. Enlaces y accesos de laboratorio')
-rows=[['Tienda','http://localhost:4200','cliente / Cliente123! · admin-store / Admin123!'],['Keycloak','http://localhost:18180/admin/','admin / local-admin-change-me'],['Kafka UI','http://localhost:18085','Sin login en DEV'],['Grafana','http://localhost:13000','admin / local-grafana'],['Prometheus','http://localhost:19090/targets','Targets y métricas'],['Eureka / Config','18761 / 18888','http://localhost:18761 · configuración en 18888']]
-vals=[[Paragraph(escape(x) if j!=1 or not x.startswith('http') else f'<link href="{x}" color="#006b80">{x}</link>',ParagraphStyle('cell',fontName='Body',fontSize=7.1,leading=9)) for j,x in enumerate(r)] for r in rows]
-t=Table(vals,colWidths=[65,155,307],hAlign='LEFT');t.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('BACKGROUND',(0,0),(-1,-1),colors.HexColor('#fff4f8')),('GRID',(0,0),(-1,-1),.25,colors.HexColor('#e8c8d6')),('TOPPADDING',(0,0),(-1,-1),4),('BOTTOMPADDING',(0,0),(-1,-1),4)]));items.append(t)
-for r in rows:txt.append(' | '.join(r))
-p('<b>APIs:</b> Venta 8081 · Institución 8082 · Envío 8083 · Citas 8084 · Catálogo 8085 · Usuario 8086 · Pago 8087 · Bienestar 8088. Gateway 18080. Swagger por servicio: http://localhost:PUERTO/swagger-ui.html. Bases: 15441–15448; Kafka: 19092; Loki: 13100; gestión Keycloak: 19000.')
-h('5. Al volver otro día / detener')
-block('cd "$HOME\\proyectos\\Garritas-Store"\nSet-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force\n# Para iniciar: .\\uso-rapido\\garritas.ps1 -Accion iniciar\n# Para detener Java y Angular:\n.\\uso-rapido\\garritas.ps1 -Accion detener')
-p('<b>Importante:</b> no ejecutar iniciar dos veces. Si tienes otra copia de Garritas activa, detenla desde su carpeta antes. detener conserva contenedores y datos. Si cambia Java, repetir build antes de iniciar. Si un puerto está ocupado, identificar el proceso o contenedor (por ejemplo, Pagatu); no borrar volúmenes. Logs: .runtime/&lt;servicio&gt;/console.log y error.log. Las contraseñas pueden diferir si alguien ya las cambió.')
-p('<b>Estado del proyecto:</b> pagos simulados; Mercado Pago aún no está conectado. Esta hoja inicia el entorno local, no publica en Railway/Supabase ni habilita cobros reales. Git no copia las bases ni las fotos guardadas localmente.')
-pdf=OUT/'Garritas-Store-inicio-una-hoja.pdf'
-SimpleDocTemplate(str(pdf),pagesize=A4,leftMargin=34,rightMargin=34,topMargin=24,bottomMargin=22,title='Garritas Store: inicio completo en una hoja',author='Garritas Store').build(items)
-d=fitz.open(pdf);assert len(d)==1,f'PDF debe tener una página: {len(d)}';assert 'git clone' in d[0].get_text();d[0].get_pixmap(matrix=fitz.Matrix(1.5,1.5)).save('/tmp/garritas-una-hoja.png');print('PDF comprobado: 1 página, texto seleccionable, enlaces:',len(d[0].get_links()))
-(OUT/'Garritas-Store-inicio-una-hoja.txt').write_text('\n'.join(txt)+'\n')
+from reportlab.platypus import PageBreak, Paragraph, Preformatted, SimpleDocTemplate
+
+OUTPUT = Path(__file__).resolve().parent
+ROOT = OUTPUT.parents[2]
+TITLE = "Garritas Store · Arranque manual en DEV"
+ACCENT = colors.HexColor("#77264c")
+FONTS = Path("/usr/share/fonts/truetype/dejavu")
+
+
+def read_guide() -> str:
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    clone = readme.split("## Clonar este repositorio\n", 1)[1].split("```powershell\n", 1)[1]
+    clone = clone.split("```", 1)[0].rstrip()
+
+    guide = (ROOT / "docs/ejecucion.md").read_text(encoding="utf-8")
+    manual = guide.split("## Arranque manual en DEV con PowerShell\n", 1)[1]
+    manual = manual.split("\n## Puertos de negocio DEV", 1)[0].strip()
+    return (
+        "### Preparación\n\n"
+        "Si ya tienes el repositorio, utiliza esa misma carpeta. Las fotos y las bases locales "
+        "se conservan en esa máquina. Si es una instalación nueva, clona el repositorio.\n\n"
+        f"```powershell\n{clone}\n```\n\n{manual}"
+    )
+
+
+def inline_markup(line: str) -> str:
+    line = escape(line)
+    line = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", line)
+    return re.sub(r"`([^`]+)`", r'<font name="Code">\1</font>', line)
+
+
+def page_footer(canvas, doc) -> None:
+    canvas.setFillColor(ACCENT)
+    canvas.setFont("Body", 8)
+    canvas.drawString(38, 23, "Garritas Store · Guía de ejecución local")
+    canvas.drawRightString(A4[0] - 38, 23, str(doc.page))
+
+
+def main() -> None:
+    for name, file in (
+        ("Body", "DejaVuSans.ttf"),
+        ("Bold", "DejaVuSans-Bold.ttf"),
+        ("Code", "DejaVuSansMono.ttf"),
+    ):
+        pdfmetrics.registerFont(TTFont(name, str(FONTS / file)))
+    pdfmetrics.registerFontFamily("Body", normal="Body", bold="Bold")
+
+    title = ParagraphStyle(
+        "title", fontName="Bold", fontSize=18, leading=23, textColor=ACCENT, spaceAfter=14
+    )
+    heading = ParagraphStyle(
+        "heading", fontName="Bold", fontSize=11, leading=15, textColor=ACCENT,
+        spaceBefore=10, spaceAfter=5, keepWithNext=True,
+    )
+    body = ParagraphStyle("body", fontName="Body", fontSize=9, leading=13, spaceAfter=6)
+    code = ParagraphStyle(
+        "code", fontName="Code", fontSize=7.8, leading=11, spaceAfter=7,
+        leftIndent=7, backColor=colors.HexColor("#fff1f7"), borderPadding=5,
+    )
+
+    guide = read_guide()
+    items = [Paragraph(TITLE, title)]
+    parts = re.split(r"```powershell\n(.*?)\n```", guide, flags=re.S)
+    for index, part in enumerate(parts):
+        if index % 2:
+            items.append(Preformatted(part, code))
+            continue
+        for line in filter(None, part.splitlines()):
+            if line.startswith("### "):
+                label = line[4:]
+                if label.startswith(("3. Microservicios", "5. Grafana")):
+                    items.append(PageBreak())
+                items.append(Paragraph(inline_markup(label), heading))
+            elif line.startswith("**") and line.endswith("**"):
+                items.append(Paragraph(inline_markup(line[2:-2]), heading))
+            else:
+                items.append(Paragraph(inline_markup(line), body))
+
+    pdf = OUTPUT / "Garritas-Store-inicio-una-hoja.pdf"
+    doc = SimpleDocTemplate(
+        str(pdf), pagesize=A4, leftMargin=38, rightMargin=38, topMargin=32,
+        bottomMargin=38, title=TITLE, author="Garritas Store",
+    )
+    doc.build(items, onFirstPage=page_footer, onLaterPages=page_footer)
+
+    plain = re.sub(r"^### |^```(?:powershell)?$|\*\*|`", "", guide, flags=re.M)
+    (OUTPUT / "Garritas-Store-inicio-una-hoja.txt").write_text(f"{TITLE}\n\n{plain}\n", encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()

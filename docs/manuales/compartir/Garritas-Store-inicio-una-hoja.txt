@@ -1,51 +1,164 @@
-Windows · PowerShell · ejecución local. Instalar Git, JDK 21 completo, Node 24.x (24.15 o superior) y Docker Desktop con WSL2. Abrir Docker Desktop y esperar a que arranque. No requiere Maven ni Angular CLI globales.
+Garritas Store · Arranque manual en DEV
 
-1. Comprobar herramientas
-git --version
-java -version
-javac -version
-node --version
-npm.cmd --version
-docker compose version
-docker info
+Preparación
 
-docker info debe mostrar Server sin error. Si falta una herramienta, instalarla antes de continuar y abrir una PowerShell nueva.
+Si ya tienes el repositorio, utiliza esa misma carpeta. Las fotos y las bases locales se conservan en esa máquina. Si es una instalación nueva, clona el repositorio.
 
-2. Clonar el nuevo repositorio (rama main) y entrar
-cd $HOME
-New-Item -ItemType Directory -Force proyectos | Out-Null
-cd proyectos
+
 git clone https://github.com/Nikol235/Garritas-Store.git
 cd Garritas-Store
-
-
-3. Compilar e iniciar; ejecutar en orden y esperar cada resultado
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
 $env:NG_CLI_ANALYTICS = "false"
-.\uso-rapido\garritas.ps1 -Accion build
-.\uso-rapido\garritas.ps1 -Accion iniciar
-.\uso-rapido\garritas.ps1 -Accion estado
-docker compose -f obs/compose-dev.yml up -d
-docker compose -f obs/compose-dev.yml ps
-Start-Process "http://localhost:4200"
 
-Qué arranca: ocho PostgreSQL, Kafka y su UI, Keycloak con su base; Config, Eureka, Gateway y los ocho servicios Java; Angular. El comando obs añade Grafana, Prometheus, Loki y Promtail. Java y Angular corren fuera de Docker.
 
-4. Enlaces y accesos de laboratorio
-Tienda | http://localhost:4200 | cliente / Cliente123! · admin-store / Admin123!
-Keycloak | http://localhost:18180/admin/ | admin / local-admin-change-me
-Kafka UI | http://localhost:18085 | Sin login en DEV
-Grafana | http://localhost:13000 | admin / local-grafana
-Prometheus | http://localhost:19090/targets | Targets y métricas
-Eureka / Config | 18761 / 18888 | http://localhost:18761 · configuración en 18888
-APIs: Venta 8081 · Institución 8082 · Envío 8083 · Citas 8084 · Catálogo 8085 · Usuario 8086 · Pago 8087 · Bienestar 8088. Gateway 18080. Swagger por servicio: http://localhost:PUERTO/swagger-ui.html. Bases: 15441–15448; Kafka: 19092; Loki: 13100; gestión Keycloak: 19000.
+En Windows, enciende Docker Desktop y verifica que JDK 21 y Node 24 estén en PATH. Para la sustentación abre un PowerShell por aplicación y deja cada ventana abierta. Cada bloque de abajo parte de la raíz del repositorio en una ventana nueva. Este recorrido usa los Maven Wrapper, los Compose DEV y el servidor local de Angular.
 
-5. Al volver otro día / detener
-cd "$HOME\proyectos\Garritas-Store"
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
-# Para iniciar: .\uso-rapido\garritas.ps1 -Accion iniciar
-# Para detener Java y Angular:
-.\uso-rapido\garritas.ps1 -Accion detener
+0. Instalar la librería compartida
 
-Importante: no ejecutar iniciar dos veces. Si tienes otra copia de Garritas activa, detenla desde su carpeta antes. detener conserva contenedores y datos. Si cambia Java, repetir build antes de iniciar. Si un puerto está ocupado, identificar el proceso o contenedor (por ejemplo, Pagatu); no borrar volúmenes. Logs: .runtime/<servicio>/console.log y error.log. Las contraseñas pueden diferir si alguien ya las cambió.
-Estado del proyecto: pagos simulados; Mercado Pago aún no está conectado. Esta hoja inicia el entorno local, no publica en Railway/Supabase ni habilita cobros reales. Git no copia las bases ni las fotos guardadas localmente.
+Ejecuta una vez desde la raíz. Repite si modificas infra/garritas-common.
+
+
+.\infra\garritas-config\mvnw.cmd -f infra/garritas-common/pom.xml -B install -DskipTests
+
+
+1. Infraestructura
+
+Abre tres ventanas en este orden. Config Server debe estar listo antes de arrancar Eureka y Gateway.
+
+
+cd infra/garritas-config
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=native'
+
+
+
+cd infra/garritas-eureka
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+
+cd infra/garritas-gateway
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+Abre Eureka en http://localhost:18761. Gateway escucha en el puerto 18080. Las rutas de negocio estarán disponibles cuando arranquen y se registren sus microservicios.
+
+2. Kafka y Keycloak
+
+Abre una ventana para Kafka y otra para Keycloak. Espera a que estén listos antes de iniciar los microservicios.
+
+
+cd kafka
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 240
+
+
+
+cd keycloak
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 240
+
+
+Kafka UI está en http://localhost:18085. Comprueba que el clúster garritas esté conectado. El realm de Keycloak responde en http://localhost:18180/realms/garritas/.well-known/openid-configuration.
+
+3. Microservicios de negocio
+
+Usa ocho ventanas, una por bloque. En cada una espera que Docker arranque la base antes de ejecutar Maven. Empieza por Catálogo e inicia Pago después de Kafka.
+
+Catálogo
+
+
+cd services/garritas-catalogo-ms
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 120
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+Institución
+
+
+cd services/garritas-institucion-ms
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 120
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+Usuario
+
+
+cd services/garritas-usuario-ms
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 120
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+Bienestar
+
+
+cd services/garritas-bienestar-ms
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 120
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+Venta
+
+
+cd services/garritas-venta-ms
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 120
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+Pago
+
+
+cd services/garritas-pago-ms
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 120
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+Envío
+
+
+cd services/garritas-envio-ms
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 120
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+Citas
+
+
+cd services/garritas-citas-ms
+docker compose -f compose-dev.yml up -d --wait --wait-timeout 120
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+
+
+4. Angular y verificación
+
+En otra ventana:
+
+
+cd clients/garritas-frontend
+npm.cmd ci
+npm.cmd start
+
+
+Abre la tienda en http://localhost:4200 y verifica en Eureka que se registren los microservicios. Desde un PowerShell de comprobación consulta por Gateway:
+
+
+Invoke-RestMethod -Method Get -Uri 'http://localhost:18080/api/v1/productos'
+
+
+5. Grafana y demostración de caída
+
+Para la sustentación, abre una ventana más y levanta observabilidad después de Keycloak.
+
+
+cd obs
+docker compose -f compose-dev.yml up -d
+
+
+Si ya tenías el Compose de observabilidad en marcha antes de actualizar el repositorio, ejecuta también docker compose -f compose-dev.yml restart garritas-prometheus garritas-grafana desde obs para cargar la configuración nueva.
+
+Abre http://localhost:13000/d/garritas-infra y entra con el usuario local admin y contraseña local-grafana, salvo que hayas configurado otra. En Garritas - Infraestructura, el panel Estado de las aplicaciones consulta las métricas de cada aplicación Spring. Usa ARRIBA si Prometheus recibe las métricas y CAÍDO si deja de recibirlas. El estado se consulta cada cinco segundos y Grafana refresca cada diez.
+
+1. Comprueba que Catálogo esté ARRIBA y que la consulta a Gateway responda.
+2. Pulsa Ctrl+C en el PowerShell de Catálogo. Deja su PostgreSQL en marcha. Espera el refresco de Grafana y comprueba que la tarjeta siga visible como CAÍDO. Repite la consulta a Gateway para ver el fallo de la ruta.
+3. En esa misma ventana, ejecuta otra vez .\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'. Comprueba que Catálogo vuelva a ARRIBA, se registre en Eureka y la consulta a Gateway responda de nuevo.
+
+6. Detener la demo
+
+Usa Ctrl+C en cada PowerShell de Java y Angular. Para bajar solo los contenedores de una carpeta, desde esa carpeta ejecuta docker compose -f compose-dev.yml down. Para conservar también los contenedores creados, usa docker compose -f compose-dev.yml stop. Si vas a detener Keycloak, baja primero el Compose de observabilidad. Así puedes detener únicamente lo que pertenece a la demo.
