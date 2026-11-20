@@ -1,0 +1,14 @@
+{
+  "commit": "6e2239c55884c2a6ae53dd921147d9e5b53749ab",
+  "alcance": "Verificación documental, no ejecución funcional de la aplicación.",
+  "paginas": 187,
+  "marcadores": 42,
+  "referencias": 344,
+  "archivos_completos": 126,
+  "java_y_pruebas_de_venta_institucion": 60,
+  "bloques_con_explicacion_al_costado": 34,
+  "enlaces": 428,
+  "codigo_y_lineas": "coinciden con Git",
+  "texto_seleccionable": true,
+  "sin_paginas_vacias_ni_desbordamiento_horizontal": true
+}

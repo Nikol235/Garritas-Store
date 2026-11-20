@@ -1,0 +1,8 @@
+digraph G {graph [bgcolor="white",fontname="DejaVu Sans",pad="0.2",nodesep="0.3",ranksep="0.45"];node [shape=box,style="rounded,filled",fillcolor="#fff0f6",color="#a94e79",fontname="DejaVu Sans",fontsize=11];edge [fontname="DejaVu Sans",fontsize=9,color="#69445b"];rankdir=TB;a[label="Cliente en Angular
+confirma carrito"];g[label="Gateway valida JWT"];v[label="Venta valida sede,
+productos y tarifa"];db[label="Guarda venta + detalles
+y evento Outbox
+transacción PostgreSQL local"];k[label="Kafka: venta.creada"];c[label="Catálogo reserva stock"];p[label="Pago simulado"];ok[label="PAGADA
+despacho si delivery cobrado"];bad[label="COMPENSANDO
+Catálogo devuelve reserva
+CANCELADA al confirmar liberación"];a->g->v->db->k->c->p;p->ok[label="aprobado"];p->bad[label="rechazado"];}

@@ -76,9 +76,9 @@ El perfil confirma su guardado leyendo nuevamente la API. La edad de mascotas se
 
 [Guía paso a paso, HTML copiable, PDF y fuentes por etapas](docs/manual-construccion-completa/README.md). Explica cómo crear y conectar todos los componentes desde una carpeta vacía.
 
-## Guías para Fio y Deissy
+## Guías para Nikol, Fio y Deissy
 
-[PDF individuales de código y sustentación](docs/guias-integrantes/README.md): Catálogo–Usuario para Fio y Citas–Envío para Deissy, con rutas, conexiones, explicación, demostración y código completo de sus módulos.
+[PDF individuales de código y sustentación](docs/guias-integrantes/README.md): Venta–Institución para Nikol, Catálogo–Usuario para Fio y Citas–Envío para Deissy, con rutas, conexiones, explicación, demostración y código completo de sus módulos.
 
 ## Ventas, fotos y comprobantes
 

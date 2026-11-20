@@ -15,7 +15,7 @@ nav:
   - Guía de sustentación: sustentacion/README.md
   - Explicación y preguntas: sustentacion/Guia-de-sustentacion-Garritas.md
   - Resumen oral: sustentacion/Resumen-para-exponer.md
-  - Guías de Fio y Deissy: guias-integrantes/README.md
+  - Guías de las integrantes: guias-integrantes/README.md
   - Estudio C4 Catálogo y Usuario: guia-estudio-catalogo-usuario/README.md
   - Construir desde cero: manual-construccion-completa/README.md
   - Manuales PDF: manuales/README.md
@@ -27,3 +27,4 @@ exclude_docs: |
   /manuales/fuentes/*.md
   /guias-integrantes/Fio-Catalogo-y-Usuario.md
   /guias-integrantes/Deissy-Citas-y-Envio.md
+  /guias-integrantes/Nikol-Venta-e-Institucion.md

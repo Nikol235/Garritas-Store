@@ -1,0 +1,2 @@
+digraph G {graph [bgcolor="white",fontname="DejaVu Sans",pad="0.2",nodesep="0.3",ranksep="0.45"];node [shape=box,style="rounded,filled",fillcolor="#fff0f6",color="#a94e79",fontname="DejaVu Sans",fontsize=11];edge [fontname="DejaVu Sans",fontsize=9,color="#69445b"];rankdir=LR;v[label="ventas"];d[label="detalle_ventas"];s[label="sedes"];o[label="sede_prestacion
+precio, duración, activo"];p[label="prestaciones"];v->d[label="1:N"];s->o[label="1:N"];p->o[label="1:N"];}

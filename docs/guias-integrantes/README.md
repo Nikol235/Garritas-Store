@@ -1,7 +1,8 @@
 # Guías individuales para estudiar y sustentar
 
-Dos PDF independientes con explicación del negocio, conexiones, relaciones, ubicación exacta del código, guion de demostración y preguntas de defensa.
+Tres PDF independientes con explicación del negocio, conexiones, relaciones, ubicación exacta del código, guion de demostración y preguntas de defensa.
 
+- **[Nikol: Venta e Institución](Nikol-Venta-e-Institucion.pdf)**. Compra, estados, Saga y compensación, despacho, constancia PDF, sedes, prestaciones, paquetes y ofertas N:M. Incluye código a la izquierda y explicación al costado, además de rutas de Angular, diseño y tamaños de letra.
 - **[Fio: Catálogo y Usuario](Fio-Catalogo-y-Usuario.pdf)**. Productos/categorías, CRUD y paginación, fotos locales, inventario y compensación, cuenta propia, mascotas, roles internos, planes, suscripciones y períodos. Distingue seguridad de Keycloak de las tablas del negocio.
 - **[Deissy: Citas y Envío](Deissy-Citas-y-Envio.pdf)**. Reserva transaccional, prestaciones/paquetes, propiedad, control de agenda, cobertura logística N:M, tarifa cobrada y conexión con el despacho que pertenece a Venta.
 
@@ -22,6 +23,10 @@ Se necesita Graphviz (`dot`), Python y las bibliotecas de `requirements.txt`.
 ```bash
 python docs/guias-integrantes/generar.py
 python docs/guias-integrantes/verificar.py
+python docs/guias-integrantes/generar_nikol.py
+python docs/guias-integrantes/verificar_nikol.py
 ```
 
 Los Markdown son fuentes para auditar el texto y los bloques completos; las ilustraciones están en `diagramas/`. Se mantiene atribución al enfoque docente de [Pagatu](https://262dist.github.io/pagatu/) y se distingue la responsabilidad de cada integrante del código compartido.
+
+La guía de Nikol tiene su [verificación documental independiente](Nikol-verificacion.json).

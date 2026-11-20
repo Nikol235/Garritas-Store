@@ -1,0 +1,3111 @@
+{
+  "commit": "6e2239c55884c2a6ae53dd921147d9e5b53749ab",
+  "referencias": [
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java",
+      "line": 18,
+      "needle": "@SpringBootApplication",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java#L18"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java",
+      "line": 12,
+      "needle": "@RequestMapping",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java#L12"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 49,
+      "needle": "public VentaResponse crear",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L49"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 79,
+      "needle": "Reference sede",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L79"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 100,
+      "needle": "var cobertura = logistica.obtener",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L100"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 140,
+      "needle": "repository.saveAndFlush(venta)",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L140"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 32,
+      "needle": "public List<VentaResponse> listar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L32"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 183,
+      "needle": "private Venta owned",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L183"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java",
+      "line": 60,
+      "needle": "@OneToMany",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java#L60"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/DetalleVenta.java",
+      "line": 21,
+      "needle": "@ManyToOne",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/DetalleVenta.java#L21"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/repository/VentaRepository.java",
+      "line": 7,
+      "needle": "public interface",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/repository/VentaRepository.java#L7"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "line": 22,
+      "needle": "public void consume",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java#L22"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "line": 48,
+      "needle": "UPDATE ventas SET",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java#L48"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java",
+      "line": 19,
+      "needle": "public byte[] generar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java#L19"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/service/DespachoService.java",
+      "line": 35,
+      "needle": "public DespachoResponse crear",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/service/DespachoService.java#L35"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplication.java",
+      "line": 15,
+      "needle": "@SpringBootApplication",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplication.java#L15"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/SedeController.java",
+      "line": 14,
+      "needle": "@RequestMapping",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/SedeController.java#L14"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "line": 21,
+      "needle": "public List<SedeResponse> listar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java#L21"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "line": 37,
+      "needle": "public SedeResponse crear",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java#L37"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "line": 52,
+      "needle": "public void eliminar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java#L52"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java",
+      "line": 17,
+      "needle": "@ManyToOne",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java#L17"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "line": 84,
+      "needle": "public OfertaResponse guardarOferta",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java#L84"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java",
+      "line": 25,
+      "needle": "@ManyToMany",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java#L25"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "line": 31,
+      "needle": "public PrestacionResponse guardar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java#L31"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/PrestacionController.java",
+      "line": 39,
+      "needle": "@GetMapping(\"/sedes/{id}/prestaciones\")",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/PrestacionController.java#L39"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/ImagenController.java",
+      "line": 11,
+      "needle": "@RequestMapping",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/ImagenController.java#L11"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/ProductoClient.java",
+      "line": 7,
+      "needle": "@FeignClient",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/ProductoClient.java#L7"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaClient.java",
+      "line": 7,
+      "needle": "@FeignClient",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaClient.java#L7"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java",
+      "line": 18,
+      "needle": "create(",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java#L18"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/FeignConfiguration.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/FeignConfiguration.java#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-venta-ms-dev.yml",
+      "line": 60,
+      "needle": "connectTimeout",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-venta-ms-dev.yml#L60"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-venta-ms-dev.yml",
+      "line": 97,
+      "needle": "sliding-window-size",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-venta-ms-dev.yml#L97"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-gateway-dev.yml",
+      "line": 17,
+      "needle": "id: garritas-institucion",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-gateway-dev.yml#L17"
+    },
+    {
+      "path": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java",
+      "line": 76,
+      "needle": "private void liberar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java#L76"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/auth.ts",
+      "line": 29,
+      "needle": "pkceMethod",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/auth.ts#L29"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/interceptor.ts",
+      "line": 17,
+      "needle": "Authorization",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/interceptor.ts#L17"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java",
+      "line": 11,
+      "needle": "SecurityFilterChain",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java#L11"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java",
+      "line": 76,
+      "needle": "/api/v1/ventas",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java#L76"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java",
+      "line": 18,
+      "needle": "requireOwner",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java#L18"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 2,
+      "needle": "font-family:",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L2"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 13,
+      "needle": "font-size: 15px",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L13"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 745,
+      "needle": "/* Rosa pastel",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L745"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 812,
+      "needle": "font-size: clamp(2rem",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L812"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 880,
+      "needle": ".sales-summary",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L880"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 939,
+      "needle": "app-resource-image",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L939"
+    },
+    {
+      "path": "clients/garritas-frontend/angular.json",
+      "line": 28,
+      "needle": "\"styles\"",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/angular.json#L28"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.html",
+      "line": 66,
+      "needle": "Ventas</button>",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/app.html#L66"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "line": 53,
+      "needle": "export class VentasComponent",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.ts#L53"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "line": 75,
+      "needle": "readonly filtered",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.ts#L75"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "line": 144,
+      "needle": "info(estado",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.ts#L144"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "line": 181,
+      "needle": "comprobante(venta",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.ts#L181"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/api.ts",
+      "line": 80,
+      "needle": "ventas()",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/api.ts#L80"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.ts",
+      "line": 150,
+      "needle": "checkout()",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/app.ts#L150"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/sedes/sedes.component.html",
+      "line": 63,
+      "needle": "app-image-editor",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/sedes/sedes.component.html#L63"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/image-editor.ts",
+      "line": 89,
+      "needle": "persist(",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/shared/image-editor.ts#L89"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/LocalImages.java",
+      "line": 55,
+      "needle": "public void upload",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/LocalImages.java#L55"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V4__imagenes.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/migration/V4__imagenes.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java",
+      "line": 19,
+      "needle": "public byte[] generar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java#L19"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java",
+      "line": 6,
+      "needle": "@org.springframework.context.annotation.Import",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java#L6"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java",
+      "line": 11,
+      "needle": "@RestController",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java#L11"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java",
+      "line": 36,
+      "needle": "  @PostMapping",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java#L36"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaRequest.java",
+      "line": 11,
+      "needle": "public class VentaRequest",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaRequest.java#L11"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaRequest.java",
+      "line": 9,
+      "needle": "public class DetalleVentaRequest",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaRequest.java#L9"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java",
+      "line": 60,
+      "needle": "  @OneToMany",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java#L60"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 49,
+      "needle": "  public VentaResponse crear",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L49"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 56,
+      "needle": "    jdbc.queryForObject(",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L56"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 79,
+      "needle": "    Reference sede =",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L79"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 106,
+      "needle": "      if (cobertura.tarifa().compareTo",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L106"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 118,
+      "needle": "      var producto = catalogo.obtener",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L118"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 140,
+      "needle": "    repository.saveAndFlush(venta)",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L140"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 32,
+      "needle": "  public List<VentaResponse> listar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L32"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Outbox.java",
+      "line": 35,
+      "needle": "  public void append",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Outbox.java#L35"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java",
+      "line": 18,
+      "needle": "        .create(\"catalogo\")",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java#L18"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "line": 24,
+      "needle": "    if (!java.util.Set.of(",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java#L24"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "line": 46,
+      "needle": "      int changed =",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java#L46"
+    },
+    {
+      "path": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java",
+      "line": 76,
+      "needle": "  private void liberar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java#L76"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java",
+      "line": 19,
+      "needle": "  public byte[] generar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java#L19"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "line": 21,
+      "needle": "  public List<SedeResponse> listar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java#L21"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "line": 37,
+      "needle": "  public SedeResponse crear",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java#L37"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "line": 52,
+      "needle": "  public void eliminar",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java#L52"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java",
+      "line": 17,
+      "needle": "  @ManyToOne",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java#L17"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "line": 94,
+      "needle": "    SedePrestacion o =",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java#L94"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java",
+      "line": 25,
+      "needle": "  @ManyToMany",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java#L25"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "line": 34,
+      "needle": "    jdbc.queryForObject(",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java#L34"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.html",
+      "line": 65,
+      "needle": "ADMINISTRACIÓN</p>",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/app.html#L65"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "line": 75,
+      "needle": "  readonly filtered = computed",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.ts#L75"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "line": 193,
+      "needle": "          const url = URL.createObjectURL",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.ts#L193"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/image-editor.ts",
+      "line": 89,
+      "needle": "  persist(id:",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/shared/image-editor.ts#L89"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 2,
+      "needle": "  font-family:",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L2"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 745,
+      "needle": "/* Rosa pastel",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L745"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 812,
+      "needle": "  font-size: clamp(2rem",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L812"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java",
+      "line": 18,
+      "needle": "  public static void requireOwner",
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java#L18"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/FeignConfiguration.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/FeignConfiguration.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaClient.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaClient.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaConsulta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaConsulta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/ProductoClient.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/ProductoClient.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/controller/DespachoController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/controller/DespachoController.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/Despacho.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/Despacho.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/EstadoDespacho.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/EstadoDespacho.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/mapper/DespachoMapper.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/mapper/DespachoMapper.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/repository/DespachoRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/repository/DespachoRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/service/DespachoService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/service/DespachoService.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/DetalleVenta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/DetalleVenta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/EstadoVenta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/EstadoVenta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/GlobalExceptionHandler.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/GlobalExceptionHandler.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/ResourceNotFoundException.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/ResourceNotFoundException.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/filter/CorrelationIdFilter.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/filter/CorrelationIdFilter.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/DetalleVentaMapper.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/DetalleVentaMapper.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/VentaMapper.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/VentaMapper.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/repository/VentaRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/repository/VentaRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/ComprobanteTest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/ComprobanteTest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DeliveryCheckoutIntegrationTests.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DeliveryCheckoutIntegrationTests.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DespachoOwnershipTest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DespachoOwnershipTest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplicationTests.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplicationTests.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplication.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplication.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/ImagenController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/ImagenController.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/PrestacionController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/PrestacionController.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/SedeController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/SedeController.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/ComponenteResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/ComponenteResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Sede.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Sede.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/GlobalExceptionHandler.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/GlobalExceptionHandler.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/ResourceNotFoundException.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/ResourceNotFoundException.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/filter/CorrelationIdFilter.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/filter/CorrelationIdFilter.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/mapper/SedeMapper.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/mapper/SedeMapper.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/PrestacionRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/PrestacionRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedePrestacionRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedePrestacionRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedeRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedeRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplicationTests.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplicationTests.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/PrestacionesIntegrationTests.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/PrestacionesIntegrationTests.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/compose-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/compose-dev.yml#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/pom.xml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/pom.xml#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/application.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/application.yml#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/demo/R__prestaciones_peru.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/demo/R__prestaciones_peru.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/demo/R__sedes_peru.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/demo/R__sedes_peru.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/demo/R__zz_paquetes_peru.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/demo/R__zz_paquetes_peru.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V1__create_institucion_tables.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/migration/V1__create_institucion_tables.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V2__prestaciones_sede.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/migration/V2__prestaciones_sede.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V3__paquetes_servicios.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/migration/V3__paquetes_servicios.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V4__imagenes.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/migration/V4__imagenes.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/logback-spring.xml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/logback-spring.xml#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/compose-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/compose-dev.yml#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/pom.xml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/pom.xml#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/application.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/application.yml#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V1__create_venta_tables.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V1__create_venta_tables.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V2__saga_identity.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V2__saga_identity.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V3__transactional_messaging.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V3__transactional_messaging.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V4__sede_venta.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V4__sede_venta.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V5__despachos.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V5__despachos.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V6__delivery_checkout.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V6__delivery_checkout.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/logback-spring.xml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/logback-spring.xml#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/angular.json",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/angular.json#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/public/config.dev.json",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/public/config.dev.json#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.config.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/app.config.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/app.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/app.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/api.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/api.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/auth.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/auth.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/config.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/config.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/domain-api.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/domain-api.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/interceptor.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/interceptor.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-panel.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/cart/cart-panel.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-panel.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/cart/cart-panel.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-store.spec.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/cart/cart-store.spec.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-store.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/cart/cart-store.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/envios/envios.component.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/envios/envios.component.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/envios/envios.component.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/envios/envios.component.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/sedes/sedes.component.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/sedes/sedes.component.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/sedes/sedes.component.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/sedes/sedes.component.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.spec.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.spec.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/image-editor.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/shared/image-editor.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/media.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/shared/media.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/resource-image.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/shared/resource-image.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/DomainErrors.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/DomainErrors.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/HttpServices.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/HttpServices.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Inbox.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Inbox.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/LocalImages.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/LocalImages.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/MessagingConfiguration.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/MessagingConfiguration.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Outbox.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Outbox.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Reference.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Reference.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SagaEvent.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SagaEvent.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/ServiceClient.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/ServiceClient.java#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-gateway-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-gateway-dev.yml#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-institucion-ms-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-institucion-ms-dev.yml#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-institucion-ms-prod.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-institucion-ms-prod.yml#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-venta-ms-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-venta-ms-dev.yml#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-venta-ms-prod.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-venta-ms-prod.yml#L1"
+    },
+    {
+      "path": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java#L1"
+    },
+    {
+      "path": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/messaging/PagoEvents.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/messaging/PagoEvents.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/compose-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/compose-dev.yml#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/pom.xml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/pom.xml#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplication.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplication.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/ImagenController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/ImagenController.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/PrestacionController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/PrestacionController.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/SedeController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/SedeController.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/ComponenteResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/ComponenteResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Sede.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Sede.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/GlobalExceptionHandler.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/GlobalExceptionHandler.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/ResourceNotFoundException.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/ResourceNotFoundException.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/filter/CorrelationIdFilter.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/filter/CorrelationIdFilter.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/mapper/SedeMapper.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/mapper/SedeMapper.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/PrestacionRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/PrestacionRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedePrestacionRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedePrestacionRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedeRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedeRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/application.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/application.yml#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/demo/R__prestaciones_peru.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/demo/R__prestaciones_peru.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/demo/R__sedes_peru.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/demo/R__sedes_peru.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/demo/R__zz_paquetes_peru.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/demo/R__zz_paquetes_peru.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V1__create_institucion_tables.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/migration/V1__create_institucion_tables.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V2__prestaciones_sede.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/migration/V2__prestaciones_sede.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V3__paquetes_servicios.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/migration/V3__paquetes_servicios.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V4__imagenes.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/db/migration/V4__imagenes.sql#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/logback-spring.xml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/main/resources/logback-spring.xml#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplicationTests.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplicationTests.java#L1"
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/PrestacionesIntegrationTests.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/PrestacionesIntegrationTests.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/compose-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/compose-dev.yml#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/pom.xml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/pom.xml#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/FeignConfiguration.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/FeignConfiguration.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaClient.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaClient.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaConsulta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaConsulta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/ProductoClient.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/ProductoClient.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/controller/DespachoController.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/controller/DespachoController.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/Despacho.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/Despacho.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/EstadoDespacho.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/EstadoDespacho.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/mapper/DespachoMapper.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/mapper/DespachoMapper.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/repository/DespachoRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/repository/DespachoRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/service/DespachoService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/service/DespachoService.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaRequest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaRequest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaResponse.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaResponse.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/DetalleVenta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/DetalleVenta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/EstadoVenta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/EstadoVenta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/GlobalExceptionHandler.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/GlobalExceptionHandler.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/ResourceNotFoundException.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/ResourceNotFoundException.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/filter/CorrelationIdFilter.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/filter/CorrelationIdFilter.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/DetalleVentaMapper.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/DetalleVentaMapper.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/VentaMapper.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/VentaMapper.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/repository/VentaRepository.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/repository/VentaRepository.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/application.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/application.yml#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V1__create_venta_tables.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V1__create_venta_tables.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V2__saga_identity.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V2__saga_identity.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V3__transactional_messaging.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V3__transactional_messaging.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V4__sede_venta.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V4__sede_venta.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V5__despachos.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V5__despachos.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V6__delivery_checkout.sql",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/db/migration/V6__delivery_checkout.sql#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/logback-spring.xml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/main/resources/logback-spring.xml#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/ComprobanteTest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/ComprobanteTest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DeliveryCheckoutIntegrationTests.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DeliveryCheckoutIntegrationTests.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DespachoOwnershipTest.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DespachoOwnershipTest.java#L1"
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplicationTests.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplicationTests.java#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/angular.json",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/angular.json#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/public/config.dev.json",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/public/config.dev.json#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.config.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/app.config.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/app.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/app.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/api.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/api.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/auth.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/auth.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/config.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/config.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/domain-api.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/domain-api.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/interceptor.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/core/interceptor.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-panel.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/cart/cart-panel.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-panel.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/cart/cart-panel.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-store.spec.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/cart/cart-store.spec.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-store.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/cart/cart-store.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/envios/envios.component.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/envios/envios.component.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/envios/envios.component.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/envios/envios.component.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/sedes/sedes.component.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/sedes/sedes.component.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/sedes/sedes.component.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/sedes/sedes.component.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.html",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.html#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.spec.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.spec.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/features/ventas/ventas.component.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/image-editor.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/shared/image-editor.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/media.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/shared/media.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/resource-image.ts",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/app/shared/resource-image.ts#L1"
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/clients/garritas-frontend/src/styles.css#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/DomainErrors.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/DomainErrors.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/HttpServices.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/HttpServices.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Inbox.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Inbox.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/LocalImages.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/LocalImages.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/MessagingConfiguration.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/MessagingConfiguration.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Outbox.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Outbox.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Reference.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Reference.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SagaEvent.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SagaEvent.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java#L1"
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/ServiceClient.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/ServiceClient.java#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-gateway-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-gateway-dev.yml#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-institucion-ms-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-institucion-ms-dev.yml#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-institucion-ms-prod.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-institucion-ms-prod.yml#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-venta-ms-dev.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-venta-ms-dev.yml#L1"
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-venta-ms-prod.yml",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/infra/garritas-config/config-repo/garritas-venta-ms-prod.yml#L1"
+    },
+    {
+      "path": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java#L1"
+    },
+    {
+      "path": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/messaging/PagoEvents.java",
+      "line": 1,
+      "needle": null,
+      "url": "https://github.com/Nikol235/Garritas-Store/blob/6e2239c55884c2a6ae53dd921147d9e5b53749ab/services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/messaging/PagoEvents.java#L1"
+    }
+  ],
+  "fuentes": [
+    {
+      "path": "services/garritas-institucion-ms/compose-dev.yml",
+      "sha256": "9e51440eaf8674ffd24f6a817a4781cf9ec896f32ec30610e4fe37ab16286b57",
+      "lines": 18
+    },
+    {
+      "path": "services/garritas-institucion-ms/pom.xml",
+      "sha256": "db1b1b456b62f3d97a043744447d253ae2ee773dc5bb1edf39df9e52132004ae",
+      "lines": 157
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplication.java",
+      "sha256": "2333c638b976908a787c3680616183a9f74198d9b847cd2751890b7e15e7a9ee",
+      "lines": 21
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/ImagenController.java",
+      "sha256": "47192b9131d421b68213ea67caef5476c874df0cc5a922969c13ce2d4e5e68ab",
+      "lines": 30
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/PrestacionController.java",
+      "sha256": "b6f42e7b78c2fcf998537bbaf2ca21b5bf04a5a64c79dc08267378613b116a5b",
+      "lines": 48
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/controller/SedeController.java",
+      "sha256": "0be71c239f4b7fd07db39497b2ece39b790a250b3b0f193be006a855b71858e5",
+      "lines": 46
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/ComponenteResponse.java",
+      "sha256": "49e750447628f40345a51f36a305eff4f2d8f3dcc1f60cd67f530fd925435473",
+      "lines": 3
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaRequest.java",
+      "sha256": "2c34c38a123e33d6dcd343aec6cba4e94a005494d109b12e71ed267cf290ef9d",
+      "lines": 10
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/OfertaResponse.java",
+      "sha256": "0bfddbfe240919b69d794d20be11e5b2003802ce7006c2c346f3ffa8a852216d",
+      "lines": 13
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionRequest.java",
+      "sha256": "761cfe629f0d93ff0a19d6c27515d594f2b0f4617ce8ff27d20e3e05cb0ccfe4",
+      "lines": 13
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/PrestacionResponse.java",
+      "sha256": "1285822efacb63016ddc738453f28432ee84b41569b17bbe9a3938b149977d5d",
+      "lines": 8
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeRequest.java",
+      "sha256": "503ce8bc1763a53cac74338f0df94937f5d6aa74b75a6469da570bcf0f605bff",
+      "lines": 32
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/dto/SedeResponse.java",
+      "sha256": "cbaafb06096e5de6bc1e30238d18f6a0e98ddd24568d31e11ba6c8e59e999af5",
+      "lines": 21
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java",
+      "sha256": "67e9de92cc9d2f892f8e67f44b829fa40528582789dc1bf0f683588bcfe77b78",
+      "lines": 31
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Sede.java",
+      "sha256": "31777ea0ecfc20460d0f11c640cca3d7c54a248ef13c38f4f9d53ee9d7bd3317",
+      "lines": 33
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java",
+      "sha256": "d5fe2fa26c2f3dae5ab912a09e7586ede3130822e6d4e7451aba45228937289e",
+      "lines": 33
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/GlobalExceptionHandler.java",
+      "sha256": "c284f0a72738ee1689ff28640b7150435c1990576e2dfc7c938ce5f900195487",
+      "lines": 50
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/exception/ResourceNotFoundException.java",
+      "sha256": "eec9fbbf71a5d31fc14de1bcd75005d460fb191fbfc58a8a786e865d3cc5d308",
+      "lines": 7
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/filter/CorrelationIdFilter.java",
+      "sha256": "6ff9f153578da6be51b35f6df87ddaf7ece2ee9743c7536275ea3d46beb68b36",
+      "lines": 41
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/mapper/SedeMapper.java",
+      "sha256": "5d6af6d9e42c88aa5d556673d4e8ba52a8278f3c80a5fb6f703ca2adc539babb",
+      "lines": 31
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/PrestacionRepository.java",
+      "sha256": "22be47f82bc9d85d41d80b16fc160b8d929d2dc580cd9c8632402bb4af0ecc73",
+      "lines": 6
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedePrestacionRepository.java",
+      "sha256": "77bb4e645a8d7bb0d36aac23b01b361bf982e92f0f8024fa638dc5cd7beb3a00",
+      "lines": 13
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/repository/SedeRepository.java",
+      "sha256": "31a9ff74c09bc5f9f3e7c1371b3fe9d5e1cb41afc8b29554f32fbe014b31d1ee",
+      "lines": 7
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "sha256": "221de9fff06b2b07e697ed64848be612f6803341ef8f5adfacbe360e75d3de6b",
+      "lines": 135
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "sha256": "4d53172161dbdb1cfa0518ec26d013f60229e3c05b896bec9e6b30a3d6e700fb",
+      "lines": 63
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/application.yml",
+      "sha256": "bdbc8ddbc37d8acefe2cd14044279faa8daccdc7e43ab53058618b8abbadac71",
+      "lines": 7
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/demo/R__prestaciones_peru.sql",
+      "sha256": "23d5e6266f52d7112f3d3e938277266309d322964f8215a25c108cdb12dd5231",
+      "lines": 2
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/demo/R__sedes_peru.sql",
+      "sha256": "c7c5d352cf8f03b726a0927f938e34e438ac9409c11eeb3bb84727af7fb84113",
+      "lines": 10
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/demo/R__zz_paquetes_peru.sql",
+      "sha256": "8c1c72084c6ee30103ae75c1149026e4ea55308b3ea624ca2744a241f59cbdd6",
+      "lines": 3
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V1__create_institucion_tables.sql",
+      "sha256": "36917edfa78b854224c145017b03e417de0b769779e96f0040c09fb3d18611ea",
+      "lines": 9
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V2__prestaciones_sede.sql",
+      "sha256": "854ad1a49355f8dae0659827ab0a6c0c16be7a7519cd7123cd5049561426e1b7",
+      "lines": 2
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V3__paquetes_servicios.sql",
+      "sha256": "b3bbffb1217b7c8ceff4530a19a320b2c28d608dc61dc97abb781bf329011bf6",
+      "lines": 2
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/db/migration/V4__imagenes.sql",
+      "sha256": "e30e40fdee32b61f6036bd834d1c3202141c8ea81f75d377fb88d5a1b867f9c0",
+      "lines": 5
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/main/resources/logback-spring.xml",
+      "sha256": "98cad98c293fc9d8a699697559a839a13bbd713bb0c3ad86a55db89ef6e4925d",
+      "lines": 29
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/GarritasInstitucionMsApplicationTests.java",
+      "sha256": "1965b321fae06a52b286ccc06dfad02b317ddfe1d7b63fa724b8b949b03fc26a",
+      "lines": 13
+    },
+    {
+      "path": "services/garritas-institucion-ms/src/test/java/pe/edu/upeu/garritas/institucion/PrestacionesIntegrationTests.java",
+      "sha256": "2e44785ceb08c691cca4b2e492c2e7929f5c54727c89eec6b8c35667839b2cf8",
+      "lines": 104
+    },
+    {
+      "path": "services/garritas-venta-ms/compose-dev.yml",
+      "sha256": "25e2ded8d85463fc8449dc5d1e1c592f7963f40487769855918b69e15516f817",
+      "lines": 18
+    },
+    {
+      "path": "services/garritas-venta-ms/pom.xml",
+      "sha256": "57d4c5d7a7b787b59a41320da4e3faad5d1ae5dcbe57efdf5740ce01bb31bfad",
+      "lines": 158
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java",
+      "sha256": "b34f6be7329d37e968aff0cd6fe8f45dfd01129acc25c0436805aecc02a75534",
+      "lines": 24
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java",
+      "sha256": "40ed62f3452f46e0bcef2578e21bed0b4418a784a92718293c3a14a89a91fdbc",
+      "lines": 29
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/FeignConfiguration.java",
+      "sha256": "70643844cfa43e980fa71d100f3b1b6a1e8522e2e3628bb7f2c24343c23edf7c",
+      "lines": 16
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaClient.java",
+      "sha256": "8fe26b65498d9b3a2b2bbad900ffc2f33ab11ed80ab403ccd5b5c403e090360a",
+      "lines": 13
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/LogisticaConsulta.java",
+      "sha256": "815c0ef10ff86dbced48c44a2fb686a1e7a7d1bfe004e02274ca4fb0737e470e",
+      "lines": 31
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/ProductoClient.java",
+      "sha256": "5553a71040d6061b5a9a06e1bb5716e4bb324f744339653e484115e190aa5725",
+      "lines": 13
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java",
+      "sha256": "086dad7a110ab3fc3dfc16548d2cde60d49f4df157bda92b81bd1a72f577598e",
+      "lines": 42
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/controller/DespachoController.java",
+      "sha256": "e1d16f208133452cf58767dabed3d3dbd4ae4ba3899d2aacd8f11cbcb59e3107",
+      "lines": 49
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoRequest.java",
+      "sha256": "006d0446766967882f72af162aa48c01f5f362fc11c5b43163809b504be3659d",
+      "lines": 26
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/dto/DespachoResponse.java",
+      "sha256": "2c28a88babecd5e6ae82f0aae33c4989bbb6a6bcee85fbb168147590cb9908a4",
+      "lines": 27
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/Despacho.java",
+      "sha256": "a7cb5f2c786d31a6ddf74d085ca3137402e6334f8523727925fe38af3395336f",
+      "lines": 51
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/entity/EstadoDespacho.java",
+      "sha256": "75c8b1910f3a434cca391d3d8ea135c7567932bda91d5ff3cc49496a30fbf14d",
+      "lines": 8
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/mapper/DespachoMapper.java",
+      "sha256": "3d92366df5b6bc0edea864cc309ef6c4177fa46c5f68d74b13c74643deb7061f",
+      "lines": 38
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/repository/DespachoRepository.java",
+      "sha256": "497aac98a7478346f63db7d2ea17caf639ec0007d55b5baa9442e50a84ab8adc",
+      "lines": 11
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/despacho/service/DespachoService.java",
+      "sha256": "69996ea1361a3a45fe16fc59e32eafdf0c2189c4d1990b2c5c0c70135b4a4a7f",
+      "lines": 106
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaRequest.java",
+      "sha256": "2bf3e063539be07ead5885313456e91706b193eb8895e38b42d325f1fb98f699",
+      "lines": 16
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaResponse.java",
+      "sha256": "7c5bd14bf2636630570f0ef47c6bc4387dc922bc9d0c10fb9651b5cbe58fee17",
+      "lines": 21
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaRequest.java",
+      "sha256": "bd94140d34bbdd82125aad05d4686f7c1fe220ad82dedfe396df1d34b3fdac4a",
+      "lines": 36
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaResponse.java",
+      "sha256": "0f8e905691681bec81f77417861b90239956ef9af916ec827ec6d15b2bd3683d",
+      "lines": 33
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/DetalleVenta.java",
+      "sha256": "4d8872f9dbd651849abc5456be57dc0bb2762e90cb3d5a6021c8b4b73651d575",
+      "lines": 36
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/EstadoVenta.java",
+      "sha256": "41d90f42eef0e099c405a3f1ce374625f591e88ed8774c3996cb051f293bb4ef",
+      "lines": 11
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java",
+      "sha256": "ffd7b2809722ac8ed8d8976435c280d288160f8bb9f4e3c764dcc24f866f2dba",
+      "lines": 66
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/GlobalExceptionHandler.java",
+      "sha256": "550e8424533b6c2a444017f6bebaa05131958e132f9339a137dcb98ec496491b",
+      "lines": 50
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/exception/ResourceNotFoundException.java",
+      "sha256": "af2b3c04c9351b146293d22617ebcd3727b4779e1d2c1f3eaa7e13e6ca9c43dc",
+      "lines": 7
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/filter/CorrelationIdFilter.java",
+      "sha256": "1022ccf3b590bd91aaaa58a5d1401689e04a8a86b32422e953bfe3d06cfd4deb",
+      "lines": 41
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/DetalleVentaMapper.java",
+      "sha256": "8fa3c0a9787cb2487fa57ed5f15bcc3e3c3bdf2edea990a7a9ac1c33054391bd",
+      "lines": 19
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/mapper/VentaMapper.java",
+      "sha256": "87f5159aa77c0bac311c0ca3ea4e517ff5482695fa4b7f0b071cf43a0ed589c3",
+      "lines": 31
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "sha256": "0bbf3e9e88ae28c928d4e8b7ffebfabb36f1b06f70aa61c063d80aff30117522",
+      "lines": 68
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/repository/VentaRepository.java",
+      "sha256": "1df7be15bd3eabaaa89a6c1c5101066ad11f468bab1e54acf555f65693a394ed",
+      "lines": 13
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java",
+      "sha256": "056960316457fb4983006e11b5c6762d6acc6b1a6349e5893c83bcc18c8e0077",
+      "lines": 58
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "sha256": "d29cf9bdd33aba9e0644f6ccfe9f70526f5307a7d8ba78d8017a90fda06a847b",
+      "lines": 192
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/application.yml",
+      "sha256": "dc38915bba43b774639285d57f921ac20c1a0639891b73417b7daf3c251234db",
+      "lines": 7
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V1__create_venta_tables.sql",
+      "sha256": "df80717c4afd60b902a0b3049b06f71b118791b069f614c87fd9173ad94188aa",
+      "lines": 18
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V2__saga_identity.sql",
+      "sha256": "d3e6a85b17512ea82729da2a3a3ec08a084b52bff436556cce61b2167a270338",
+      "lines": 5
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V3__transactional_messaging.sql",
+      "sha256": "46d7b5f7e71da82dfdbd46c32fe18eac6ec254f5db0c50393dd05a8e6e5d4d55",
+      "lines": 7
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V4__sede_venta.sql",
+      "sha256": "8534385ce9ddae3613bc1363cc3cd503dedae0d837883c3bebe05b67a8a6266f",
+      "lines": 1
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V5__despachos.sql",
+      "sha256": "73d23b6abee23d1253951ea8be167192dc18199f82c4200200c8368aae8e2c0d",
+      "lines": 1
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/db/migration/V6__delivery_checkout.sql",
+      "sha256": "3b2fba3ee9f38da75b94cdccf5c0d9821acb385d4d297c8a1bc0d6060812c6fa",
+      "lines": 8
+    },
+    {
+      "path": "services/garritas-venta-ms/src/main/resources/logback-spring.xml",
+      "sha256": "b8b37722ff319e6920c2502b831c5acd23c2795260ed796f8d08252978afd842",
+      "lines": 29
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/ComprobanteTest.java",
+      "sha256": "cef4f80fab29cfc0a1a1575af2a10b3b78f900efa8fee4e1f78cb98dc7fb015a",
+      "lines": 37
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DeliveryCheckoutIntegrationTests.java",
+      "sha256": "bc6931c8a032bea24ada44fd07a3a81339749ace06ededd6d87c74a6ec747a63",
+      "lines": 119
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/DespachoOwnershipTest.java",
+      "sha256": "e0bfb70fd273ef0ee84012b75277a4c1b50b2ee52c5f4bc6808ec448fecfd5ed",
+      "lines": 51
+    },
+    {
+      "path": "services/garritas-venta-ms/src/test/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplicationTests.java",
+      "sha256": "1484608f96df11e907372dd3cb4c261ea31faea5b38a7a1b4ecbd9f163511a54",
+      "lines": 13
+    },
+    {
+      "path": "clients/garritas-frontend/angular.json",
+      "sha256": "d44f9b76a835aeefca29506ceb73eb0febb5c8b345db84db07a0e03d1f289374",
+      "lines": 72
+    },
+    {
+      "path": "clients/garritas-frontend/public/config.dev.json",
+      "sha256": "ac6ac24dd308445a1b9bb2966b146335a2d1203550a61fac236e829bfe9e4691",
+      "lines": 1
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.config.ts",
+      "sha256": "5cc2447e6ea56bd54bb36528e71e4169ad417d982513ab79e14763731b81e8cd",
+      "lines": 16
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.html",
+      "sha256": "531386a65860056aa51f5b231f86a964433f097604e33b996178ede83c6a915e",
+      "lines": 271
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/app.ts",
+      "sha256": "e89adf98e05dcacddc87f53a673bcf90a75c43fb70060b09534e0b27bb26efeb",
+      "lines": 236
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/api.ts",
+      "sha256": "947d4f80f287abd16f6c2059e1cb905cce1c5f5065347f0302ab2420913488aa",
+      "lines": 110
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/auth.ts",
+      "sha256": "8a6ab40bff6bda15ad37ba0cb0d9bc428c132b1d8c6bcab74f5b68cbb47cb5a0",
+      "lines": 74
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/config.ts",
+      "sha256": "d0090b21fb921fc2362e2bdf52692e7d9d072072412436eae443857a28877c56",
+      "lines": 17
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/domain-api.ts",
+      "sha256": "68afa06e3bb3a3725b782bdbc40a7b411c2be2f026389a0b07d1d7e62254e415",
+      "lines": 267
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/core/interceptor.ts",
+      "sha256": "0536a974ced2ce1a1019d170c99a2bd735f6495751ef0afb8499309430d731e4",
+      "lines": 23
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-panel.html",
+      "sha256": "0997a5c7dd9428678e19ae730fd4882f2b96ec952a99b33e73e387df67464463",
+      "lines": 172
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-panel.ts",
+      "sha256": "6e20762e7b165cff7ed0561a2aeba7d3ba8e6ac84d1e3f1d4f253b14b2908e12",
+      "lines": 45
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-store.spec.ts",
+      "sha256": "d4c2e7fb3f2c968595943bbc97b827d0be8c0cd26d371a76d64d402178cb0e8b",
+      "lines": 238
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/cart/cart-store.ts",
+      "sha256": "cd1210b97a8076fe5b1d61bb4627e3b3c50dd1a4d64e89f647d9eed11f225546",
+      "lines": 276
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/envios/envios.component.html",
+      "sha256": "9221527ac61c80a29980cffb2804109888795169a5e67a032d3b1de8e81c363e",
+      "lines": 50
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/envios/envios.component.ts",
+      "sha256": "c2212556bf4019f28988e2b3a2b1a0be53127d7c7230d975f0fe9aab0d0cbed5",
+      "lines": 86
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.html",
+      "sha256": "8dca6348a9ee2a59e2248515701d901b429b8f34068ef78512a4787e532ccb26",
+      "lines": 204
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/prestaciones/prestaciones.component.ts",
+      "sha256": "4cc1748a5352899a037a68f63f6a7722858597355ce0afc4a914bc50aee87347",
+      "lines": 129
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/sedes/sedes.component.html",
+      "sha256": "923f9b4385f3c89839891fba0baa914c69477287ef0b8d411153d831e68999a4",
+      "lines": 105
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/sedes/sedes.component.ts",
+      "sha256": "ebb86b888a0f6a83592dfe742532ac114b67271c47b35f51729a4e04529e9b76",
+      "lines": 86
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.html",
+      "sha256": "6f806e68bbeebe38894b5ce4482482c0dc08c13c5b3e18a66c8b0bd2351b5d0f",
+      "lines": 230
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.spec.ts",
+      "sha256": "7581048341513d2710d1752f21d68a98a04a09865982f8c29859c8413d40f961",
+      "lines": 89
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "sha256": "43da28eeb04b9a672547b3d2b4a55e3ef9c635106ee418877338e937ab92346d",
+      "lines": 211
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/image-editor.ts",
+      "sha256": "6743a9add616c3007ced7ea6961d577863458d1b57d1e13453662a9d8ae97758",
+      "lines": 101
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/media.ts",
+      "sha256": "df8c7473f8a0af13a597975f53ff6e2cc38965cfe18b740199ff2fd5ac0f336a",
+      "lines": 32
+    },
+    {
+      "path": "clients/garritas-frontend/src/app/shared/resource-image.ts",
+      "sha256": "75f74a07d73c844ae65935936e95427a651db648cf50e2e7efab8812c65bf78c",
+      "lines": 34
+    },
+    {
+      "path": "clients/garritas-frontend/src/styles.css",
+      "sha256": "ad4a080e6dc7e81ac4d272abc4c54af065dcb54adc7bb68db3b4627003b3b24c",
+      "lines": 1012
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java",
+      "sha256": "82f6282ae6da5c406324d1551ec919a8de7c107defe725623277b837fe6da7aa",
+      "lines": 22
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/DomainErrors.java",
+      "sha256": "c1a60506e7a1275f2d8fab8bcaa502e9aa016b506f467a7253c052c3fd1c9dc5",
+      "lines": 45
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/HttpServices.java",
+      "sha256": "5df1bcba7976da514240f4fc8cb15074c890a1209e883528959c64f3757c8b57",
+      "lines": 21
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Inbox.java",
+      "sha256": "4b9f5f97fcc833ebf8ae0b10e3303a1f6fe32a372934d497d5e4139d6791e45b",
+      "lines": 21
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/LocalImages.java",
+      "sha256": "3d17d2db01e1beea7620e22815f7ccc48fff64a8ca402013a98e026f6f13fd0d",
+      "lines": 132
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/MessagingConfiguration.java",
+      "sha256": "189d5c15d7113dcde0d7025bb657b9090d28d49ee226338302e99787d083e0fb",
+      "lines": 46
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Outbox.java",
+      "sha256": "1bb7bbd8b58205852167506a2b376a41271061af12926db2dc1a52ca85e1ec5d",
+      "lines": 77
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Reference.java",
+      "sha256": "0d4281c662ed3cc1a013dd205c23f05716b9aa263a60a3f3058cadc9510cbb92",
+      "lines": 5
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SagaEvent.java",
+      "sha256": "ab1d6535c043a8145cd529b3e4b2d1daeba10fe8807622ef386937d3550dfe39",
+      "lines": 58
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/SecurityConfiguration.java",
+      "sha256": "bd029aecafc3ba8e5348703c96d6b0f04d3b16ffa3e20ca193564fdbd995a853",
+      "lines": 110
+    },
+    {
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/ServiceClient.java",
+      "sha256": "b42e03aa2d6261902310649d90fd14d019e5b1957de3b395ff373d8066b58e47",
+      "lines": 48
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-gateway-dev.yml",
+      "sha256": "978728011fe3dae542ae67d76d1932cb2e786bb815e807c93ea9a1b636f079fb",
+      "lines": 101
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-institucion-ms-dev.yml",
+      "sha256": "0882d5f78eea43d975de1599ee9d448b38ec2142e9dd65e6df628372ac45d9dc",
+      "lines": 66
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-institucion-ms-prod.yml",
+      "sha256": "3eed16fc0f2ad65b110ff08ad61735c4f6eb18f12c12985b4cbe22cbfe2940ba",
+      "lines": 58
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-venta-ms-dev.yml",
+      "sha256": "0252f739dd906d8eb26ddd35de808e2a056fc51e337547c54bdfd131cdf283c3",
+      "lines": 111
+    },
+    {
+      "path": "infra/garritas-config/config-repo/garritas-venta-ms-prod.yml",
+      "sha256": "65563cc9025d136f603297a917042b80c749005f0deed982e5d9c9cd72c920cf",
+      "lines": 105
+    },
+    {
+      "path": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java",
+      "sha256": "4baecbfed38dfbab4239bb44123484daf62ed96129e0ce65852b1a05627ed446",
+      "lines": 92
+    },
+    {
+      "path": "services/garritas-pago-ms/src/main/java/pe/edu/upeu/garritas/pago/messaging/PagoEvents.java",
+      "sha256": "724684ff715e4f3c8368fa002c885d29342fe423674849ad9cbb5d671e0601ae",
+      "lines": 53
+    }
+  ],
+  "lectura_comentada": [
+    {
+      "titulo": "A1. La aplicación importa seguridad, eventos y Feign",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/GarritasVentaMsApplication.java",
+      "start_line": 6,
+      "end_line": 15,
+      "fragmento": "@org.springframework.context.annotation.Import({\n  pe.edu.upeu.garritas.common.SecurityConfiguration.class,\n  pe.edu.upeu.garritas.common.MessagingConfiguration.class\n})\n@org.springframework.cloud.openfeign.EnableFeignClients\n@io.swagger.v3.oas.annotations.OpenAPIDefinition(\n    security = @io.swagger.v3.oas.annotations.security.SecurityRequirement(name = \"bearerAuth\"))\n@io.swagger.v3.oas.annotations.security.SecurityScheme(\n    name = \"bearerAuth\",\n    type = io.swagger.v3.oas.annotations.enums.SecuritySchemeType.HTTP,",
+      "explicaciones": [
+        "**@Import:** incorpora la configuración común que no está en el paquete de Venta.",
+        "**SecurityConfiguration:** valida JWT y permisos. **MessagingConfiguration:** prepara Kafka.",
+        "**EnableFeignClients:** habilita los contratos de llamadas declarativas. Las anotaciones Swagger documentan el esquema Bearer."
+      ]
+    },
+    {
+      "titulo": "A2. Este es el controlador REST de Venta",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java",
+      "start_line": 11,
+      "end_line": 17,
+      "fragmento": "@RestController\n@RequestMapping(\"/api/v1/ventas\")\n@RequiredArgsConstructor\npublic class VentaController {\n  private final VentaService service;\n  private final pe.edu.upeu.garritas.venta.service.ComprobanteService comprobantes;\n",
+      "explicaciones": [
+        "**@RestController:** sus métodos atienden HTTP y producen una respuesta de API.",
+        "**@RequestMapping:** agrupa las rutas bajo /api/v1/ventas.",
+        "**private final:** dependencias inyectadas por constructor. El controlador delega al servicio; no calcula el carrito aquí."
+      ]
+    },
+    {
+      "titulo": "A3. Crear una compra: POST, DTO y clave",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/controller/VentaController.java",
+      "start_line": 36,
+      "end_line": 42,
+      "fragmento": "  @PostMapping\n  @ResponseStatus(HttpStatus.CREATED)\n  public VentaResponse crear(\n      @Valid @RequestBody VentaRequest request, @RequestHeader(\"Idempotency-Key\") UUID key) {\n    return service.crear(request, key);\n  }\n}",
+      "explicaciones": [
+        "**POST:** crea una compra; **201 CREATED** es la respuesta de creación.",
+        "**@Valid + @RequestBody:** recibe JSON y ejecuta las validaciones del DTO.",
+        "**Idempotency-Key:** UUID obligatorio para reconocer reintentos. El servicio compara su contenido antes de reutilizar una venta."
+      ]
+    },
+    {
+      "titulo": "A4. El DTO limita sede y tipo de entrega",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/VentaRequest.java",
+      "start_line": 11,
+      "end_line": 25,
+      "fragmento": "public class VentaRequest {\n  @NotNull @Positive private Long sedeId;\n\n  @NotNull\n  @Pattern(regexp = \"RECOJO|ENVIO\")\n  private String tipoEntrega = \"RECOJO\";\n\n  @Size(max = 255)\n  private String direccionEntrega;\n\n  @Positive private Long zonaId;\n  @Positive private Long transportistaId;\n\n  @DecimalMin(\"0.00\")\n  @Digits(integer = 8, fraction = 2)",
+      "explicaciones": [
+        "**sedeId:** ID obligatorio y positivo; después el servicio comprobará que esa sede exista y esté activa.",
+        "**tipoEntrega:** solo RECOJO o ENVIO. El valor inicial es recojo.",
+        "**@Size / @Positive:** limitan campos. Validar el formato no sustituye comprobar referencias o cobrar la tarifa real."
+      ]
+    },
+    {
+      "titulo": "A5. Una cantidad válida no puede ser cero",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/dto/DetalleVentaRequest.java",
+      "start_line": 9,
+      "end_line": 16,
+      "fragmento": "public class DetalleVentaRequest {\n  @NotNull @Positive private Long idProducto;\n\n  @NotNull\n  @Min(1)\n  @Max(10000)\n  private Integer cantidad;\n}",
+      "explicaciones": [
+        "**idProducto:** referencia positiva de un producto de Catálogo.",
+        "**cantidad:** entero obligatorio entre 1 y 10000 según este contrato. No se permite comprar una cantidad negativa para aumentar stock.",
+        "El servidor también verifica disponibilidad: pasar la validación del DTO no garantiza que haya inventario."
+      ]
+    },
+    {
+      "titulo": "A6. Cabecera y detalles: una relación 1:N",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/entity/Venta.java",
+      "start_line": 60,
+      "end_line": 66,
+      "fragmento": "  @OneToMany(\n      mappedBy = \"venta\",\n      cascade = CascadeType.ALL,\n      orphanRemoval = true,\n      fetch = FetchType.LAZY)\n  private List<DetalleVenta> detalles = new ArrayList<>();\n}",
+      "explicaciones": [
+        "**mappedBy = venta:** cada detalle indica a qué venta pertenece.",
+        "**cascade ALL:** guardar la cabecera propaga la persistencia de sus detalles.",
+        "**LAZY:** la colección no se carga siempre por defecto. Se convierte a DTO dentro de la operación de servicio."
+      ]
+    },
+    {
+      "titulo": "B1. La operación es localmente transaccional",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "start_line": 48,
+      "end_line": 55,
+      "fragmento": "  @Transactional\n  public VentaResponse crear(VentaRequest request, UUID key) {\n    if (CurrentUser.admin())\n      throw new org.springframework.security.access.AccessDeniedException(\n          \"El administrador gestiona la tienda; utiliza una cuenta de cliente para comprar\");\n    validarEntrega(request);\n    String owner = CurrentUser.subject();\n    // Serialize equal request keys across instances without holding a distributed transaction.",
+      "explicaciones": [
+        "**@Transactional:** protege la escritura local de la compra. Un fallo no debe confirmar solo una parte del agregado.",
+        "**CurrentUser.admin():** rechaza ADMIN como comprador.",
+        "**validarEntrega / subject:** comprueba entrega y toma la identidad del JWT, no un idCliente escrito por el navegador."
+      ]
+    },
+    {
+      "titulo": "B2. Bloqueo y búsqueda de una clave ya utilizada",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "start_line": 56,
+      "end_line": 64,
+      "fragmento": "    jdbc.queryForObject(\n        \"SELECT pg_advisory_xact_lock(hashtextextended(?,0))\", Object.class, owner + \":\" + key);\n    var existing = repository.findByIdClienteAndIdempotencyKey(owner, key);\n    if (existing.isPresent()) {\n      Venta old = existing.get();\n      var original = new TreeMap<Long, Integer>();\n      old.getDetalles()\n          .forEach(d -> original.merge(d.getIdProducto(), d.getCantidad(), Integer::sum));\n      var incoming = new TreeMap<Long, Integer>();",
+      "explicaciones": [
+        "**pg_advisory_xact_lock:** serializa peticiones con la misma combinación de dueño y clave en esta base.",
+        "**findByIdClienteAndIdempotencyKey:** busca el resultado anterior de esa operación.",
+        "No basta generar un UUID: el mismo reintento debe conservarlo; una clave reutilizada con otros datos se rechaza más adelante."
+      ]
+    },
+    {
+      "titulo": "B3. Consultar una sede por nombre de servicio",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "start_line": 79,
+      "end_line": 85,
+      "fragmento": "    Reference sede =\n        services.get(\n            \"garritas-institucion-ms\", \"/api/v1/sedes/\" + request.getSedeId(), Reference.class);\n    if (!Boolean.TRUE.equals(sede.activo()))\n      throw new ResponseStatusException(HttpStatus.CONFLICT, \"La sede no está disponible\");\n    var quantities = new TreeMap<Long, Integer>();\n    request",
+      "explicaciones": [
+        "**services.get:** llamada HTTP a Institución mediante el cliente común.",
+        "**garritas-institucion-ms:** nombre lógico para descubrimiento; no es una tabla de Venta.",
+        "**activo:** si la sede no está disponible se rechaza la compra, sin aceptar una referencia falsa."
+      ]
+    },
+    {
+      "titulo": "B4. Una tarifa cambiada exige nueva confirmación",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "start_line": 106,
+      "end_line": 115,
+      "fragmento": "      if (cobertura.tarifa().compareTo(request.getTarifaCotizada()) != 0)\n        throw new ResponseStatusException(\n            HttpStatus.CONFLICT,\n            \"La tarifa de envío cambió. Actualiza las opciones y confirma el nuevo total\");\n      venta.setCostoEnvio(cobertura.tarifa());\n      venta.setDireccionEntrega(direccion(request));\n      venta.setZonaId(request.getZonaId());\n      venta.setTransportistaId(request.getTransportistaId());\n      venta.setTransportistaNombre(cobertura.transportista());\n      venta.setDiasEntrega(cobertura.diasEstimados());",
+      "explicaciones": [
+        "**compareTo:** compara importes BigDecimal, evitando basarse en un total arbitrario del cliente.",
+        "**409 CONFLICT:** la cotización cambió; Angular debe actualizar y el cliente confirmar las condiciones nuevas.",
+        "Después se conserva costoEnvio y los datos acordados de la entrega dentro de Venta."
+      ]
+    },
+    {
+      "titulo": "B5. Producto, cantidad y subtotal calculado por el servidor",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "start_line": 118,
+      "end_line": 129,
+      "fragmento": "      var producto = catalogo.obtener(item.getKey());\n      if (!Boolean.TRUE.equals(producto.activo()) || producto.stock() < item.getValue())\n        throw new ResponseStatusException(\n            HttpStatus.CONFLICT, \"Producto inactivo o stock insuficiente: \" + item.getKey());\n      var subtotal = producto.precio().multiply(BigDecimal.valueOf(item.getValue()));\n      venta\n          .getDetalles()\n          .add(\n              DetalleVenta.builder()\n                  .venta(venta)\n                  .idProducto(item.getKey())\n                  .cantidad(item.getValue())",
+      "explicaciones": [
+        "**catalogo.obtener:** consulta el producto real.",
+        "**activo / stock:** comprobación previa de elegibilidad; la reserva definitiva se decide luego en Catálogo.",
+        "**precio × cantidad:** calcula el subtotal con BigDecimal y construye el detalle con el precio acordado."
+      ]
+    },
+    {
+      "titulo": "B6. Guardar y registrar venta.creada",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "start_line": 140,
+      "end_line": 155,
+      "fragmento": "    repository.saveAndFlush(venta);\n    outbox.append(\n        new SagaEvent(\n            UUID.randomUUID(),\n            1,\n            \"venta.creada\",\n            venta.getId(),\n            owner,\n            venta.getTotal(),\n            venta.getMetodoPago(),\n            Optional.ofNullable(MDC.get(\"traceId\")).orElseGet(() -> UUID.randomUUID().toString()),\n            venta.getDetalles().stream()\n                .map(\n                    d ->\n                        new SagaEvent.Item(\n                            d.getIdProducto(), d.getCantidad(), d.getPrecioUnitario()))",
+      "explicaciones": [
+        "**saveAndFlush:** persiste la venta y sus detalles.",
+        "**outbox.append:** registra el evento en la misma transacción local. No envía directamente un pago bancario.",
+        "**eventId / ventaId / owner / traceId:** distinguen mensaje, agregado, propietario y correlación; no son cuatro nombres de la misma clave."
+      ]
+    },
+    {
+      "titulo": "B7. El listado también aplica el rol en el servidor",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/VentaService.java",
+      "start_line": 32,
+      "end_line": 41,
+      "fragmento": "  public List<VentaResponse> listar() {\n    var ventas =\n        CurrentUser.admin()\n            ? repository.findAll()\n            : repository.findByIdCliente(CurrentUser.subject());\n    return ventas.stream()\n        .sorted(Comparator.comparing(Venta::getFecha).reversed())\n        .map(mapper::toResponse)\n        .toList();\n  }",
+      "explicaciones": [
+        "**ADMIN:** recupera todas las ventas.",
+        "**Cliente:** obtiene solo las del subject autenticado.",
+        "**mapper + orden:** convierte a DTO y presenta las más recientes. La tabla Angular no recibe ventas ajenas para ocultarlas después."
+      ]
+    },
+    {
+      "titulo": "B8. Outbox exige una transacción activa",
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/Outbox.java",
+      "start_line": 35,
+      "end_line": 44,
+      "fragmento": "  public void append(SagaEvent event) {\n    if (!TransactionSynchronizationManager.isActualTransactionActive())\n      throw new IllegalStateException(\"Outbox requiere una transacción local\");\n    event.validate();\n    jdbc.update(\n        \"INSERT INTO outbox_event(event_id,aggregate_id,payload) VALUES (?,?,?)\",\n        event.eventId(),\n        event.ventaId().toString(),\n        json.writeValueAsString(event));\n  }",
+      "explicaciones": [
+        "**isActualTransactionActive:** evita usar Outbox sin el límite transaccional requerido.",
+        "**event.validate:** comprueba el contrato antes de persistirlo.",
+        "**INSERT outbox_event:** guarda el mensaje con los datos locales. Un publicador posterior lo enviará a Kafka."
+      ]
+    },
+    {
+      "titulo": "B9. Feign más Circuit Breaker no inventa stock",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/client/CatalogoConsulta.java",
+      "start_line": 18,
+      "end_line": 28,
+      "fragmento": "        .create(\"catalogo\")\n        .run(\n            () -> client.obtener(id),\n            ex -> {\n              if (ex instanceof FeignException.NotFound)\n                throw new ResponseStatusException(\n                    HttpStatus.UNPROCESSABLE_CONTENT, \"Producto no encontrado\");\n              throw new ResponseStatusException(\n                  HttpStatus.SERVICE_UNAVAILABLE, \"Catálogo no disponible; inténtalo de nuevo\", ex);\n            });\n  }",
+      "explicaciones": [
+        "**create(catalogo):** utiliza el circuito configurado para esa dependencia.",
+        "**run:** ejecuta la consulta o maneja su fallo. Un producto inexistente y un servicio no disponible se distinguen.",
+        "El fallback es un error controlado; no devuelve un producto ficticio para seguir vendiendo."
+      ]
+    },
+    {
+      "titulo": "C1. Filtrar eventos y deduplicar consumo",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "start_line": 24,
+      "end_line": 34,
+      "fragmento": "    if (!java.util.Set.of(\n            \"inventario.reservado\",\n            \"inventario.rechazado\",\n            \"pago.validado\",\n            \"pago.fallido\",\n            \"inventario.liberado\")\n        .contains(e.type())) return;\n    if (!inbox.claim(e)) return;\n    try (var scope = MDC.putCloseable(\"traceId\", e.traceId())) {\n      String state =\n          switch (e.type()) {",
+      "explicaciones": [
+        "Solo procesa los tipos de inventario/pago que le corresponden; otros eventos se ignoran.",
+        "**inbox.claim:** evita repetir el mismo eventId en una transacción confirmada.",
+        "El estado previo y las restricciones del negocio aportan protección adicional frente a repeticiones semánticas."
+      ]
+    },
+    {
+      "titulo": "C2. La transición SQL comprueba el estado anterior",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/messaging/VentaEvents.java",
+      "start_line": 46,
+      "end_line": 57,
+      "fragmento": "      int changed =\n          jdbc.update(\n              \"UPDATE ventas SET estado=? WHERE id=? AND estado=?\", state, e.ventaId(), expected);\n      if (changed == 1 && \"pago.validado\".equals(e.type())) {\n        // Same local transaction as inbox and sale transition: no paid order without its dispatch.\n        jdbc.update(\n            \"\"\"\n            INSERT INTO despachos(id_venta,id_cliente,direccion_entrega,transportista,estado,fecha_entrega_estimada,id_zona,id_transportista,tarifa)\n            SELECT id,id_cliente,direccion_entrega,transportista_nombre,'PENDIENTE',CURRENT_TIMESTAMP + dias_entrega * interval '1 day',zona_id,transportista_id,costo_envio\n            FROM ventas WHERE id=? AND tipo_entrega='ENVIO'\n            ON CONFLICT(id_venta) DO NOTHING\n            \"\"\",",
+      "explicaciones": [
+        "**WHERE id AND estado:** aplica la transición solo si la venta sigue en el estado esperado.",
+        "**changed == 1:** un cambio realmente aplicado puede desencadenar el despacho.",
+        "El INSERT usa datos de una venta ENVIO ya pagada. No crea un delivery gratuito para un recojo."
+      ]
+    },
+    {
+      "titulo": "C3. La reserva solo se libera una vez (Catálogo)",
+      "path": "services/garritas-catalogo-ms/src/main/java/pe/edu/upeu/garritas/catalogo/messaging/InventarioEvents.java",
+      "start_line": 76,
+      "end_line": 92,
+      "fragmento": "  private void liberar(SagaEvent e) {\n    var rows =\n        jdbc.queryForList(\n            \"SELECT estado,payload FROM reservas_stock WHERE id_venta=? FOR UPDATE\", e.ventaId());\n    if (rows.isEmpty()) throw new IllegalStateException(\"Reserva inexistente: \" + e.ventaId());\n    if (!rows.getFirst().get(\"estado\").equals(\"RESERVADA\")) return;\n    var original = json.readValue(rows.getFirst().get(\"payload\").toString(), SagaEvent.class);\n    for (var item :\n        original.items().stream().sorted(Comparator.comparing(SagaEvent.Item::productoId)).toList())\n      jdbc.update(\n          \"UPDATE productos SET stock=stock+?,version=version+1 WHERE id=?\",\n          item.cantidad(),\n          item.productoId());\n    jdbc.update(\"UPDATE reservas_stock SET estado='LIBERADA' WHERE id_venta=?\", e.ventaId());\n    outbox.append(original.next(\"inventario.liberado\"));\n  }\n}",
+      "explicaciones": [
+        "**Código de colaboración de Catálogo:** la devolución del stock sucede aquí, no escribiendo desde Venta otra base.",
+        "**FOR UPDATE / RESERVADA:** bloquea la reserva y verifica que aún pueda liberarse.",
+        "**stock + cantidad:** devuelve unidades originales; luego marca LIBERADA y añade inventario.liberado al Outbox."
+      ]
+    },
+    {
+      "titulo": "C4. El PDF comprueba identidad y estado antes de crearse",
+      "path": "services/garritas-venta-ms/src/main/java/pe/edu/upeu/garritas/venta/service/ComprobanteService.java",
+      "start_line": 19,
+      "end_line": 30,
+      "fragmento": "  public byte[] generar(long id) {\n    var v = ventas.obtener(id); // Aplica la misma propiedad/rol que la consulta de venta.\n    if (v.getEstado() != EstadoVenta.PAGADA)\n      throw new ResponseStatusException(HttpStatus.CONFLICT, \"El comprobante está disponible cuando la compra está pagada\");\n    List<String> lines = new ArrayList<>();\n    lines.add(\"GARRITAS STORE - CONSTANCIA DE COMPRA #\" + id);\n    lines.add(\"Laboratorio: pago simulado. Sin validez tributaria.\");\n    lines.add(\"Fecha: \" + DateTimeFormatter.ofPattern(\"dd/MM/yyyy HH:mm\").withZone(ZoneId.of(\"America/Lima\")).format(v.getFecha()));\n    lines.add(\"Cliente (identificador): \" + v.getIdCliente());\n    lines.add(\"Sede: #\" + v.getSedeId() + \" | Estado: PAGADA\");\n    lines.add(\" \"); lines.add(\"Producto / cantidad / precio acordado / subtotal (S/)\");\n    for (var d : v.getDetalles())",
+      "explicaciones": [
+        "**ventas.obtener:** reutiliza el control de propietario/ADMIN.",
+        "**PAGADA:** si no está confirmada, responde conflicto en vez de emitir una constancia engañosa.",
+        "**lines:** prepara contenido desde datos persistidos. Declara pago simulado y ausencia de validez tributaria."
+      ]
+    },
+    {
+      "titulo": "D1. Sedes visibles según disponibilidad y rol",
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "start_line": 21,
+      "end_line": 29,
+      "fragmento": "  public List<SedeResponse> listar() {\n    return sedeRepository.findAll().stream()\n        .filter(s -> pe.edu.upeu.garritas.common.CurrentUser.admin() || s.getActivo())\n        .sorted(java.util.Comparator.comparing(Sede::getCiudad).thenComparing(Sede::getNombre))\n        .map(sedeMapper::toResponse)\n        .toList();\n  }\n\n  public SedeResponse obtener(Long id) {",
+      "explicaciones": [
+        "**findAll:** obtiene entidades de la base propia.",
+        "**filter:** ADMIN puede ver todas; un cliente consulta activas.",
+        "**sorted y mapper:** ordena por ciudad/nombre y prepara una respuesta de API, sin exponer directamente JPA."
+      ]
+    },
+    {
+      "titulo": "D2. Crear y actualizar una sede son operaciones distintas",
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "start_line": 37,
+      "end_line": 52,
+      "fragmento": "  public SedeResponse crear(SedeRequest request) {\n    Sede sede = sedeMapper.toEntity(request);\n    return sedeMapper.toResponse(sedeRepository.save(sede));\n  }\n\n  public SedeResponse actualizar(Long id, SedeRequest request) {\n    Sede sede = buscarOFallar(id);\n    sede.setNombre(request.getNombre());\n    sede.setDireccion(request.getDireccion());\n    sede.setCiudad(request.getCiudad());\n    sede.setTelefono(request.getTelefono());\n    sede.setActivo(request.getActivo());\n    return sedeMapper.toResponse(sedeRepository.save(sede));\n  }\n\n  public void eliminar(Long id) {",
+      "explicaciones": [
+        "**crear:** convierte el DTO y guarda un registro nuevo.",
+        "**actualizar:** busca por ID y cambia nombre, dirección, ciudad, teléfono y activo.",
+        "La identidad de una sede se mantiene al editar: no se crea otra para cada cambio."
+      ]
+    },
+    {
+      "titulo": "D3. Eliminar es una baja lógica",
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/SedeService.java",
+      "start_line": 52,
+      "end_line": 56,
+      "fragmento": "  public void eliminar(Long id) {\n    Sede sede = buscarOFallar(id);\n    sede.setActivo(false);\n    sedeRepository.save(sede);\n  }",
+      "explicaciones": [
+        "**buscarOFallar:** no acepta un ID inexistente como éxito.",
+        "**setActivo(false):** desactiva la sede, conserva la fila y el historial.",
+        "El verbo HTTP DELETE no obliga a borrar físicamente una tabla."
+      ]
+    },
+    {
+      "titulo": "D4. Dos relaciones N:1 forman tu N:M con atributos",
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/SedePrestacion.java",
+      "start_line": 17,
+      "end_line": 33,
+      "fragmento": "  @ManyToOne(fetch = FetchType.LAZY, optional = false)\n  @JoinColumn(name = \"id_sede\")\n  private Sede sede;\n\n  @ManyToOne(fetch = FetchType.LAZY, optional = false)\n  @JoinColumn(name = \"id_prestacion\")\n  private Prestacion prestacion;\n\n  @Column(nullable = false, precision = 10, scale = 2)\n  private BigDecimal precio;\n\n  @Column(name = \"duracion_minutos\", nullable = false)\n  private Integer duracionMinutos;\n\n  @Column(nullable = false)\n  private Boolean activo = true;\n}",
+      "explicaciones": [
+        "**id_sede e id_prestacion:** claves foráneas locales hacia los dos lados de la asociación.",
+        "**precio / duracionMinutos / activo:** condiciones de esa pareja concreta.",
+        "Una sede puede aparecer en muchas filas y una prestación también: así se representa la N:M."
+      ]
+    },
+    {
+      "titulo": "D5. La oferta no duplica la pareja sede/prestación",
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "start_line": 94,
+      "end_line": 105,
+      "fragmento": "    SedePrestacion o =\n        ofertas.findBySedeIdAndPrestacionId(sede, p.getId()).orElseGet(SedePrestacion::new);\n    o.setSede(s);\n    o.setPrestacion(p);\n    o.setPrecio(r.precio());\n    o.setDuracionMinutos(r.duracionMinutos());\n    o.setActivo(r.activo());\n    return response(ofertas.saveAndFlush(o));\n  }\n\n  private OfertaResponse response(SedePrestacion o) {\n    return new OfertaResponse(",
+      "explicaciones": [
+        "**findBySedeIdAndPrestacionId:** recupera la asociación si ya existe.",
+        "**orElseGet:** crea una solo cuando falta.",
+        "**setPrecio / setDuracion:** actualiza las condiciones de esa sede; saveAndFlush conserva el resultado."
+      ]
+    },
+    {
+      "titulo": "D6. Un paquete contiene prestaciones individuales",
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/entity/Prestacion.java",
+      "start_line": 25,
+      "end_line": 31,
+      "fragmento": "  @ManyToMany(fetch = FetchType.LAZY)\n  @JoinTable(\n      name = \"prestacion_componentes\",\n      joinColumns = @JoinColumn(name = \"id_paquete\"),\n      inverseJoinColumns = @JoinColumn(name = \"id_componente\"))\n  private java.util.Set<Prestacion> componentes = new java.util.HashSet<>();\n}",
+      "explicaciones": [
+        "**prestacion_componentes:** tabla intermedia de una asociación autorreferente.",
+        "**id_paquete / id_componente:** el mismo tipo Prestacion cumple dos papeles.",
+        "La entidad expresa la relación; PrestacionService impide anidamientos y componentes inválidos."
+      ]
+    },
+    {
+      "titulo": "D7. Bloquear cambios del grafo evita carreras entre paquetes",
+      "path": "services/garritas-institucion-ms/src/main/java/pe/edu/upeu/garritas/institucion/service/PrestacionService.java",
+      "start_line": 34,
+      "end_line": 48,
+      "fragmento": "    jdbc.queryForObject(\n        \"SELECT pg_advisory_xact_lock(hashtextextended(?,0))\", Object.class, \"garritas:paquetes\");\n    Prestacion p =\n        id == null\n            ? new Prestacion()\n            : prestaciones.findById(id).orElseThrow(() -> error(404, \"Prestación no encontrada\"));\n    var ids = r.componenteIds() == null ? java.util.Set.<Long>of() : r.componenteIds();\n    if (!ids.isEmpty()) {\n      if (ids.size() < 2) throw error(400, \"Un paquete necesita al menos dos servicios distintos\");\n      if (id != null && ids.contains(id))\n        throw error(400, \"Un paquete no puede incluirse a sí mismo\");\n      var componentes = new java.util.HashSet<>(prestaciones.findAllById(ids));\n      if (componentes.size() != ids.size())\n        throw error(400, \"Uno de los servicios del paquete no existe\");\n      if (componentes.stream().anyMatch(x -> !x.getActivo() || !x.getComponentes().isEmpty()))",
+      "explicaciones": [
+        "**garritas:paquetes:** clave de bloqueo de las ediciones del grafo en esta base.",
+        "**componentes:** se exige un conjunto válido y no incluir el propio paquete.",
+        "La comprobación posterior exige servicios individuales activos y evita paquetes dentro de paquetes."
+      ]
+    },
+    {
+      "titulo": "E1. El botón Ventas solo aparece en la sección ADMIN",
+      "path": "clients/garritas-frontend/src/app/app.html",
+      "start_line": 65,
+      "end_line": 69,
+      "fragmento": "      <p class=\"nav-section\">ADMINISTRACIÓN</p>\n      <button [class.selected]=\"view()==='pedidos'\" (click)=\"view.set('pedidos')\">Ventas</button>\n      <button\n        [class.selected]=\"view()==='logistica'\"\n        (click)=\"view.set('logistica')\"",
+      "explicaciones": [
+        "**auth.admin():** la sección que contiene este bloque se presenta al administrador.",
+        "**view.set(pedidos):** cambia la vista de Angular; no crea otra venta ni otra API.",
+        "**class.selected:** da estilo al botón activo. La autorización real sigue en el servidor."
+      ]
+    },
+    {
+      "titulo": "E2. Los filtros son valores derivados de las ventas autorizadas",
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "start_line": 75,
+      "end_line": 91,
+      "fragmento": "  readonly filtered = computed(() => {\n    const query = this.search().trim().toLowerCase();\n    return this.ventas().filter((v) => {\n      const fecha = this.localDate(v.fecha);\n      return (\n        (!query ||\n          String(v.id).includes(query) ||\n          (this.auth.admin() && v.idCliente.toLowerCase().includes(query))) &&\n        (!this.estado() || v.estado === this.estado()) &&\n        (!this.desde() || fecha >= this.desde()) &&\n        (!this.hasta() || fecha <= this.hasta())\n      );\n    });\n  });\n  readonly pagadas = computed(() =>\n    this.ventas().filter((v) => v.estado === \"PAGADA\"),\n  );",
+      "explicaciones": [
+        "**computed:** recalcula al cambiar las señales de búsqueda/estado/fechas.",
+        "**filter:** reduce la colección que devolvió el servidor.",
+        "No reemplaza permisos: el endpoint ya entrega al cliente únicamente sus compras."
+      ]
+    },
+    {
+      "titulo": "E3. Un Blob permite descargar el PDF del backend",
+      "path": "clients/garritas-frontend/src/app/features/ventas/ventas.component.ts",
+      "start_line": 193,
+      "end_line": 204,
+      "fragmento": "          const url = URL.createObjectURL(blob);\n          const anchor = document.createElement(\"a\");\n          anchor.href = url;\n          anchor.download = `Garritas-compra-${venta.id}.pdf`;\n          document.body.appendChild(anchor);\n          anchor.click();\n          anchor.remove();\n          setTimeout(() => URL.revokeObjectURL(url), 60000);\n          this.message.set(\n            \"PDF descargado. Ábrelo y elige Imprimir para obtener una copia en papel.\",\n          );\n        },",
+      "explicaciones": [
+        "**createObjectURL:** crea una referencia temporal al archivo recibido.",
+        "**anchor.download / click:** inicia la descarga con un nombre reconocible.",
+        "**revokeObjectURL:** libera la referencia después. El usuario abre el PDF y lo imprime; el navegador no calcula el comprobante."
+      ]
+    },
+    {
+      "titulo": "E4. Seleccionar una foto no obliga a escribir su URL",
+      "path": "clients/garritas-frontend/src/app/shared/image-editor.ts",
+      "start_line": 89,
+      "end_line": 100,
+      "fragmento": "  persist(id: number): Observable<void> {\n    const file = this.file();\n    const request = file\n      ? this.media.upload(this.resource(), id, file)\n      : this.removed()\n        ? this.media.delete(this.resource(), id)\n        : of(void 0);\n    return request.pipe(tap(() => this.reset()));\n  }\n  ngOnDestroy() {\n    this.revoke();\n  }",
+      "explicaciones": [
+        "**file / removed:** decide si subir, borrar o conservar la foto.",
+        "**persist(id):** espera un ID real del registro. Se aplica al guardar el formulario.",
+        "**reset:** limpia la selección tras el éxito. Si la foto falla al crear, el padre conserva el ID y no duplica el registro al reintentar."
+      ]
+    },
+    {
+      "titulo": "E5. La familia de letras y el tamaño base",
+      "path": "clients/garritas-frontend/src/styles.css",
+      "start_line": 2,
+      "end_line": 14,
+      "fragmento": "  font-family:\n    Inter,\n    ui-sans-serif,\n    system-ui,\n    -apple-system,\n    BlinkMacSystemFont,\n    \"Segoe UI\",\n    sans-serif;\n  color: #233c35;\n  background: #f5f6f2;\n  font-synthesis: none;\n  font-size: 15px;\n  line-height: 1.5;",
+      "explicaciones": [
+        "**font-family:** lista de preferencia; usa la primera fuente disponible en el equipo.",
+        "**font-size: 15px:** tamaño raíz. Una medida rem se calcula a partir de este valor.",
+        "**line-height:** distancia de líneas. Estas propiedades son presentación, no datos de PostgreSQL."
+      ]
+    },
+    {
+      "titulo": "E6. Los colores rosa son reglas CSS",
+      "path": "clients/garritas-frontend/src/styles.css",
+      "start_line": 745,
+      "end_line": 760,
+      "fragmento": "/* Rosa pastel: presentación de tienda y administración, sin alterar permisos. */\n:root {\n  color: #4c3042;\n  background: #fff5f8;\n  --rose: #a92f69;\n  --rose-dark: #83234f;\n  --rose-line: #efcdda;\n}\nbody {\n  background:\n    radial-gradient(ellipse at top right, #fde3ed 0, transparent 50%), #fff7fa;\n}\nbutton {\n  color: #733252;\n  border-color: var(--rose-line);\n}",
+      "explicaciones": [
+        "**color / background:** texto y fondo global.",
+        "**--rose:** variable reutilizable por botones; cambiarla modifica los lugares que la consumen.",
+        "La cascada importa: entre reglas con igual prioridad puede ganar la posterior; revisa también selectores específicos e inline."
+      ]
+    },
+    {
+      "titulo": "E7. El título de portada se adapta al tamaño de pantalla",
+      "path": "clients/garritas-frontend/src/styles.css",
+      "start_line": 812,
+      "end_line": 818,
+      "fragmento": "  font-size: clamp(2rem, 4vw, 3.6rem);\n  line-height: 1.12;\n  max-width: 700px;\n  position: relative;\n  z-index: 1;\n}\n.hero p {",
+      "explicaciones": [
+        "**clamp:** define mínimo, valor adaptable y máximo de tamaño de letra.",
+        "**line-height y max-width:** controlan lectura y ancho del título.",
+        "No hay que cambiar Java para ampliar un título: se modifica este estilo y se comprueba en móvil y escritorio."
+      ]
+    },
+    {
+      "titulo": "E8. Propiedad del recurso: no basta ocultar un botón",
+      "path": "infra/garritas-common/src/main/java/pe/edu/upeu/garritas/common/CurrentUser.java",
+      "start_line": 18,
+      "end_line": 21,
+      "fragmento": "  public static void requireOwner(String owner) {\n    if (!admin() && !subject().equals(owner))\n      throw new AccessDeniedException(\"El recurso pertenece a otro cliente\");\n  }",
+      "explicaciones": [
+        "**owner:** identidad persistida del dueño.",
+        "**subject():** identidad del JWT autenticado.",
+        "Si no es ADMIN y no coincide con el dueño, el backend rechaza el acceso, aunque se llame directamente a la API."
+      ]
+    }
+  ]
+}
