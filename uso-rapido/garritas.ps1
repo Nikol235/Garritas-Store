@@ -12,12 +12,36 @@ function Invoke-Checked([scriptblock]$Command) {
   & $Command
   if($LASTEXITCODE -ne 0){throw "Falló un comando (salida $LASTEXITCODE). Revisa el mensaje anterior."}
 }
-function Wait-Ready([string]$Url) {
+function Wait-Ready([string]$Url, $Process) {
   for($i=0;$i -lt 120;$i++){
+    if($Process -and $Process.HasExited){throw "La consola que iniciaba $Url terminó. Revisa los logs de .runtime."}
     try {$r=Invoke-WebRequest -UseBasicParsing -Uri $Url -TimeoutSec 3;if($r.StatusCode -eq 200){return}} catch {}
     Start-Sleep -Seconds 1
   }
   throw "No responde $Url. Revisa los logs de .runtime."
+}
+function Open-DevConsole([string]$Tipo, [string]$Nombre, [string]$Ruta, [string]$Log, [string]$Directorio) {
+  $script=Join-Path $PSScriptRoot 'scripts/consola-dev.ps1'
+  $process=Start-Process -FilePath 'powershell.exe' -WindowStyle Normal -WorkingDirectory $Directorio -PassThru -ArgumentList @(
+    '-NoLogo','-NoProfile','-ExecutionPolicy','RemoteSigned','-File',"`"$script`"",
+    '-Tipo',$Tipo,'-Nombre',"`"$Nombre`"",'-Ruta',"`"$Ruta`"",'-Log',"`"$Log`""
+  )
+  $records.Add(@{id=$process.Id;started=$process.StartTime.ToUniversalTime().ToString('o')})
+  ConvertTo-Json -InputObject @($records.ToArray()) | Set-Content $pidFile
+  $process
+}
+function Start-DevCompose([string]$Compose, [switch]$Wait) {
+  $argsUp=@('compose','-f',$Compose,'up','-d')
+  if($Wait){$argsUp+=@('--wait','--wait-timeout','240')}
+  Invoke-Checked {docker @argsUp}
+  $services=@(docker compose -f $Compose config --services)
+  if($LASTEXITCODE -ne 0){throw "No se pudo leer $Compose."}
+  $directory=Split-Path $Compose -Parent
+  $project=Split-Path $directory -Leaf
+  foreach($service in $services){
+    $log=Join-Path $runtime "$project-$service-docker.log"
+    Open-DevConsole 'docker' $service $Compose $log $directory | Out-Null
+  }
 }
 $ports=[ordered]@{'garritas-config'=18888;'garritas-eureka'=18761;'garritas-catalogo-ms'=8085;'garritas-institucion-ms'=8082;'garritas-usuario-ms'=8086;'garritas-bienestar-ms'=8088;'garritas-venta-ms'=8081;'garritas-pago-ms'=8087;'garritas-envio-ms'=8083;'garritas-citas-ms'=8084;'garritas-gateway'=18080}
 switch($Accion){
@@ -34,51 +58,46 @@ switch($Accion){
     if(Test-Path $pidFile){
       $alive=@(Get-Content $pidFile -Raw | ConvertFrom-Json | ForEach-Object {
         $process=Get-Process -Id $_.id -ErrorAction SilentlyContinue
-        if($process -and $process.StartTime.ToUniversalTime().ToString('o') -eq $_.started){$process}
+        if($process -and $process.StartTime.ToUniversalTime() -eq ([datetime]$_.started).ToUniversalTime()){$process}
       })
       if($alive.Count -gt 0){throw 'Hay procesos de este arranque todavía activos. Usa -Accion estado; para reiniciar, -Accion detener primero. No ejecutes iniciar dos veces.'}
       Remove-Item $pidFile
       Write-Host 'Se retiró un registro de procesos ya finalizados. Se iniciará una sesión nueva.'
     }
-    Invoke-Checked {docker compose -f kafka/compose-dev.yml up -d --wait --wait-timeout 240}
-    Invoke-Checked {docker compose -f keycloak/compose-dev.yml up -d --wait --wait-timeout 240}
+    $modules=@{}
+    foreach($name in $ports.Keys){
+      $module=Join-Path $root "services/$name"
+      if(!(Test-Path $module)){$module=Join-Path $root "infra/$name"}
+      $jar=Join-Path $module "target/$name-0.0.1-SNAPSHOT.jar"
+      if(!(Test-Path $jar)){throw "Falta $jar. Ejecuta primero -Accion build."}
+      $modules[$name]=@{directory=$module;jar=$jar}
+    }
+    $records=[System.Collections.Generic.List[object]]::new()
+    Start-DevCompose (Join-Path $root 'kafka/compose-dev.yml') -Wait
+    Start-DevCompose (Join-Path $root 'keycloak/compose-dev.yml') -Wait
     Get-ChildItem (Join-Path $root 'services') -Directory | ForEach-Object {
       $compose=Join-Path $_.FullName 'compose-dev.yml'
-      if(Test-Path $compose){Invoke-Checked {docker compose -f $compose up -d}}
+      if(Test-Path $compose){Start-DevCompose $compose}
     }
-    $records=@()
-    $names=@('SPRING_PROFILES_ACTIVE','LOG_PATH','LOGGING_FILE_NAME','LOGGING_CONFIG','JAVA_TOOL_OPTIONS')
-    $previous=@{};foreach($name in $names){$previous[$name]=[Environment]::GetEnvironmentVariable($name,'Process')}
-    try {
-      $java=if($env:JAVA_HOME){Join-Path $env:JAVA_HOME 'bin/java.exe'}else{(Get-Command java.exe).Source}
-      foreach($entry in $ports.GetEnumerator()){
-        $name=$entry.Key
-        $module=Join-Path $root "services/$name"
-        if(!(Test-Path $module)){$module=Join-Path $root "infra/$name"}
-        $jar=Join-Path $module "target/$name-0.0.1-SNAPSHOT.jar"
-        if(!(Test-Path $jar)){throw "Falta $jar. Ejecuta primero -Accion build."}
-        $logs=Join-Path $runtime $name;New-Item -ItemType Directory -Force $logs | Out-Null
-        $copy=Join-Path $logs 'app.jar';Copy-Item -Force $jar $copy
-        $env:SPRING_PROFILES_ACTIVE=if($name -eq 'garritas-config'){'native'}else{'dev'}
-        $env:LOG_PATH=$logs;$env:LOGGING_FILE_NAME=Join-Path $logs 'application.log'
-        $env:LOGGING_CONFIG=$null;$env:JAVA_TOOL_OPTIONS='-Xms64m -Xmx384m'
-        $process=Start-Process -WindowStyle Hidden -FilePath $java -ArgumentList @('-jar',"`"$copy`"") -WorkingDirectory $module -PassThru -RedirectStandardOutput (Join-Path $logs 'console.log') -RedirectStandardError (Join-Path $logs 'error.log')
-        $records+=@{id=$process.Id;started=$process.StartTime.ToUniversalTime().ToString('o')}
-        ConvertTo-Json -InputObject @($records) | Set-Content $pidFile
-        Wait-Ready "http://localhost:$($entry.Value)/actuator/health/readiness"
-        Write-Host "$name disponible"
-      }
-      Wait-Ready 'http://localhost:18080/api/v1/productos'
-      & (Join-Path $PSScriptRoot 'scripts/migrar-despachos.ps1')
-      $frontend=Join-Path $root 'clients/garritas-frontend'
-      if(!(Test-Path (Join-Path $frontend 'node_modules'))){Push-Location $frontend;try{Invoke-Checked {npm.cmd ci}}finally{Pop-Location}}
-      $node=(Get-Command node.exe).Source;$cli=Join-Path $frontend 'node_modules/@angular/cli/bin/ng.js'
-      $process=Start-Process -WindowStyle Hidden -FilePath $node -ArgumentList @("`"$cli`"",'serve','--host','127.0.0.1') -WorkingDirectory $frontend -PassThru -RedirectStandardOutput (Join-Path $runtime 'frontend.log') -RedirectStandardError (Join-Path $runtime 'frontend-error.log')
-      $records+=@{id=$process.Id;started=$process.StartTime.ToUniversalTime().ToString('o')}
-      ConvertTo-Json -InputObject @($records) | Set-Content $pidFile
-      Wait-Ready 'http://localhost:4200'
-      Write-Host 'Garritas iniciado. Ejecuta -Accion estado para comprobar los puertos.'
-    } finally {foreach($name in $names){[Environment]::SetEnvironmentVariable($name,$previous[$name],'Process')}}
+    foreach($entry in $ports.GetEnumerator()){
+      $name=$entry.Key
+      $module=$modules[$name]
+      $logs=Join-Path $runtime $name
+      New-Item -ItemType Directory -Force $logs | Out-Null
+      $copy=Join-Path $logs 'app.jar'
+      Copy-Item -Force $module.jar $copy
+      $process=Open-DevConsole 'java' $name $copy (Join-Path $logs 'console.log') $module.directory
+      Wait-Ready "http://localhost:$($entry.Value)/actuator/health/readiness" $process
+      Write-Host "$name disponible"
+    }
+    Wait-Ready 'http://localhost:18080/api/v1/productos'
+    & (Join-Path $PSScriptRoot 'scripts/migrar-despachos.ps1')
+    $frontend=Join-Path $root 'clients/garritas-frontend'
+    if(!(Test-Path (Join-Path $frontend 'node_modules'))){Push-Location $frontend;try{Invoke-Checked {npm.cmd ci}}finally{Pop-Location}}
+    $cli=Join-Path $frontend 'node_modules/@angular/cli/bin/ng.js'
+    $process=Open-DevConsole 'frontend' 'Angular' $cli (Join-Path $runtime 'frontend.log') $frontend
+    Wait-Ready 'http://localhost:4200' $process
+    Write-Host 'Garritas iniciado. Ejecuta -Accion estado para comprobar los puertos.'
   }
   'estado' {
     foreach($entry in $ports.GetEnumerator()){
@@ -93,10 +112,12 @@ switch($Accion){
       $records=@(Get-Content $pidFile -Raw | ConvertFrom-Json)
       foreach($record in $records){
         $process=Get-Process -Id $record.id -ErrorAction SilentlyContinue
-        if($process -and $process.StartTime.ToUniversalTime().ToString('o') -eq $record.started){Stop-Process -Id $process.Id}
+        if($process -and $process.StartTime.ToUniversalTime() -eq ([datetime]$record.started).ToUniversalTime()){
+          Invoke-Checked {taskkill.exe /PID $process.Id /T /F}
+        }
       }
       Remove-Item $pidFile
     }
-    Write-Host 'Procesos Java y Angular detenidos. Los contenedores y volúmenes se conservan.'
+    Write-Host 'Consolas DEV detenidas. Los contenedores y volúmenes se conservan.'
   }
 }

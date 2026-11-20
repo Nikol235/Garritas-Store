@@ -117,7 +117,7 @@ Con Docker Desktop iniciado, JDK 21 y Node 24 en PATH:
 .\uso-rapido\garritas.ps1 -Accion estado
 ```
 
-Las nuevas consolas Java/Node se ejecutan ocultas y sus logs quedan en `.runtime/`. Un registro de procesos ya finalizados se recupera automáticamente; si siguen activos, usa `estado` o `detener` antes de reiniciar. Para detener Java y Angular: `-Accion detener`. Este lanzador conserva los volúmenes y verifica los procesos registrados antes de detenerlos. También se pueden seguir los comandos manuales de cada módulo como en Pagatu; consulta [la guía de ejecución](docs/ejecucion.md).
+El lanzador abre un PowerShell visible para cada aplicación Java, Angular y cada contenedor DEV. Los contenedores usan sus propios archivos `compose-dev.yml`. Sus consolas muestran los logs en vivo y guardan una copia en `.runtime/`. Usa `-Accion detener` para cerrar las consolas gestionadas y detener Java y Angular. Los contenedores y sus volúmenes se conservan. También puedes seguir los comandos por módulo en [la guía de ejecución](docs/ejecucion.md).
 
 ## Abrir las aplicaciones
 

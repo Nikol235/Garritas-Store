@@ -41,7 +41,7 @@ docker compose -f compose-dev.yml up -d
 
 Repite para Catálogo, Usuario, Bienestar, Venta, Pago, Citas y Envío. Cuando haya una dependencia de negocio, espera a que sus servicios aparezcan en Eureka antes de utilizar el formulario. Angular se inicia desde `clients/garritas-frontend` con `npm ci` y `npm start`.
 
-El lanzador `uso-rapido/garritas.ps1` automatiza el proceso en Windows. El script Bash `uso-rapido/scripts/dev.sh all` automatiza el equivalente en Linux/WSL2 y comprueba también una petición funcional a través del Gateway.
+El lanzador `uso-rapido/garritas.ps1 -Accion iniciar` automatiza el proceso en Windows. Abre un PowerShell visible y con título para cada aplicación Java, Angular y cada contenedor de los Compose DEV. Las ventanas de Docker siguen los logs de su contenedor, por lo que puedes cerrarlas sin detenerlo. El script Bash `uso-rapido/scripts/dev.sh all` automatiza el arranque en Linux/WSL2 y comprueba también una petición funcional a través del Gateway.
 
 ## Puertos de negocio DEV
 
@@ -78,6 +78,6 @@ Una especialidad utilizada no se elimina: primero se desasigna de sus profesiona
 
 [Asignación y migraciones](asignacion-y-sustentacion.md) explica el traslado de despachos a Venta, las nuevas relaciones y las edades en días/meses. Los puertos no cambian. `build` utiliza `clean package` para evitar que un JAR conserve una copia anterior de la librería común.
 
-En Windows las consolas nuevas se ocultan y los logs se conservan en `.runtime`. No ejecutes dos arranques simultáneamente ni alternes copias en C: y D: que comparten puertos y contenedores. `detener` comprueba id y hora del proceso antes de detenerlo. Un registro sin procesos vivos se retira al iniciar.
+En Windows puedes leer los logs en las consolas visibles y en `.runtime`. No ejecutes dos arranques simultáneamente ni alternes copias en C: y D: que comparten puertos y contenedores. `-Accion detener` comprueba el identificador y la hora de inicio de cada consola antes de detenerla junto con sus procesos hijos. Los contenedores y volúmenes se conservan. Un registro sin procesos vivos se retira al iniciar.
 
 Swagger de cada servicio está en `http://localhost:PUERTO/swagger-ui/index.html`; la documentación es consultable y las operaciones protegidas requieren un JWT Bearer mediante Authorize. No se incluyen tokens en esta documentación.
