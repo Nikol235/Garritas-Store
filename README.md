@@ -109,15 +109,7 @@ bash uso-rapido/scripts/dev.sh status --observability
 
 ### Windows con PowerShell
 
-Con Docker Desktop iniciado, JDK 21 y Node 24 en PATH:
-
-```powershell
-.\uso-rapido\garritas.ps1 -Accion build
-.\uso-rapido\garritas.ps1 -Accion iniciar
-.\uso-rapido\garritas.ps1 -Accion estado
-```
-
-El lanzador abre un PowerShell visible para cada aplicación Java, Angular y cada contenedor DEV. Los contenedores usan sus propios archivos `compose-dev.yml`. Sus consolas muestran los logs en vivo y guardan una copia en `.runtime/`. Usa `-Accion detener` para cerrar las consolas gestionadas y detener Java y Angular. Los contenedores y sus volúmenes se conservan. También puedes seguir los comandos por módulo en [la guía de ejecución](docs/ejecucion.md).
+Para la sustentación en DEV, abre un PowerShell por aplicación y arranca cada componente desde su carpeta. La [guía de arranque manual](docs/ejecucion.md#arranque-manual-en-dev-con-powershell) contiene los comandos para Docker, Maven Wrapper y Angular, y explica cómo mostrar la caída y recuperación de Catálogo en Grafana.
 
 ## Abrir las aplicaciones
 

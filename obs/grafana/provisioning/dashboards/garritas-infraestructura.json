@@ -2,7 +2,7 @@
   "title": "Garritas - Infraestructura",
   "uid": "garritas-infra",
   "schemaVersion": 39,
-  "version": 1,
+  "version": 2,
   "editable": true,
   "timezone": "browser",
   "time": { "from": "now-30m", "to": "now" },
@@ -11,12 +11,35 @@
     {
       "id": 1,
       "type": "stat",
-      "title": "Instancias activas",
-      "gridPos": { "h": 6, "w": 8, "x": 0, "y": 0 },
+      "title": "Estado de las aplicaciones",
+      "description": "Prometheus comprueba si cada aplicación responde al consultar sus métricas. En DEV, una aplicación detenida conserva su tarjeta aunque se retire de Eureka.",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 0 },
       "datasource": { "type": "prometheus", "uid": "garritas-prometheus" },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": { "text": "CAÍDO", "color": "red", "index": 0 },
+                "1": { "text": "ARRIBA", "color": "green", "index": 1 }
+              }
+            }
+          ]
+        },
+        "overrides": []
+      },
+      "options": {
+        "colorMode": "background_solid",
+        "graphMode": "none",
+        "textMode": "value_and_name",
+        "reduceOptions": { "calcs": ["lastNotNull"], "fields": "", "values": false }
+      },
       "targets": [
         {
-          "expr": "up{job=\"garritas-microservicios\"}",
+          "expr": "up{job=\"garritas-estado-dev\"} or (up{job=\"garritas-microservicios\"} unless on() up{job=\"garritas-estado-dev\"})",
+          "instant": true,
+          "range": false,
           "legendFormat": "{{application}}",
           "refId": "A",
           "datasource": { "type": "prometheus", "uid": "garritas-prometheus" }
@@ -27,7 +50,7 @@
       "id": 2,
       "type": "timeseries",
       "title": "Peticiones HTTP por segundo, por instancia",
-      "gridPos": { "h": 8, "w": 16, "x": 8, "y": 0 },
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 8 },
       "datasource": { "type": "prometheus", "uid": "garritas-prometheus" },
       "targets": [
         {
@@ -42,7 +65,7 @@
       "id": 3,
       "type": "timeseries",
       "title": "Conexiones a PostgreSQL",
-      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 16 },
       "datasource": { "type": "prometheus", "uid": "garritas-prometheus" },
       "targets": [
         {
@@ -63,7 +86,7 @@
       "id": 4,
       "type": "timeseries",
       "title": "Peticiones al Gateway",
-      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 16 },
       "datasource": { "type": "prometheus", "uid": "garritas-prometheus" },
       "targets": [
         {
@@ -78,7 +101,7 @@
       "id": 5,
       "type": "logs",
       "title": "Logs recientes - garritas-catalogo-ms",
-      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 16 },
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 24 },
       "datasource": { "type": "loki", "uid": "garritas-loki" },
       "targets": [
         {
@@ -92,7 +115,7 @@
       "id": 6,
       "type": "logs",
       "title": "Errores recientes - garritas-catalogo-ms",
-      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 16 },
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 24 },
       "datasource": { "type": "loki", "uid": "garritas-loki" },
       "targets": [
         {

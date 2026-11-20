@@ -1,6 +1,33 @@
 global:
   scrape_interval: 15s
 scrape_configs:
+- job_name: garritas-estado-dev
+  scrape_interval: 5s
+  scrape_timeout: 3s
+  metrics_path: /actuator/prometheus
+  static_configs:
+  - targets: ['host.docker.internal:18888']
+    labels: {application: garritas-config}
+  - targets: ['host.docker.internal:18761']
+    labels: {application: garritas-eureka}
+  - targets: ['host.docker.internal:18080']
+    labels: {application: garritas-gateway}
+  - targets: ['host.docker.internal:8081']
+    labels: {application: garritas-venta-ms}
+  - targets: ['host.docker.internal:8082']
+    labels: {application: garritas-institucion-ms}
+  - targets: ['host.docker.internal:8083']
+    labels: {application: garritas-envio-ms}
+  - targets: ['host.docker.internal:8084']
+    labels: {application: garritas-citas-ms}
+  - targets: ['host.docker.internal:8085']
+    labels: {application: garritas-catalogo-ms}
+  - targets: ['host.docker.internal:8086']
+    labels: {application: garritas-usuario-ms}
+  - targets: ['host.docker.internal:8087']
+    labels: {application: garritas-pago-ms}
+  - targets: ['host.docker.internal:8088']
+    labels: {application: garritas-bienestar-ms}
 - job_name: garritas-microservicios
   eureka_sd_configs:
   - server: http://host.docker.internal:18761/eureka
