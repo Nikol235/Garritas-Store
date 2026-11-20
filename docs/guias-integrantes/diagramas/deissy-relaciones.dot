@@ -1,0 +1,4 @@
+digraph G {graph [bgcolor="white",fontname="DejaVu Sans",pad="0.2",nodesep="0.3",ranksep="0.45"];node [shape=box,style="rounded,filled",fillcolor="#fff0f6",color="#a94e79",fontname="DejaVu Sans",fontsize=11];edge [fontname="DejaVu Sans",fontsize=9,color="#69445b"];rankdir=LR;t[label="transportistas"];c[label="coberturas
+tarifa, días, activo
+UNIQUE transportista + zona"];z[label="zonas"];ci[label="citas"];dc[label="cita_detalles
+precio / duración acordados"];t->c[label="1:N"];z->c[label="1:N"];ci->dc[label="1:N"];}

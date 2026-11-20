@@ -1,0 +1,6 @@
+digraph G {graph [bgcolor="white",fontname="DejaVu Sans",pad="0.2",nodesep="0.3",ranksep="0.45"];node [shape=box,style="rounded,filled",fillcolor="#fff0f6",color="#a94e79",fontname="DejaVu Sans",fontsize=11];edge [fontname="DejaVu Sans",fontsize=9,color="#69445b"];rankdir=TB;f[label="Formulario válido / cliente"];r[label="Consultar mascota, sede,
+profesional y ofertas"];d[label="Construir detalles
+precio + duración"];l[label="Bloqueo PostgreSQL
+por profesional"];o[label="¿Se cruza con PROGRAMADA
+o CONFIRMADA?",shape=diamond];x[label="409: no guardar reserva"];s[label="Guardar cita + detalles
+commit local"];f->r->d->l->o;o->x[label="sí"];o->s[label="no"];}

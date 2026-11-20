@@ -1,0 +1,5 @@
+digraph G {graph [bgcolor="white",fontname="DejaVu Sans",pad="0.2",nodesep="0.3",ranksep="0.45"];node [shape=box,style="rounded,filled",fillcolor="#fff0f6",color="#a94e79",fontname="DejaVu Sans",fontsize=11];edge [fontname="DejaVu Sans",fontsize=9,color="#69445b"];rankdir=TB;a[label="Cliente contrata / renueva
+Idempotency-Key"];o[label="Identificar usuario y operación"];l[label="Bloqueo por usuario + clave"];k[label="¿Operación ya aplicada?",shape=diamond];r[label="Mismo tipo y recurso:
+ devolver resultado existente"];s[label="Validar plan y vigencia
+guardar suscripción + período
+misma transacción local"];b[label="Commit local; si falla, rollback"];a->o->l->k;k->r[label="sí"];k->s[label="no"];s->b;}

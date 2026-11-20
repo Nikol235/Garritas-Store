@@ -1,0 +1,34 @@
+{
+  "commit": "6e2239c55884c2a6ae53dd921147d9e5b53749ab",
+  "alcance": "Verificación documental; no repite pruebas funcionales ni ejecuta servicios.",
+  "guias": [
+    {
+      "integrante": "Fio",
+      "pdf": "Fio-Catalogo-y-Usuario.pdf",
+      "paginas": 183,
+      "marcadores": 29,
+      "referencias": 292,
+      "archivos_completos": 129,
+      "clases_y_pruebas_de_los_dos_dominios": 64,
+      "texto_seleccionable": true,
+      "enlaces": 350,
+      "rutas_y_lineas": "coinciden con Git",
+      "codigo_completo": "coincide con fuente numerada",
+      "sin_paginas_vacias": true
+    },
+    {
+      "integrante": "Deissy",
+      "pdf": "Deissy-Citas-y-Envio.pdf",
+      "paginas": 116,
+      "marcadores": 32,
+      "referencias": 197,
+      "archivos_completos": 83,
+      "clases_y_pruebas_de_los_dos_dominios": 37,
+      "texto_seleccionable": true,
+      "enlaces": 261,
+      "rutas_y_lineas": "coinciden con Git",
+      "codigo_completo": "coincide con fuente numerada",
+      "sin_paginas_vacias": true
+    }
+  ]
+}

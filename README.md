@@ -76,6 +76,10 @@ El perfil confirma su guardado leyendo nuevamente la API. La edad de mascotas se
 
 [Guía paso a paso, HTML copiable, PDF y fuentes por etapas](docs/manual-construccion-completa/README.md). Explica cómo crear y conectar todos los componentes desde una carpeta vacía.
 
+## Guías para Fio y Deissy
+
+[PDF individuales de código y sustentación](docs/guias-integrantes/README.md): Catálogo–Usuario para Fio y Citas–Envío para Deissy, con rutas, conexiones, explicación, demostración y código completo de sus módulos.
+
 ## Ventas, fotos y comprobantes
 
 [Guía de funciones y código](docs/ventas-imagenes-y-comprobantes.md): Ventas para ADMIN, Mis compras para CLIENTE, filtros y detalle; imagen principal local para productos/profesionales/sedes; constancia PDF imprimible para compras pagadas. El pago continúa simulado.

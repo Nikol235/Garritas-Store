@@ -1,0 +1,3 @@
+digraph G {graph [bgcolor="white",fontname="DejaVu Sans",pad="0.2",nodesep="0.3",ranksep="0.45"];node [shape=box,style="rounded,filled",fillcolor="#fff0f6",color="#a94e79",fontname="DejaVu Sans",fontsize=11];edge [fontname="DejaVu Sans",fontsize=9,color="#69445b"];rankdir=TB; a[label="Angular"];g[label="Gateway"];k[label="Keycloak"];c[label="Catálogo 8085"];u[label="Usuario 8086"];pc[label="PostgreSQL Catálogo
+15445"];pu[label="PostgreSQL Usuario
+15446"];v[label="Venta"];q[label="Kafka"];ct[label="Citas"];a->k[label="login / JWT"];a->g[label="API + JWT"];g->c;g->u;c->pc;u->pu;v->c[label="consulta Feign"];v->q[label="eventos"];q->c[label="reserva / compensación"];c->q[label="resultado inventario"];ct->u[label="mascota propia / HTTP"];}

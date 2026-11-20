@@ -1,0 +1,6 @@
+digraph G {graph [bgcolor="white",fontname="DejaVu Sans",pad="0.2",nodesep="0.3",ranksep="0.45"];node [shape=box,style="rounded,filled",fillcolor="#fff0f6",color="#a94e79",fontname="DejaVu Sans",fontsize=11];edge [fontname="DejaVu Sans",fontsize=9,color="#69445b"];rankdir=TB;a[label="Angular"];g[label="Gateway"];c[label="Citas 8084"];e[label="Envío 8083
+maestros logísticos"];u[label="Usuario
+mascota propia"];i[label="Institución
+sede / oferta"];b[label="Bienestar
+profesional"];v[label="Venta 8081
+compra + despacho"];pc[label="PG Citas 15444"];pe[label="PG Envío 15443"];a->g;g->c;g->e;g->v[label="/envios, /despachos"];c->u[label="HTTP"];c->i[label="HTTP"];c->b[label="HTTP"];c->pc;e->pe;v->e[label="Feign / tarifa"];}
