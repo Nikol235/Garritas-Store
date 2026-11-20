@@ -1,0 +1,51 @@
+Windows · PowerShell · ejecución local. Instalar Git, JDK 21 completo, Node 24.x (24.15 o superior) y Docker Desktop con WSL2. Abrir Docker Desktop y esperar a que arranque. No requiere Maven ni Angular CLI globales.
+
+1. Comprobar herramientas
+git --version
+java -version
+javac -version
+node --version
+npm.cmd --version
+docker compose version
+docker info
+
+docker info debe mostrar Server sin error. Si falta una herramienta, instalarla antes de continuar y abrir una PowerShell nueva.
+
+2. Clonar el nuevo repositorio (rama main) y entrar
+cd $HOME
+New-Item -ItemType Directory -Force proyectos | Out-Null
+cd proyectos
+git clone https://github.com/Nikol235/Garritas-Store.git
+cd Garritas-Store
+
+
+3. Compilar e iniciar; ejecutar en orden y esperar cada resultado
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+$env:NG_CLI_ANALYTICS = "false"
+.\uso-rapido\garritas.ps1 -Accion build
+.\uso-rapido\garritas.ps1 -Accion iniciar
+.\uso-rapido\garritas.ps1 -Accion estado
+docker compose -f obs/compose-dev.yml up -d
+docker compose -f obs/compose-dev.yml ps
+Start-Process "http://localhost:4200"
+
+Qué arranca: ocho PostgreSQL, Kafka y su UI, Keycloak con su base; Config, Eureka, Gateway y los ocho servicios Java; Angular. El comando obs añade Grafana, Prometheus, Loki y Promtail. Java y Angular corren fuera de Docker.
+
+4. Enlaces y accesos de laboratorio
+Tienda | http://localhost:4200 | cliente / Cliente123! · admin-store / Admin123!
+Keycloak | http://localhost:18180/admin/ | admin / local-admin-change-me
+Kafka UI | http://localhost:18085 | Sin login en DEV
+Grafana | http://localhost:13000 | admin / local-grafana
+Prometheus | http://localhost:19090/targets | Targets y métricas
+Eureka / Config | 18761 / 18888 | http://localhost:18761 · configuración en 18888
+APIs: Venta 8081 · Institución 8082 · Envío 8083 · Citas 8084 · Catálogo 8085 · Usuario 8086 · Pago 8087 · Bienestar 8088. Gateway 18080. Swagger por servicio: http://localhost:PUERTO/swagger-ui.html. Bases: 15441–15448; Kafka: 19092; Loki: 13100; gestión Keycloak: 19000.
+
+5. Al volver otro día / detener
+cd "$HOME\proyectos\Garritas-Store"
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned -Force
+# Para iniciar: .\uso-rapido\garritas.ps1 -Accion iniciar
+# Para detener Java y Angular:
+.\uso-rapido\garritas.ps1 -Accion detener
+
+Importante: no ejecutar iniciar dos veces. Si tienes otra copia de Garritas activa, detenla desde su carpeta antes. detener conserva contenedores y datos. Si cambia Java, repetir build antes de iniciar. Si un puerto está ocupado, identificar el proceso o contenedor (por ejemplo, Pagatu); no borrar volúmenes. Logs: .runtime/<servicio>/console.log y error.log. Las contraseñas pueden diferir si alguien ya las cambió.
+Estado del proyecto: pagos simulados; Mercado Pago aún no está conectado. Esta hoja inicia el entorno local, no publica en Railway/Supabase ni habilita cobros reales. Git no copia las bases ni las fotos guardadas localmente.
