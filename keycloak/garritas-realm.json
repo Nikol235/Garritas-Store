@@ -1,7 +1,8 @@
 {
   "realm": "garritas",
   "enabled": true,
-  "registrationAllowed": false,
+  "registrationAllowed": true,
+  "defaultRoles": ["CLIENTE"],
   "resetPasswordAllowed": true,
   "roles": {
     "realm": [

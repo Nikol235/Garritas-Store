@@ -44,6 +44,10 @@ export class Auth {
     return this.kc.login({ redirectUri: location.origin + "/" });
   }
 
+  register() {
+    return this.kc.register({ redirectUri: location.origin + "/" });
+  }
+
   logout() {
     return this.kc.logout({ redirectUri: location.origin + "/" });
   }

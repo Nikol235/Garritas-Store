@@ -103,12 +103,12 @@
         @if(auth.loggedIn()){<span class="role-badge"
           >{{auth.admin()?'Administrador':'Cliente'}}</span
         ><strong>{{auth.name()}}</strong
-        ><button (click)="auth.logout()">Salir</button>}@else{<button
-          class="primary"
-          (click)="auth.login()"
-        >
-          Iniciar sesión</button
-        >}
+        ><button (click)="auth.logout()">Salir</button>}@else{
+          <button type="button" (click)="auth.register()">Crear cuenta</button>
+          <button type="button" class="primary" (click)="auth.login()">
+            Iniciar sesión
+          </button>
+        }
       </div>
     </header>
     <main class="main-content">
