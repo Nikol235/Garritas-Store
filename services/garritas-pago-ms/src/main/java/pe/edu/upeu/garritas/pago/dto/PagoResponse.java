@@ -24,4 +24,5 @@ public class PagoResponse {
     private EstadoPago estado;
     private Instant fechaPago;
     private String referenciaExterna;
+    private String initPoint;
 }

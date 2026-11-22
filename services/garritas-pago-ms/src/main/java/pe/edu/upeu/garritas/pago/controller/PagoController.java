@@ -26,4 +26,14 @@ public class PagoController {
   public PagoResponse porVenta(@PathVariable Long id) {
     return service.porVenta(id);
   }
+
+  /**
+   * Confirma un pago después del redirect de Mercado Pago.
+   */
+  @PostMapping("/confirmar")
+  public PagoResponse confirmar(
+      @RequestParam("ventaId") Long ventaId,
+      @RequestParam("paymentId") Long paymentId) {
+    return service.confirmar(ventaId, paymentId);
+  }
 }

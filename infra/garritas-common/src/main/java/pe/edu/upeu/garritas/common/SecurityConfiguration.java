@@ -102,6 +102,8 @@ public class SecurityConfiguration {
                     .hasAnyRole("CLIENTE", "ADMIN")
                     .requestMatchers(HttpMethod.GET, "/api/v1/pagos/**")
                     .hasAnyRole("CLIENTE", "ADMIN")
+                    .requestMatchers(HttpMethod.POST, "/api/v1/pagos/confirmar")
+                    .hasAnyRole("CLIENTE", "ADMIN")
                     .anyRequest()
                     .hasRole("ADMIN"))
         .oauth2ResourceServer(o -> o.jwt(j -> j.jwtAuthenticationConverter(converter)));

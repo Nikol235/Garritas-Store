@@ -936,6 +936,21 @@ select:focus-visible {
   color: #79551c;
   font-size: 0.85rem;
 }
+.btn-mercadopago {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  background: #009ee3;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+.btn-mercadopago:hover {
+  background: #007eb5;
+}
 app-resource-image {
   display: block;
   overflow: hidden;

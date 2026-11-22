@@ -2,7 +2,7 @@
 
 Repositorio de continuidad para preparar el despliegue del proyecto. Conserva el historial de [Garritas-](https://github.com/Nikol235/Garritas-/tree/feat/garritas-store) hasta la versión `8944d5a`, incluidas Ventas por rol, fotos locales y constancias PDF. La rama principal de este repositorio es **main**.
 
-**Estado:** ejecución local verificada; despliegue en Railway/Supabase por preparar. Los pagos siguen simulados: Mercado Pago aún no está integrado. Los manuales históricos mantienen enlaces a los commits originales como referencia; los comandos de clonación actuales son los siguientes.
+**Estado:** ejecución local verificada; despliegue en Railway/Supabase por preparar. Los pagos de demostración se simulan por defecto. Checkout Pro requiere habilitación explícita y credenciales configuradas fuera del repositorio. Los manuales históricos mantienen enlaces a los commits originales como referencia; los comandos de clonación actuales son los siguientes.
 
 Campus Juliaca · Sistemas Distribuidos · semestre 2026-2 · Grupo 2 · Ciclo 5 G · Sección única. [Descripción y temas del repositorio](docs/configuracion-del-repositorio.md).
 
@@ -230,7 +230,7 @@ El perfil confirma su guardado leyendo nuevamente la API. La edad de mascotas se
 
 ## Ventas, fotos y comprobantes
 
-[Guía de funciones y código](docs/ventas-imagenes-y-comprobantes.md): Ventas para ADMIN, Mis compras para CLIENTE, filtros y detalle; imagen principal local para productos/profesionales/sedes; constancia PDF imprimible para compras pagadas. El pago continúa simulado.
+[Guía de funciones y código](docs/ventas-imagenes-y-comprobantes.md): Ventas para ADMIN, Mis compras para CLIENTE, filtros y detalle; imagen principal local para productos/profesionales/sedes; constancia PDF imprimible para compras pagadas. Los pagos de demostración siguen disponibles.
 
 ## Abrir las aplicaciones
 

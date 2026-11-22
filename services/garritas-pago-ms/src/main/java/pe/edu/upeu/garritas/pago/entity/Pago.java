@@ -40,4 +40,13 @@ public class Pago {
 
   @Column(name = "referencia_externa", length = 100)
   private String referenciaExterna;
+
+  @Column(name = "preference_id", length = 100)
+  private String preferenceId;
+
+  @Column(name = "init_point", length = 500)
+  private String initPoint;
+
+  @Column(name = "payment_id")
+  private Long paymentId;
 }

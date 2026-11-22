@@ -45,6 +45,7 @@ export interface Pago {
   idVenta: number;
   estado: string;
   monto: number;
+  initPoint?: string;
 }
 
 @Injectable({ providedIn: "root" })
@@ -102,6 +103,13 @@ export class Api {
 
   pago(id: number) {
     return this.http.get<Pago>(this.url + "/pagos/venta/" + id);
+  }
+
+  confirmarPago(ventaId: number, paymentId: number) {
+    return this.http.post<Pago>(
+      this.url + "/pagos/confirmar?ventaId=" + ventaId + "&paymentId=" + paymentId,
+      {},
+    );
   }
 }
 

@@ -83,3 +83,10 @@ management:
 app:
   kafka:
     topic: garritas.ventas.v1
+  pagos:
+    metodo-rechazado: ${PAGO_METODO_RECHAZADO:TRANSFERENCIA}
+  mercadopago:
+    enabled: ${MP_CHECKOUT_ENABLED:false}
+    sandbox: ${MP_USE_SANDBOX:true}
+    access-token: "${MP_ACCESS_TOKEN:}"
+    back-url: ${MP_BACK_URL:http://localhost:4200}

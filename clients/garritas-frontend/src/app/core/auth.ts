@@ -11,6 +11,11 @@ export class Auth {
   readonly admin = signal(false);
 
   async init() {
+    if (location.pathname === "/compras" && location.search) {
+      const callback = new URLSearchParams(location.search);
+      if (callback.has("venta_id") || callback.has("external_reference"))
+        sessionStorage.setItem("garritas-checkout-return", location.search);
+    }
     await this.config.load();
     const c = this.config.value;
     this.kc = new Keycloak({

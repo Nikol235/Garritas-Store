@@ -87,6 +87,45 @@ export class App {
     this.refreshCatalogo();
     this.refreshSedes();
     effect(() => sessionStorage.setItem("garritas-view", this.view()));
+
+    // Detectar redirect de Mercado Pago
+    this.handleMercadoPagoRedirect();
+  }
+
+  private handleMercadoPagoRedirect() {
+    const key = "garritas-checkout-return";
+    const saved = sessionStorage.getItem(key);
+    if (!saved) return;
+
+    const params = new URLSearchParams(saved);
+    const ventaId = Number(params.get("venta_id") ?? params.get("external_reference"));
+    const paymentId = Number(params.get("payment_id"));
+    const validId = (id: number) => Number.isSafeInteger(id) && id > 0;
+    if (!validId(ventaId)) {
+      sessionStorage.removeItem(key);
+      return;
+    }
+    if (!this.auth.loggedIn()) {
+      this.notice.set("Inicia sesión para consultar el resultado de tu pago.");
+      return;
+    }
+    this.view.set("pedidos");
+    if (!validId(paymentId)) {
+      sessionStorage.removeItem(key);
+      this.notice.set("Mercado Pago todavía no devolvió una confirmación. Revisa tu pedido.");
+      return;
+    }
+
+    this.api.confirmarPago(ventaId, paymentId).subscribe({
+      next: (pago) => {
+        if (pago.estado !== "PENDIENTE") sessionStorage.removeItem(key);
+        if (window.location.pathname === "/compras") window.history.replaceState({}, "", "/");
+        if (pago.estado === "APROBADO") this.notice.set("Mercado Pago confirmó tu pago.");
+        else if (pago.estado === "RECHAZADO") this.error.set("Mercado Pago rechazó el pago.");
+        else this.notice.set("El pago sigue pendiente. Recarga la página para consultar de nuevo.");
+      },
+      error: () => this.error.set("No se pudo comprobar el pago. Recarga la página para reintentar."),
+    });
   }
 
   refreshSedes() {

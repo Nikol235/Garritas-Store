@@ -23,8 +23,8 @@
   <p class="notice" role="status">{{ message() }}</p>
 }
 <p class="simulation-note">
-  Entorno de laboratorio: el pago actual es simulado. La constancia no es una
-  boleta o factura tributaria.
+  Entorno sandbox: los pagos se procesan con Mercado Pago en modo pruebas.
+  La constancia no es una boleta o factura tributaria.
 </p>
 @if (auth.admin()) {
   <section class="sales-summary" aria-label="Resumen de ventas">
@@ -220,6 +220,14 @@
         Pago #{{ p.id }} · {{ p.estado }} ·
         {{ p.monto | currency: "PEN" : "S/ " }}
       </p>
+      @if (p.estado === "PENDIENTE" && p.initPoint) {
+        <a
+          class="btn-mercadopago"
+          [href]="p.initPoint"
+        >
+          Pagar con Mercado Pago
+        </a>
+      }
     }
     <p class="muted">
       Los importes son los acordados al comprar. Los nombres de productos y

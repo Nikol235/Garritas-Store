@@ -30,6 +30,7 @@ public class PagoMapper {
                 .estado(pago.getEstado())
                 .fechaPago(pago.getFechaPago())
                 .referenciaExterna(pago.getReferenciaExterna())
+                .initPoint(pago.getInitPoint())
                 .build();
     }
 }

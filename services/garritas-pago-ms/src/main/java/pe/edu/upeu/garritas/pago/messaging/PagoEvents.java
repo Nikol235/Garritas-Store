@@ -9,6 +9,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import pe.edu.upeu.garritas.common.*;
+import pe.edu.upeu.garritas.pago.service.MercadoPagoService;
 import tools.jackson.databind.ObjectMapper;
 
 @Component
@@ -19,6 +20,7 @@ public class PagoEvents {
   private final Inbox inbox;
   private final Outbox outbox;
   private final ObjectMapper json;
+  private final MercadoPagoService mpService;
 
   @Value("${app.pagos.metodo-rechazado:TRANSFERENCIA}")
   private String metodoRechazado;
@@ -30,24 +32,27 @@ public class PagoEvents {
     if (!e.type().equals("inventario.reservado")) return;
     if (!inbox.claim(e)) return;
     try (var scope = MDC.putCloseable("traceId", e.traceId())) {
+      if (Boolean.TRUE.equals(jdbc.queryForObject(
+          "SELECT EXISTS(SELECT 1 FROM pagos WHERE id_venta = ?)", Boolean.class, e.ventaId())))
+        return;
+
+      boolean checkout = mpService.enabled();
+      String referencia = checkout ? "garritas:" + UUID.randomUUID() : UUID.randomUUID().toString();
+      var preferencia = checkout
+          ? mpService.crearPreferencia(e.ventaId(), referencia, e.total())
+          : null;
       boolean aprobado = !e.metodo().equals(metodoRechazado);
-      int created =
-          jdbc.update(
-              "INSERT INTO"
-                  + " pagos(id_venta,id_cliente,monto,metodo,estado,fecha_pago,referencia_externa)"
-                  + " VALUES (?,?,?,?,?,CURRENT_TIMESTAMP,?) ON CONFLICT(id_venta) DO NOTHING",
-              e.ventaId(),
-              e.clienteId(),
-              e.total(),
-              e.metodo(),
-              aprobado ? "APROBADO" : "RECHAZADO",
-              UUID.randomUUID().toString());
-      if (created == 1) outbox.append(e.next(aprobado ? "pago.validado" : "pago.fallido"));
-      log.info(
-          "component=pago ventaId={} estado={} created={}",
-          e.ventaId(),
-          aprobado ? "APROBADO" : "RECHAZADO",
-          created);
+      String estado = checkout ? "PENDIENTE" : aprobado ? "APROBADO" : "RECHAZADO";
+      int created = jdbc.update(
+          "INSERT INTO pagos(id_venta,id_cliente,monto,metodo,estado,fecha_pago,referencia_externa,"
+              + "preference_id,init_point) VALUES (?,?,?,?,?,CURRENT_TIMESTAMP,?,?,?)"
+              + " ON CONFLICT(id_venta) DO NOTHING",
+          e.ventaId(), e.clienteId(), e.total(), e.metodo(), estado, referencia,
+          preferencia == null ? null : preferencia.preferenceId(),
+          preferencia == null ? null : preferencia.initPoint());
+      if (created == 1 && !checkout)
+        outbox.append(e.next(aprobado ? "pago.validado" : "pago.fallido"));
+      log.info("component=pago ventaId={} estado={} created={}", e.ventaId(), estado, created);
     }
   }
 }
