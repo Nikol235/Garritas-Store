@@ -138,6 +138,20 @@ docker compose -f compose-dev.yml up -d --wait --wait-timeout 120
 .\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
 ```
 
+#### Mercado Pago de prueba en DEV
+
+Para probar Checkout Pro, usa el **Access Token de prueba** de una aplicación Checkout Pro de Mercado Pago Perú. En el mismo PowerShell de **Pago**, después de arrancar PostgreSQL y antes de iniciar Maven, ejecuta:
+
+```powershell
+$env:MP_CHECKOUT_ENABLED = 'true'
+$env:MP_ACCESS_TOKEN = ([System.Net.NetworkCredential]::new('', (Read-Host 'Access Token de prueba' -AsSecureString))).Password
+.\mvnw.cmd spring-boot:run '-Dspring-boot.run.profiles=dev'
+```
+
+Si Pago ya está corriendo, detenlo con **Ctrl+C** en su ventana antes de ejecutar el bloque. DEV usa enlaces de prueba y valida que los pagos correspondan a ese entorno. Si inicias sin habilitar Checkout Pro, el laboratorio usa la simulación interna.
+
+Crea un pedido nuevo y abre **Mis compras → detalle → Consultar pago → Pagar con Mercado Pago**. Usa el comprador y los datos de tarjeta de prueba que te indica Mercado Pago. Cuando termines en el checkout, vuelve a la pestaña de Garritas en `http://localhost:4200` y pulsa **Verificar pago**. Comprueba una aprobación y un rechazo en pedidos distintos. La verificación consulta el proveedor aunque el checkout se haya abierto desde localhost. Mantén el token en tu PowerShell y fuera de Git.
+
 ### 4. Angular y verificación
 
 En otra ventana:

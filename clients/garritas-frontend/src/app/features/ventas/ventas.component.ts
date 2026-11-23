@@ -67,6 +67,7 @@ export class VentasComponent extends Feedback {
   readonly pagos = signal<Record<number, Pago>>({});
   readonly loading = signal(false);
   readonly pdfBusy = signal(false);
+  readonly verificandoPago = signal(false);
   readonly search = signal("");
   readonly estado = signal("");
   readonly desde = signal("");
@@ -178,6 +179,24 @@ export class VentasComponent extends Feedback {
         error: (e) => this.report(e),
       });
   }
+  verificarPago(id: number) {
+    if (this.verificandoPago()) return;
+    this.verificandoPago.set(true);
+    this.error.set("");
+    this.message.set("");
+    this.api.confirmarPago(id)
+      .pipe(finalize(() => this.verificandoPago.set(false)), takeUntilDestroyed(this.destroy))
+      .subscribe({
+        next: (pago) => {
+          this.pagos.update((all) => ({ ...all, [id]: pago }));
+          if (pago.estado === "PENDIENTE")
+            this.message.set("Mercado Pago todavía no confirma el pago. Puedes volver a verificarlo.");
+          else this.refresh();
+        },
+        error: (e) => this.report(e),
+      });
+  }
+
   comprobante(venta: Venta) {
     if (venta.estado !== "PAGADA" || this.pdfBusy()) return;
     this.pdfBusy.set(true);

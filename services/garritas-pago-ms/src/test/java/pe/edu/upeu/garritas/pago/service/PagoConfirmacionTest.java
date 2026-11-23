@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,7 @@ import pe.edu.upeu.garritas.pago.entity.MetodoPago;
 import pe.edu.upeu.garritas.pago.entity.Pago;
 import pe.edu.upeu.garritas.pago.mapper.PagoMapper;
 import pe.edu.upeu.garritas.pago.repository.PagoRepository;
+import pe.edu.upeu.garritas.pago.service.MercadoPagoService.PaymentResult;
 import pe.edu.upeu.garritas.pago.service.MercadoPagoService.VerifiedPayment;
 
 class PagoConfirmacionTest {
@@ -93,6 +95,30 @@ class PagoConfirmacionTest {
     var evento = ArgumentCaptor.forClass(SagaEvent.class);
     verify(outbox).append(evento.capture());
     assertEquals("pago.fallido", evento.getValue().type());
+  }
+
+  @Test
+  void buscaPorReferenciaYConfirmaSinRetornoDelNavegador() {
+    var anterior = new VerifiedPayment("rejected", pago.getReferenciaExterna(), pago.getMonto(), "PEN", false);
+    var aprobado = new VerifiedPayment("approved", pago.getReferenciaExterna(), pago.getMonto(), "PEN", false);
+    when(proveedor.buscarPagos(pago.getReferenciaExterna()))
+        .thenReturn(List.of(new PaymentResult(99L, anterior), new PaymentResult(100L, aprobado)));
+    try (var usuario = mockStatic(CurrentUser.class)) {
+      servicio.confirmar(42L, null);
+    }
+    assertEquals(EstadoPago.APROBADO, pago.getEstado());
+    assertEquals(100L, pago.getPaymentId());
+    verify(proveedor, never()).verificarPago(anyLong());
+  }
+
+  @Test
+  void mantienePendienteSiElProveedorTodaviaNoTienePago() {
+    when(proveedor.buscarPagos(pago.getReferenciaExterna())).thenReturn(List.of());
+    try (var usuario = mockStatic(CurrentUser.class)) {
+      servicio.confirmar(42L, null);
+    }
+    assertEquals(EstadoPago.PENDIENTE, pago.getEstado());
+    verifyNoInteractions(outbox);
   }
 
   private void responde(String estado, String referencia, String monto, String moneda, boolean real) {

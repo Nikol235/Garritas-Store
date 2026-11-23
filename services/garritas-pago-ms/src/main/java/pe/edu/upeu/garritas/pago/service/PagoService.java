@@ -1,6 +1,9 @@
 package pe.edu.upeu.garritas.pago.service;
 
+import java.util.Comparator;
 import java.util.List;
+import pe.edu.upeu.garritas.pago.service.MercadoPagoService.PaymentResult;
+import pe.edu.upeu.garritas.pago.service.MercadoPagoService.VerifiedPayment;
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -66,20 +69,27 @@ public class PagoService {
     if (!mpService.enabled() || pago.getPreferenceId() == null)
       throw new ResponseStatusException(HttpStatus.CONFLICT, "La venta no tiene un checkout activo");
 
-    var confirmado = mpService.verificarPago(paymentId);
     String referencia = pago.getReferenciaExterna();
     String esperada = referencia != null && referencia.startsWith("garritas:")
         ? referencia : ventaId.toString();
-    if (!Objects.equals(esperada, confirmado.externalReference())
-        || confirmado.amount() == null || pago.getMonto().compareTo(confirmado.amount()) != 0
-        || !"PEN".equals(confirmado.currency()) || !mpService.expectedMode(confirmado.liveMode()))
-      throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_ENTITY, "El pago no corresponde a esta venta");
+    PaymentResult resultado;
+    if (paymentId == null) {
+      resultado = mpService.buscarPagos(esperada).stream()
+          .filter(p -> corresponde(pago, esperada, p.payment()))
+          .min(Comparator.comparingInt(p -> prioridad(p.payment().status())))
+          .orElse(null);
+      if (resultado == null) return mapper.toResponse(pago);
+    } else {
+      resultado = new PaymentResult(paymentId, mpService.verificarPago(paymentId));
+      if (!corresponde(pago, esperada, resultado.payment()))
+        throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_CONTENT, "El pago no corresponde a esta venta");
+    }
 
-    boolean aprobado = "approved".equals(confirmado.status());
-    boolean rechazado = "rejected".equals(confirmado.status()) || "cancelled".equals(confirmado.status());
-    if (!aprobado && !rechazado) return mapper.toResponse(pago);
+    String estado = resultado.payment().status();
+    boolean aprobado = "approved".equals(estado);
+    if (!aprobado && !rechazo(estado)) return mapper.toResponse(pago);
 
-    pago.setPaymentId(paymentId);
+    pago.setPaymentId(resultado.id());
     pago.setEstado(aprobado ? EstadoPago.APROBADO : EstadoPago.RECHAZADO);
     repository.saveAndFlush(pago);
     outbox.append(new SagaEvent(
@@ -87,5 +97,20 @@ public class PagoService {
         pago.getIdVenta(), pago.getIdCliente(), pago.getMonto(), pago.getMetodo().name(),
         java.util.UUID.randomUUID().toString(), List.of(), java.time.Instant.now()));
     return mapper.toResponse(pago);
+  }
+
+  private boolean corresponde(Pago pago, String referencia, VerifiedPayment confirmado) {
+    return Objects.equals(referencia, confirmado.externalReference())
+        && confirmado.amount() != null && pago.getMonto().compareTo(confirmado.amount()) == 0
+        && "PEN".equals(confirmado.currency()) && mpService.expectedMode(confirmado.liveMode());
+  }
+
+  private static boolean rechazo(String status) {
+    return "rejected".equals(status) || "cancelled".equals(status);
+  }
+
+  private static int prioridad(String status) {
+    if ("approved".equals(status)) return 0;
+    return rechazo(status) ? 2 : 1;
   }
 }

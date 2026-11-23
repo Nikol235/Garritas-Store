@@ -105,11 +105,10 @@ export class Api {
     return this.http.get<Pago>(this.url + "/pagos/venta/" + id);
   }
 
-  confirmarPago(ventaId: number, paymentId: number) {
-    return this.http.post<Pago>(
-      this.url + "/pagos/confirmar?ventaId=" + ventaId + "&paymentId=" + paymentId,
-      {},
-    );
+  confirmarPago(ventaId: number, paymentId?: number) {
+    const params = new URLSearchParams({ ventaId: String(ventaId) });
+    if (paymentId !== undefined) params.set("paymentId", String(paymentId));
+    return this.http.post<Pago>(this.url + "/pagos/confirmar?" + params, {});
   }
 }
 

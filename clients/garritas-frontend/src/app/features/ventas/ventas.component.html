@@ -224,9 +224,14 @@
         <a
           class="btn-mercadopago"
           [href]="p.initPoint"
+          target="_blank"
+          rel="noopener"
         >
           Pagar con Mercado Pago
         </a>
+        <button type="button" [disabled]="verificandoPago()" (click)="verificarPago(v.id)">
+          {{ verificandoPago() ? "Verificando…" : "Verificar pago" }}
+        </button>
       }
     }
     <p class="muted">

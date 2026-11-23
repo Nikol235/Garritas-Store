@@ -28,12 +28,12 @@ public class PagoController {
   }
 
   /**
-   * Confirma un pago después del redirect de Mercado Pago.
+   * Verifica el pago indicado por el retorno o busca por la referencia del pedido.
    */
   @PostMapping("/confirmar")
   public PagoResponse confirmar(
       @RequestParam("ventaId") Long ventaId,
-      @RequestParam("paymentId") Long paymentId) {
+      @RequestParam(value = "paymentId", required = false) Long paymentId) {
     return service.confirmar(ventaId, paymentId);
   }
 }
