@@ -43,16 +43,19 @@ public record SagaEvent(
         || total == null
         || total.signum() <= 0
         || metodo == null
-        || items == null
-        || items.isEmpty()
-        || items.stream()
+        || items == null) {
+      throw new IllegalArgumentException("Contrato de evento inválido o versión no soportada");
+    }
+    // Los eventos de pago no llevan items (la reserva ya se hizo)
+    if (!items.isEmpty()
+        && items.stream()
             .anyMatch(
                 i ->
                     i.productoId() == null
                         || i.cantidad() <= 0
                         || i.precio() == null
                         || i.precio().signum() < 0)) {
-      throw new IllegalArgumentException("Contrato de evento inválido o versión no soportada");
+      throw new IllegalArgumentException("Items del evento inválidos");
     }
   }
 }

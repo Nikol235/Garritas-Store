@@ -76,11 +76,11 @@ spring:
           - garritas-api
 eureka:
   instance:
-    hostname: localhost
-    instance-id: ${spring.application.name}:${server.port}
+    instance-id: ${spring.application.name}:${random.value}
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:18761/eureka
+      defaultZone: http://garritas-eureka:8761/eureka
 management:
   endpoints:
     web:
@@ -98,4 +98,4 @@ management:
           include: readinessState
 garritas:
   cors:
-    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:4200}
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:https://garritas-frontend-production.up.railway.app}
