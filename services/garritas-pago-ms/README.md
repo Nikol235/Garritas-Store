@@ -1,6 +1,6 @@
 # garritas-pago-ms
 
-Pasarela de pagos. Microservicio Spring Boot 4 / Java 25, registrado en Eureka y configurado via Config Server.
+Pasarela de pagos. Microservicio Spring Boot 4 / Java 21, registrado en Eureka y configurado via Config Server.
 
 ## Correr en local
 ```

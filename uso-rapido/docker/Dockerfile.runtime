@@ -1,5 +1,5 @@
 # Alternative for restricted builders: compile and verify JARs on the host first.
-FROM eclipse-temurin:25-jre
+FROM eclipse-temurin:21-jre
 ARG MODULE
 WORKDIR /app
 RUN mkdir -p /app/logs /app/uploads && chown -R 10001:10001 /app

@@ -1,9 +1,9 @@
-FROM maven:3.9.16-eclipse-temurin-25 AS build
+FROM maven:3.9.16-eclipse-temurin-21 AS build
 WORKDIR /build
 COPY . .
 ARG MODULE
 RUN test -n "$MODULE" && mvn -B -f uso-rapido/pom.xml -pl "../$MODULE" -am package -DskipTests && cp "$MODULE"/target/*-SNAPSHOT.jar /app.jar
-FROM eclipse-temurin:25-jre
+FROM eclipse-temurin:21-jre
 WORKDIR /app
 RUN mkdir -p /app/logs /app/uploads && chown -R 10001:10001 /app
 COPY --from=build --chown=10001:10001 /app.jar /app/app.jar

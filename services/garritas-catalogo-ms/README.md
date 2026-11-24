@@ -1,6 +1,6 @@
 # garritas-catalogo-ms
 
-Productos e inventario. Microservicio Spring Boot 4 / Java 25, registrado en Eureka y configurado via Config Server.
+Productos e inventario. Microservicio Spring Boot 4 / Java 21, registrado en Eureka y configurado via Config Server.
 
 ## Correr en local
 ```
