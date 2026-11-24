@@ -213,6 +213,8 @@ export class App {
           );
           this.view.set("pedidos");
           this.refreshCatalogo();
+          // Consultar pago después de un breve delay para que la saga procese
+          this.pollForCheckout(venta.id);
         },
         error: (e) => {
           this.busy.set(false);
@@ -231,6 +233,27 @@ export class App {
         },
       });
   }
+  private pollForCheckout(ventaId: number, attempt = 0) {
+    if (attempt > 10) return; // max 10 intentos (~20 segundos)
+    setTimeout(() => {
+      this.api.pago(ventaId).subscribe({
+        next: (pago) => {
+          if (pago.initPoint && pago.estado === "PENDIENTE") {
+            this.notice.set(
+              "Redirigiendo al checkout de Mercado Pago para completar el pago…"
+            );
+            window.open(pago.initPoint, "_blank", "noopener");
+          } else if (pago.estado === "PENDIENTE" && !pago.initPoint && attempt < 10) {
+            this.pollForCheckout(ventaId, attempt + 1);
+          }
+        },
+        error: () => {
+          if (attempt < 10) this.pollForCheckout(ventaId, attempt + 1);
+        },
+      });
+    }, 2000);
+  }
+
   edit(c: Categoria) {
     this.categoriaId = c.id;
     this.nombre = c.nombre;

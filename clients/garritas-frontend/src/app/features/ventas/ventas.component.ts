@@ -117,6 +117,14 @@ export class VentasComponent extends Feedback {
         takeUntilDestroyed(this.destroy),
       )
       .subscribe((ventas) => this.apply(ventas));
+
+    // Autocargar pago al seleccionar un pedido
+    effect(() => {
+      const id = this.selected();
+      if (id == null) return;
+      const v = this.ventas().find(x => x.id === id);
+      if (v && pending(v.estado) && !this.pagos()[id]) this.pago(id);
+    });
   }
   refresh() {
     if (this.loading()) return;

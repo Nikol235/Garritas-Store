@@ -23,7 +23,6 @@
   <p class="notice" role="status">{{ message() }}</p>
 }
 <p class="simulation-note">
-  Entorno sandbox: los pagos se procesan con Mercado Pago en modo pruebas.
   La constancia no es una boleta o factura tributaria.
 </p>
 @if (auth.admin()) {
@@ -207,6 +206,31 @@
           : "Recojo en sede, sin cargo de envío."
       }}
     </p>
+    @if (pagos()[v.id]; as p) {
+      <p>
+        Pago #{{ p.id }} · {{ p.estado }} ·
+        {{ p.monto | currency: "PEN" : "S/ " }}
+      </p>
+      @if (p.estado === "PENDIENTE" && p.initPoint) {
+        <div class="checkout-actions">
+          <a
+            class="btn-mercadopago primary"
+            [href]="p.initPoint"
+            target="_blank"
+            rel="noopener"
+          >
+            💳 Pagar con Mercado Pago
+          </a>
+          <button type="button" [disabled]="verificandoPago()" (click)="verificarPago(v.id)">
+            {{ verificandoPago() ? "Verificando…" : "Ya pagué · Verificar" }}
+          </button>
+        </div>
+        <p class="muted">
+          Haz clic en "Pagar con Mercado Pago" para abrir el checkout.
+          Cuando termines, vuelve aquí y presiona "Ya pagué · Verificar".
+        </p>
+      }
+    }
     <div class="actions">
       <button (click)="pago(v.id)">Consultar pago</button>
       @if (v.estado === "PAGADA") {
@@ -215,25 +239,6 @@
         </button>
       }
     </div>
-    @if (pagos()[v.id]; as p) {
-      <p>
-        Pago #{{ p.id }} · {{ p.estado }} ·
-        {{ p.monto | currency: "PEN" : "S/ " }}
-      </p>
-      @if (p.estado === "PENDIENTE" && p.initPoint) {
-        <a
-          class="btn-mercadopago"
-          [href]="p.initPoint"
-          target="_blank"
-          rel="noopener"
-        >
-          Pagar con Mercado Pago
-        </a>
-        <button type="button" [disabled]="verificandoPago()" (click)="verificarPago(v.id)">
-          {{ verificandoPago() ? "Verificando…" : "Verificar pago" }}
-        </button>
-      }
-    }
     <p class="muted">
       Los importes son los acordados al comprar. Los nombres de productos y
       sedes se consultan del catálogo actual. La constancia PDF conserva las
