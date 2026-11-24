@@ -85,8 +85,10 @@ app:
     topic: garritas.ventas.v1
   pagos:
     metodo-rechazado: ${PAGO_METODO_RECHAZADO:TRANSFERENCIA}
+    # true: sin Mercado Pago, aprueba/rechaza al instante (solo demos). false: queda PENDIENTE.
+    simular: ${MP_SIMULAR_PAGOS:false}
   mercadopago:
-    # auto: Checkout Pro si hay MP_ACCESS_TOKEN; sin token los pagos se simulan.
+    # auto: Checkout Pro si hay MP_ACCESS_TOKEN; sin token el pago queda PENDIENTE.
     enabled: ${MP_CHECKOUT_ENABLED:auto}
     mode: ${MP_MODE:test}
     access-token: "${MP_ACCESS_TOKEN:}"

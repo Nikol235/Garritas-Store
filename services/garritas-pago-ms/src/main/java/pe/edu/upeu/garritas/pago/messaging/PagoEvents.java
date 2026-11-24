@@ -25,6 +25,9 @@ public class PagoEvents {
   @Value("${app.pagos.metodo-rechazado:TRANSFERENCIA}")
   private String metodoRechazado;
 
+  @Value("${app.pagos.simular:false}")
+  private boolean simular;
+
   @KafkaListener(topics = "${app.kafka.topic:garritas.ventas.v1}")
   @Transactional
   public void consume(String payload) {
@@ -37,12 +40,18 @@ public class PagoEvents {
         return;
 
       boolean checkout = mpService.enabled();
+      // Solo se simula el resultado si se pide explícitamente (MP_SIMULAR_PAGOS=true).
+      // Sin checkout ni simulación, el pago queda PENDIENTE: nunca se aprueba ni rechaza solo.
+      boolean simulado = !checkout && simular;
+      if (!checkout && !simulado)
+        log.warn("component=pago ventaId={} sin MP_ACCESS_TOKEN: el pago queda PENDIENTE sin checkout",
+            e.ventaId());
       String referencia = checkout ? "garritas:" + UUID.randomUUID() : UUID.randomUUID().toString();
       var preferencia = checkout
           ? mpService.crearPreferencia(e.ventaId(), referencia, e.total())
           : null;
       boolean aprobado = !e.metodo().equals(metodoRechazado);
-      String estado = checkout ? "PENDIENTE" : aprobado ? "APROBADO" : "RECHAZADO";
+      String estado = !simulado ? "PENDIENTE" : aprobado ? "APROBADO" : "RECHAZADO";
       int created = jdbc.update(
           "INSERT INTO pagos(id_venta,id_cliente,monto,metodo,estado,fecha_pago,referencia_externa,"
               + "preference_id,init_point) VALUES (?,?,?,?,?,CURRENT_TIMESTAMP,?,?,?)"
@@ -50,7 +59,7 @@ public class PagoEvents {
           e.ventaId(), e.clienteId(), e.total(), e.metodo(), estado, referencia,
           preferencia == null ? null : preferencia.preferenceId(),
           preferencia == null ? null : preferencia.initPoint());
-      if (created == 1 && !checkout)
+      if (created == 1 && simulado)
         outbox.append(e.next(aprobado ? "pago.validado" : "pago.fallido"));
       log.info("component=pago ventaId={} estado={} created={}", e.ventaId(), estado, created);
     }

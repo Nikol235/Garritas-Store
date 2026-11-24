@@ -81,7 +81,8 @@ public class MercadoPagoService {
           live ? "live" : "test", this.backUrl.startsWith("https://"),
           this.notificationUrl.startsWith("https://"));
     else
-      log.warn("component=mercadopago checkout=inactivo: sin MP_ACCESS_TOKEN los pagos se simulan");
+      log.warn("component=mercadopago checkout=inactivo: falta MP_ACCESS_TOKEN; los pagos quedan PENDIENTE"
+          + " (o se simulan si MP_SIMULAR_PAGOS=true)");
   }
 
   public boolean enabled() {
