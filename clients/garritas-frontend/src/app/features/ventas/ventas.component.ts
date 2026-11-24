@@ -179,12 +179,24 @@ export class VentasComponent extends Feedback {
     this.desde.set("");
     this.hasta.set("");
   }
-  pago(id: number) {
+  pago(id: number, avisar = false) {
+    if (avisar) {
+      this.error.set("");
+      this.message.set("");
+    }
     this.api
       .pago(id)
       .pipe(takeUntilDestroyed(this.destroy))
       .subscribe({
-        next: (p) => this.pagos.update((all) => ({ ...all, [id]: p })),
+        next: (p) => {
+          this.pagos.update((all) => ({ ...all, [id]: p }));
+          if (!avisar) return;
+          if (p.estado === "PENDIENTE" && p.initPoint)
+            this.message.set("Pago pendiente. Paga con Mercado Pago y luego presiona \"Ya pagué · Verificar\".");
+          else if (p.estado === "PENDIENTE")
+            this.message.set("Pago pendiente. Mercado Pago no está disponible en el servidor; el pago no se confirmará solo.");
+          else this.message.set(`Estado del pago: ${p.estado}.`);
+        },
         error: (e) => this.report(e),
       });
   }

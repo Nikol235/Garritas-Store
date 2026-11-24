@@ -229,10 +229,15 @@
           Haz clic en "Pagar con Mercado Pago" para abrir el checkout.
           Cuando termines, vuelve aquí y presiona "Ya pagué · Verificar".
         </p>
+      } @else if (p.estado === "PENDIENTE") {
+        <p class="muted">
+          Mercado Pago no está configurado en el servidor (falta MP_ACCESS_TOKEN),
+          por eso no hay enlace de pago. El pedido seguirá pendiente.
+        </p>
       }
     }
     <div class="actions">
-      <button (click)="pago(v.id)">Consultar pago</button>
+      <button (click)="pago(v.id, true)">Consultar pago</button>
       @if (v.estado === "PAGADA") {
         <button class="primary" [disabled]="pdfBusy()" (click)="comprobante(v)">
           {{ pdfBusy() ? "Preparando…" : "Descargar comprobante PDF" }}
