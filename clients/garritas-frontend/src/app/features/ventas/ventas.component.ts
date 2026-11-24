@@ -2,6 +2,7 @@ import {
   Component,
   DestroyRef,
   computed,
+  effect,
   inject,
   output,
   signal,
