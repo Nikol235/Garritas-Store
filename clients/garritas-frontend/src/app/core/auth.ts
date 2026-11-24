@@ -45,8 +45,10 @@ export class Auth {
     this.admin.set(this.kc.hasRealmRole("ADMIN"));
   }
 
-  login() {
-    return this.kc.login({ redirectUri: location.origin + "/" });
+  /** @param returnPath ruta interna (p. ej. "/citas") a la que volver tras iniciar sesión. */
+  login(returnPath = "/") {
+    const path = returnPath.startsWith("/") ? returnPath : "/";
+    return this.kc.login({ redirectUri: location.origin + path });
   }
 
   register() {

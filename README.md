@@ -19,11 +19,11 @@ $env:NG_CLI_ANALYTICS = "false"
 
 Clonar no copia bases de datos ni las fotos locales: su persistencia y respaldo se explican en la [guía de imágenes y comprobantes](docs/ventas-imagenes-y-comprobantes.md).
 
-Tienda y bienestar para mascotas en el Perú. Microservicios con **Java 21 / Spring Boot 4**, PostgreSQL/Flyway, Config Server, Eureka, Gateway, Kafka, Keycloak y un cliente **Angular 22**.
+Tienda y bienestar para mascotas en el Perú. Microservicios con **Java 25 / Spring Boot 4**, PostgreSQL/Flyway, Config Server, Eureka, Gateway, Kafka, Keycloak y un cliente **Angular 22**.
 
 ## Arranque manual en DEV con PowerShell
 
-En Windows, enciende Docker Desktop y verifica que JDK 21 y Node 24 estén en PATH. Para la sustentación abre **un PowerShell por aplicación** y deja cada ventana abierta. Cada bloque de abajo parte de la raíz del repositorio en una ventana nueva. Este recorrido usa los Maven Wrapper, los Compose DEV y el servidor local de Angular.
+En Windows, enciende Docker Desktop y verifica que JDK 25 y Node 24 estén en PATH. Para la sustentación abre **un PowerShell por aplicación** y deja cada ventana abierta. Cada bloque de abajo parte de la raíz del repositorio en una ventana nueva. Este recorrido usa los Maven Wrapper, los Compose DEV y el servidor local de Angular.
 
 ### 0. Instalar la librería compartida
 
@@ -288,7 +288,7 @@ Consulta [la actualización de Catálogo, Usuario, delivery y paquetes](docs/int
 
 ## Uso rápido y pruebas opcionales
 
-Requisitos: **JDK 21 completo, Node 24, Docker Compose, Git** y Python 3 para las herramientas Linux/pruebas. Los ejemplos son locales; no se hacen cobros bancarios reales.
+Requisitos: **JDK 25 completo, Node 24, Docker Compose, Git** y Python 3 para las herramientas Linux/pruebas. Los ejemplos son locales; no se hacen cobros bancarios reales.
 
 ### Linux o WSL2
 

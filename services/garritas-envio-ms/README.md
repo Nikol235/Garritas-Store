@@ -1,6 +1,6 @@
 # garritas-envio-ms
 
-Logistica y envios. Microservicio Spring Boot 4 / Java 21, registrado en Eureka y configurado via Config Server.
+Logistica y envios. Microservicio Spring Boot 4 / Java 25, registrado en Eureka y configurado via Config Server.
 
 ## Correr en local
 ```

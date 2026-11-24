@@ -1,96 +1,72 @@
 <div class="app-shell">
   <aside class="sidebar">
-    <a class="brand" href="/"
+    <a class="brand" routerLink="/"
       >🐾 <span>Garritas<small>STORE · PERÚ</small></span></a
     >
     <nav aria-label="Navegación principal">
       <p class="nav-section">TIENDA</p>
       <button
-        [class.selected]="view()==='catalogo'"
-        (click)="view.set('catalogo');refreshCatalogo()"
+        routerLink="/catalogo"
+        routerLinkActive="selected"
+        (click)="shop.refreshCatalogo()"
       >
         Catálogo
       </button>
       @if(!auth.admin()){
-      <button
-        [class.selected]="view()==='nueva-orden' && !auth.admin()"
-        (click)="view.set('nueva-orden')"
-      >
+      <button routerLink="/nueva-orden" routerLinkActive="selected">
         Nueva orden
       </button>
       <button
-        [class.selected]="view()==='carrito' && !auth.admin()"
-        (click)="view.set('carrito')"
+        routerLink="/carrito"
+        routerLinkActive="selected"
         [attr.aria-label]="'Carrito, '+cart.count()+' unidades'"
       >
         Carrito <span class="cart-count">{{cart.count()}}</span>
       </button>
       }
-      <button [class.selected]="view()==='sedes'" (click)="view.set('sedes')">
-        Sedes
-      </button>
-      <button
-        [class.selected]="view()==='especialistas'"
-        (click)="view.set('especialistas')"
-      >
+      <button routerLink="/sedes" routerLinkActive="selected">Sedes</button>
+      <button routerLink="/especialistas" routerLinkActive="selected">
         Especialistas
       </button>
-      <button
-        [class.selected]="view()==='prestaciones'"
-        (click)="view.set('prestaciones')"
-      >
+      <button routerLink="/prestaciones" routerLinkActive="selected">
         Servicios por sede
       </button>
       @if(auth.loggedIn()){
       <p class="nav-section">MI ESPACIO</p>
-      <button [class.selected]="view()==='planes'" (click)="view.set('planes')">
+      <button routerLink="/planes" routerLinkActive="selected">
         Planes y suscripciones
       </button>
-      <button [class.selected]="view()==='cuenta'" (click)="view.set('cuenta')">
+      <button routerLink="/cuenta" routerLinkActive="selected">
         Mi cuenta y mascotas
       </button>
       @if(!auth.admin()){
-      <button [class.selected]="view()==='pedidos'" (click)="view.set('pedidos')">Mis compras</button>
+      <button routerLink="/compras" routerLinkActive="selected">Mis compras</button>
       }
-      <button [class.selected]="view()==='citas'" (click)="view.set('citas')">
-        Citas
-      </button>
-      <button [class.selected]="view()==='envios'" (click)="view.set('envios')">
-        Envíos
-      </button>
-      <button [class.selected]="view()==='pagos'" (click)="view.set('pagos')">
-        Pagos
-      </button>
+      <button routerLink="/citas" routerLinkActive="selected">Citas</button>
+      <button routerLink="/envios" routerLinkActive="selected">Envíos</button>
+      <button routerLink="/pagos" routerLinkActive="selected">Pagos</button>
       } @if(auth.admin()){
       <p class="nav-section">ADMINISTRACIÓN</p>
-      <button [class.selected]="view()==='pedidos'" (click)="view.set('pedidos')">Ventas</button>
-      <button
-        [class.selected]="view()==='logistica'"
-        (click)="view.set('logistica')"
-      >
+      <button routerLink="/compras" routerLinkActive="selected">Ventas</button>
+      <button routerLink="/admin/logistica" routerLinkActive="selected">
         Logística
       </button>
-      <button
-        [class.selected]="view()==='productos'"
-        (click)="view.set('productos')"
-      >
+      <button routerLink="/admin/productos" routerLinkActive="selected">
         Productos
       </button>
-      <button
-        [class.selected]="view()==='categorias'"
-        (click)="view.set('categorias')"
-      >
+      <button routerLink="/admin/categorias" routerLinkActive="selected">
         Categorías
       </button>
-      <button
-        [class.selected]="view()==='clientes'"
-        (click)="view.set('clientes')"
-      >
+      <button routerLink="/admin/clientes" routerLinkActive="selected">
         Clientes
       </button>
-      } @if(auth.admin()){<button (click)="view.set('roles')">
-        Roles de personal</button
-      ><button (click)="view.set('usuarios-roles')">Usuarios y roles</button>}
+      <button routerLink="/admin/roles" routerLinkActive="selected">
+        Roles de personal
+      </button>
+      <button routerLink="/admin/usuarios-roles" routerLinkActive="selected">
+        Usuarios y roles
+      </button>
+      }
     </nav>
     <div class="sidebar-note">
       Todo para su bienestar.<br />En cada etapa de su vida.
@@ -112,159 +88,21 @@
       </div>
     </header>
     <main class="main-content">
-      @if(error()){
+      @if(shop.error()){
       <p class="error" role="alert">
-        {{error()}}
-        <button (click)="error.set('')" aria-label="Cerrar mensaje">×</button>
+        {{shop.error()}}
+        <button (click)="shop.error.set('')" aria-label="Cerrar mensaje">×</button>
       </p>
-      } @if(notice()){
+      } @if(shop.notice()){
       <div class="notice" role="status">
-        <span>{{notice()}}</span>@if(cart.count()>0){<button
-          (click)="view.set('carrito')"
+        <span>{{shop.notice()}}</span>@if(cart.count()>0 && !auth.admin()){<button
+          routerLink="/carrito"
         >
           Ver carrito</button
-        >}<button (click)="notice.set('')" aria-label="Cerrar aviso">×</button>
+        >}<button (click)="shop.notice.set('')" aria-label="Cerrar aviso">×</button>
       </div>
-      } @if(view()==='catalogo'){
-      <section class="hero">
-        <span>TODO PARA TU MEJOR AMIGO</span>
-        <h1>Cuídalos con amor.<br />Nosotros ponemos lo demás.</h1>
-        <p>
-          Alimentos, higiene, juguetes y accesorios para cada etapa de su vida.
-        </p>
-        @if(!auth.admin()){<button
-          class="primary"
-          (click)="view.set('nueva-orden')"
-        >
-          Crear nueva orden</button
-        >}
-        <div class="hero-features">
-          <span>🐾 Hecho para su bienestar</span
-          ><span>♡ Atención en nuestras sedes</span
-          ><span>✦ Productos para cada etapa</span>
-        </div>
-      </section>
-      <div class="heading">
-        <h2>Encuentra su próximo favorito</h2>
-        <button (click)="refreshCatalogo()">Actualizar catálogo</button>
-      </div>
-      @if(loading()){
-      <p role="status">Cargando productos…</p>
       }
-      <app-product-catalog
-        [productos]="productos()"
-        [purchasable]="!auth.admin()"
-        [categorias]="categorias()"
-        [busy]="busy()"
-        (add)="add($event)"
-      />
-      } @if(view()==='nueva-orden' && !auth.admin()){
-      <div class="heading">
-        <div>
-          <p class="eyebrow">PREPARA SU PRÓXIMA ENTREGA</p>
-          <h1>Nueva orden</h1>
-          <p>
-            Elige lo que necesita tu mascota y revisa tu compra antes de
-            confirmar.
-          </p>
-        </div>
-        <button (click)="refreshCatalogo()">Actualizar catálogo</button>
-      </div>
-      <div class="order-layout">
-        <section aria-label="Productos para tu nueva orden">
-          @if(loading()){
-          <p role="status">Cargando productos…</p>
-          }<app-product-catalog
-            [productos]="productos()"
-            [purchasable]="!auth.admin()"
-            [categorias]="categorias()"
-            [busy]="busy()"
-            (add)="add($event)"
-          />
-        </section>
-        <aside>
-          <app-cart-panel
-            [busy]="busy()"
-            [authenticated]="auth.loggedIn()"
-            (checkout)="checkout()"
-            (login)="auth.login()"
-          />
-        </aside>
-      </div>
-      } @if(view()==='carrito' && !auth.admin()){
-      <div class="heading">
-        <h1>Carrito de compras</h1>
-        <button (click)="view.set('nueva-orden')">Seguir comprando</button>
-      </div>
-      <div class="cart-page">
-        <app-cart-panel
-          [busy]="busy()"
-          [authenticated]="auth.loggedIn()"
-          (checkout)="checkout()"
-          (login)="auth.login()"
-        />
-      </div>
-      } @if(view()==='pedidos' && auth.loggedIn()){
-      <app-ventas
-        (settled)="refreshCatalogo()"
-        (comprar)="view.set('catalogo')"
-      />
-      } @if(view()==='categorias' && auth.admin()){
-      <h1>Administrar categorías</h1>
-      <form (ngSubmit)="save()">
-        <label
-          >Nombre<input
-            name="nombre"
-            [(ngModel)]="nombre"
-            required
-            maxlength="100" /></label
-        ><label
-          >Descripción<input
-            name="descripcion"
-            [(ngModel)]="descripcion"
-            maxlength="255" /></label
-        ><button class="primary" [disabled]="!nombre.trim()">
-          {{categoriaId?'Actualizar':'Crear'}}
-        </button>
-      </form>
-      <section class="grid">
-        @for(c of categorias();track c.id){
-        <article>
-          <h2>{{c.nombre}}</h2>
-          <p>{{c.descripcion}}</p>
-          <button (click)="edit(c)">Editar</button
-          ><button (click)="remove(c)">Eliminar</button>
-        </article>
-        }
-      </section>
-      } @if(view()==='prestaciones'){<app-prestaciones
-        (reservar)="openPrestacion($event)"
-      />} @if(view()==='sedes'){<app-sedes
-        (servicios)="openServicios($event)"
-        (order)="view.set('nueva-orden')"
-      />} @if(view()==='especialistas'){<app-especialistas
-        (reservar)="openCitas($event)"
-      />} @if(auth.loggedIn()){ @if(view()==='cuenta'){<button
-        (click)="auth.manageAccount()"
-      >
-        Cambiar contraseña en Keycloak</button
-      ><app-cuenta />} @if(view()==='planes'){<app-planes
-        (cuenta)="view.set('cuenta')"
-      />} @if(view()==='citas'){<app-citas (cuenta)="view.set('cuenta')" />}
-      @if(view()==='envios'){<app-envios [initialVenta]="shippingSaleId" />}
-      @if(view()==='pagos'){<app-pagos />} } @if(auth.admin()){
-      @if(view()==='logistica'){<app-logistica />}
-      @if(view()==='productos'){<app-admin-productos />}
-      @if(view()==='clientes'){<app-clientes />}
-      @if(view()==='roles'){<app-roles />}
-      @if(view()==='usuarios-roles'){<app-usuarios-roles />} }
-      @if(!auth.loggedIn() &&
-      (view()==='planes'||view()==='cuenta'||view()==='citas'||view()==='envios'||view()==='pagos'||view()==='pedidos')){
-      <section class="empty-state">
-        <h1>Inicia sesión para continuar</h1>
-        <button class="primary" (click)="auth.login()">Iniciar sesión</button>
-      </section>
-      }
+      <router-outlet />
     </main>
     <footer>Garritas Store · Cuidado que deja huella · Perú</footer>
   </div>

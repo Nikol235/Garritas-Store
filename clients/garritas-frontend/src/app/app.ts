@@ -1,298 +1,49 @@
-import { VentasComponent } from "./features/ventas/ventas.component";
-import { RolesComponent } from "./features/admin/roles.component";
-import { UsuariosRolesComponent } from "./features/admin/usuarios-roles.component";
-import { PrestacionesComponent } from "./features/prestaciones/prestaciones.component";
-import { LogisticaComponent } from "./features/logistica/logistica.component";
-import { PlanesComponent } from "./features/planes/planes.component";
-import { DomainApi, Sede, stateLabel } from "./core/domain-api";
-import { SedesComponent } from "./features/sedes/sedes.component";
-import { EspecialistasComponent } from "./features/bienestar/especialistas.component";
-import { CuentaComponent } from "./features/cuenta/cuenta.component";
-import { CitasComponent } from "./features/citas/citas.component";
-import { EnviosComponent } from "./features/envios/envios.component";
-import { PagosComponent } from "./features/pagos/pagos.component";
-import { ProductosComponent } from "./features/admin/productos.component";
-import { ClientesComponent } from "./features/admin/clientes.component";
-import { Component, inject, signal, effect } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { HttpErrorResponse } from "@angular/common/http";
+import { Component, inject } from "@angular/core";
+import {
+  NavigationEnd,
+  Router,
+  RouterLink,
+  RouterLinkActive,
+  RouterOutlet,
+} from "@angular/router";
+import { filter, take } from "rxjs";
 import { Auth } from "./core/auth";
-import { Api, Categoria, Producto } from "./core/api";
+import { RETURN_URL_KEY } from "./core/guards";
+import { Shop } from "./core/shop";
 import { CartStore } from "./features/cart/cart-store";
-import { CartPanel } from "./features/cart/cart-panel";
-import { ProductCatalog } from "./features/catalogo/product-catalog";
 
 @Component({
   selector: "app-root",
-  imports: [
-    FormsModule,
-    VentasComponent,
-    CartPanel,
-    ProductCatalog,
-    PrestacionesComponent,
-    LogisticaComponent,
-    PlanesComponent,
-    SedesComponent,
-    EspecialistasComponent,
-    CuentaComponent,
-    CitasComponent,
-    EnviosComponent,
-    PagosComponent,
-    ProductosComponent,
-    ClientesComponent,
-    RolesComponent,
-    UsuariosRolesComponent,
-  ],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: "./app.html",
 })
 export class App {
   readonly auth = inject(Auth);
   readonly cart = inject(CartStore);
-  private readonly api = inject(Api);
-  private readonly domain = inject(DomainApi);
-  readonly label = stateLabel;
-  shippingSaleId = 0;
-  readonly productos = signal<Producto[]>([]);
-  readonly categorias = signal<Categoria[]>([]);
-  readonly error = signal("");
-  readonly notice = signal("");
-  readonly busy = signal(false);
-  readonly loading = signal(true);
-  readonly view = signal(
-    sessionStorage.getItem("garritas-view") ||
-      (this.cart.count() > 0 ? "nueva-orden" : "catalogo"),
-  );
-  nombre = "";
-  descripcion = "";
-  categoriaId: number | undefined;
+  readonly shop = inject(Shop);
+  private readonly router = inject(Router);
 
   constructor() {
-    if (
-      !this.auth.admin() &&
-      [
-        "productos",
-        "categorias",
-        "clientes",
-        "logistica",
-        "roles",
-        "usuarios-roles",
-      ].includes(this.view())
-    )
-      this.view.set("catalogo");
-    if (this.auth.admin()) {
-      this.cart.clear();
-      if (["nueva-orden", "carrito"].includes(this.view()))
-        this.view.set("catalogo");
-    }
-    this.refreshCatalogo();
-    this.refreshSedes();
-    effect(() => sessionStorage.setItem("garritas-view", this.view()));
+    if (this.auth.admin()) this.cart.clear();
+    this.shop.refreshCatalogo();
+    this.shop.refreshSedes();
 
-    // Detectar redirect de Mercado Pago
-    this.handleMercadoPagoRedirect();
-  }
-
-  private handleMercadoPagoRedirect() {
-    const key = "garritas-checkout-return";
-    const saved = sessionStorage.getItem(key);
-    if (!saved) return;
-
-    const params = new URLSearchParams(saved);
-    const ventaId = Number(params.get("venta_id") ?? params.get("external_reference"));
-    const paymentId = Number(params.get("payment_id"));
-    const validId = (id: number) => Number.isSafeInteger(id) && id > 0;
-    if (!validId(ventaId)) {
-      sessionStorage.removeItem(key);
-      return;
-    }
-    if (!this.auth.loggedIn()) {
-      this.notice.set("Inicia sesión para consultar el resultado de tu pago.");
-      return;
-    }
-    this.view.set("pedidos");
-    if (!validId(paymentId)) {
-      sessionStorage.removeItem(key);
-      this.notice.set("Mercado Pago todavía no devolvió una confirmación. Revisa tu pedido.");
-      return;
-    }
-
-    this.api.confirmarPago(ventaId, paymentId).subscribe({
-      next: (pago) => {
-        if (pago.estado !== "PENDIENTE") sessionStorage.removeItem(key);
-        if (window.location.pathname === "/compras") window.history.replaceState({}, "", "/");
-        if (pago.estado === "APROBADO") this.notice.set("Mercado Pago confirmó tu pago.");
-        else if (pago.estado === "RECHAZADO") this.error.set("Mercado Pago rechazó el pago.");
-        else this.notice.set("El pago sigue pendiente. Recarga la página para consultar de nuevo.");
-      },
-      error: () => this.error.set("No se pudo comprobar el pago. Recarga la página para reintentar."),
-    });
-  }
-
-  refreshSedes() {
-    this.domain.get<Sede[]>("/sedes").subscribe({
-      next: (s) => this.cart.setSedes(s),
-      error: (e) => this.fail(e),
-    });
-  }
-  openPrestacion(event: { sedeId: number; prestacionId: number }) {
-    if (this.auth.admin()) return;
-    sessionStorage.setItem("garritas-cita-sede", String(event.sedeId));
-    sessionStorage.setItem(
-      "garritas-cita-prestacion",
-      String(event.prestacionId),
-    );
-    this.view.set("citas");
-    if (!this.auth.loggedIn()) this.auth.login();
-  }
-  openServicios(id: number) {
-    sessionStorage.setItem("garritas-servicios-sede", String(id));
-    this.view.set("prestaciones");
-  }
-  openCitas(id: number) {
-    sessionStorage.setItem("garritas-profesional", String(id));
-    sessionStorage.setItem("garritas-view", "citas");
-    this.view.set("citas");
-    if (!this.auth.loggedIn()) this.auth.login();
-  }
-  shipping(id: number) {
-    this.shippingSaleId = id;
-    this.view.set("envios");
-  }
-  refreshCatalogo() {
-    this.loading.set(true);
-    this.api.productos().subscribe({
-      next: (p) => {
-        this.productos.set(p);
-        this.cart.reconcile(p);
-        this.loading.set(false);
-      },
-      error: (e) => {
-        this.loading.set(false);
-        this.fail(e);
-      },
-    });
-    this.api.categorias().subscribe({
-      next: (c) => this.categorias.set(c),
-      error: (e) => this.fail(e),
-    });
-  }
-  add(producto: Producto) {
-    if (this.busy() || this.auth.admin()) return;
-    this.error.set("");
-    if (this.cart.add(producto))
-      this.notice.set(producto.nombre + " añadido al carrito.");
-    else
-      this.error.set(
-        "Ya tienes en el carrito todas las unidades disponibles de este producto.",
-      );
-  }
-  checkout() {
-    if (this.busy() || this.auth.admin()) return;
-    this.error.set("");
-    if (!this.auth.loggedIn()) {
-      this.auth.login();
-      return;
-    }
-    if (!this.cart.valid()) {
-      this.error.set(
-        "Revisa los productos y las cantidades de tu carrito antes de confirmar.",
-      );
-      return;
-    }
-    this.busy.set(true);
-    this.api
-      .crearVenta(this.cart.payload(), this.cart.checkoutKey())
-      .subscribe({
-        next: (venta) => {
-          this.busy.set(false);
-          this.cart.clear();
-          this.notice.set(
-            "Pedido #" +
-              venta.id +
-              " registrado. Estamos verificando el inventario y el pago.",
-          );
-          this.view.set("pedidos");
-          this.refreshCatalogo();
-          // Consultar pago después de un breve delay para que la saga procese
-          this.pollForCheckout(venta.id);
-        },
-        error: (e) => {
-          this.busy.set(false);
-          this.fail(e);
-          if (e.status === 409) {
-            this.refreshCatalogo();
-            this.refreshSedes();
-            this.domain
-              .get<import("./core/domain-api").Cobertura[]>("/coberturas")
-              .subscribe({
-                next: (c) =>
-                  this.cart.coberturas.set(c.filter((x) => x.activo)),
-                error: () => this.cart.coberturas.set([]),
-              });
-          }
-        },
-      });
-  }
-  private pollForCheckout(ventaId: number, attempt = 0) {
-    if (attempt > 10) return; // max 10 intentos (~20 segundos)
-    setTimeout(() => {
-      this.api.pago(ventaId).subscribe({
-        next: (pago) => {
-          if (pago.initPoint && pago.estado === "PENDIENTE") {
-            this.notice.set(
-              "Redirigiendo al checkout de Mercado Pago para completar el pago…"
-            );
-            window.open(pago.initPoint, "_blank", "noopener");
-          } else if (pago.estado === "PENDIENTE" && !pago.initPoint && attempt < 10) {
-            this.pollForCheckout(ventaId, attempt + 1);
-          }
-        },
-        error: () => {
-          if (attempt < 10) this.pollForCheckout(ventaId, attempt + 1);
-        },
-      });
-    }, 2000);
-  }
-
-  edit(c: Categoria) {
-    this.categoriaId = c.id;
-    this.nombre = c.nombre;
-    this.descripcion = c.descripcion ?? "";
-  }
-  save() {
-    this.api
-      .guardarCategoria(
-        { nombre: this.nombre, descripcion: this.descripcion },
-        this.categoriaId,
+    // Tras la navegación inicial: retorno de Mercado Pago o ruta pendiente del login
+    this.router.events
+      .pipe(
+        filter((e) => e instanceof NavigationEnd),
+        take(1),
       )
-      .subscribe({
-        next: () => {
-          this.nombre = "";
-          this.descripcion = "";
-          this.categoriaId = undefined;
-          this.refreshCatalogo();
-        },
-        error: (e) => this.fail(e),
-      });
+      .subscribe(() => this.afterInitialNavigation());
   }
-  remove(c: Categoria) {
-    if (confirm("¿Eliminar categoría " + c.nombre + "?"))
-      this.api.borrarCategoria(c.id).subscribe({
-        next: () => this.refreshCatalogo(),
-        error: (e) => this.fail(e),
-      });
-  }
-  private fail(e: HttpErrorResponse) {
-    this.error.set(
-      e.status === 401
-        ? "La sesión expiró. Inicia sesión de nuevo."
-        : e.status === 403
-          ? "No tienes permiso para esta operación."
-          : e.status === 0
-            ? "No se pudo contactar al servidor. Tu carrito se conserva; puedes reintentar la compra sin duplicarla."
-            : (e.error?.detail ??
-              e.error?.message ??
-              "No se pudo completar la operación. Inténtalo de nuevo."),
-    );
+
+  private afterInitialNavigation() {
+    const returnUrl = sessionStorage.getItem(RETURN_URL_KEY);
+    sessionStorage.removeItem(RETURN_URL_KEY);
+    if (sessionStorage.getItem("garritas-checkout-return")) {
+      this.shop.handleMercadoPagoRedirect();
+    } else if (returnUrl?.startsWith("/") && this.auth.loggedIn()) {
+      this.router.navigateByUrl(returnUrl, { replaceUrl: true });
+    }
   }
 }

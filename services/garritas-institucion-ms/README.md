@@ -1,6 +1,6 @@
 # garritas-institucion-ms
 
-Sedes y sucursales. Microservicio Spring Boot 4 / Java 21, registrado en Eureka y configurado via Config Server.
+Sedes y sucursales. Microservicio Spring Boot 4 / Java 25, registrado en Eureka y configurado via Config Server.
 
 ## Correr en local
 ```

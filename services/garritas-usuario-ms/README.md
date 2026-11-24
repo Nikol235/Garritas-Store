@@ -1,6 +1,6 @@
 # garritas-usuario-ms
 
-Perfiles y mascotas. Microservicio Spring Boot 4 / Java 21, registrado en Eureka y configurado via Config Server.
+Perfiles y mascotas. Microservicio Spring Boot 4 / Java 25, registrado en Eureka y configurado via Config Server.
 
 ## Correr en local
 ```
