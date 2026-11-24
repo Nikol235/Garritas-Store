@@ -86,7 +86,10 @@ app:
   pagos:
     metodo-rechazado: ${PAGO_METODO_RECHAZADO:TRANSFERENCIA}
   mercadopago:
-    enabled: ${MP_CHECKOUT_ENABLED:true}
-    sandbox: true
+    # auto: Checkout Pro si hay MP_ACCESS_TOKEN; sin token los pagos se simulan.
+    enabled: ${MP_CHECKOUT_ENABLED:auto}
+    mode: ${MP_MODE:test}
     access-token: "${MP_ACCESS_TOKEN:}"
     back-url: ${MP_BACK_URL:http://localhost:4200}
+    notification-url: "${MP_NOTIFICATION_URL:}"
+    webhook-secret: "${MP_WEBHOOK_SECRET:}"

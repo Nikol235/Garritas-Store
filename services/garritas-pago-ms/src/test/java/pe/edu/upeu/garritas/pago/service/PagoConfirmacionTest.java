@@ -121,6 +121,28 @@ class PagoConfirmacionTest {
     verifyNoInteractions(outbox);
   }
 
+  @Test
+  void webhookConfirmaPorReferenciaSinUsuario() {
+    when(pagos.lockByReferencia(pago.getReferenciaExterna())).thenReturn(Optional.of(pago));
+    responde("approved", pago.getReferenciaExterna(), "15.50", "PEN", false);
+    servicio.notificar(100L);
+    servicio.notificar(100L);
+    assertEquals(EstadoPago.APROBADO, pago.getEstado());
+    verify(outbox, times(1)).append(any());
+  }
+
+  @Test
+  void webhookIgnoraPagosAjenosOConImporteDistinto() {
+    responde("approved", "otra-tienda", "15.50", "PEN", false);
+    servicio.notificar(100L);
+    verify(pagos, never()).lockByReferencia(any());
+    when(pagos.lockByReferencia(pago.getReferenciaExterna())).thenReturn(Optional.of(pago));
+    responde("approved", pago.getReferenciaExterna(), "1.00", "PEN", false);
+    servicio.notificar(100L);
+    assertEquals(EstadoPago.PENDIENTE, pago.getEstado());
+    verifyNoInteractions(outbox);
+  }
+
   private void responde(String estado, String referencia, String monto, String moneda, boolean real) {
     when(proveedor.verificarPago(100L))
         .thenReturn(new VerifiedPayment(estado, referencia, new BigDecimal(monto), moneda, real));

@@ -73,6 +73,9 @@ public class SecurityConfiguration {
                         "/api/v1/especialistas/**",
                         "/api/v1/especialidades/**")
                     .permitAll()
+                    // Webhook de Mercado Pago: sin JWT; el servicio valida x-signature.
+                    .requestMatchers(HttpMethod.POST, "/api/v1/pagos/webhook")
+                    .permitAll()
                     .requestMatchers(HttpMethod.POST, "/api/v1/ventas")
                     .access(
                         (authentication, context) ->

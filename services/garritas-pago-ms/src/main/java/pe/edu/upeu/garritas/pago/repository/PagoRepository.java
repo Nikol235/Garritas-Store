@@ -16,5 +16,9 @@ public interface PagoRepository extends JpaRepository<Pago, Long> {
   @Query("select p from Pago p where p.idVenta = :idVenta")
   Optional<Pago> lockByVenta(@Param("idVenta") Long idVenta);
 
+  @Lock(LockModeType.PESSIMISTIC_WRITE)
+  @Query("select p from Pago p where p.referenciaExterna = :referencia")
+  Optional<Pago> lockByReferencia(@Param("referencia") String referencia);
+
   List<Pago> findByIdCliente(String idCliente);
 }

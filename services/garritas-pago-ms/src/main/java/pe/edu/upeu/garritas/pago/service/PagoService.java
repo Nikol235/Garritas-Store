@@ -85,9 +85,30 @@ public class PagoService {
         throw new ResponseStatusException(HttpStatus.UNPROCESSABLE_CONTENT, "El pago no corresponde a esta venta");
     }
 
+    aplicar(pago, resultado);
+    return mapper.toResponse(pago);
+  }
+
+  /**
+   * Procesa una notificación (webhook) de Mercado Pago. No confía en el contenido de la
+   * notificación: vuelve a consultar el pago en la API y lo vincula por external_reference.
+   */
+  @Transactional
+  public void notificar(long paymentId) {
+    if (!mpService.enabled()) return;
+    VerifiedPayment verificado = mpService.verificarPago(paymentId);
+    String referencia = verificado.externalReference();
+    if (referencia == null || !referencia.startsWith("garritas:")) return;
+    var pago = repository.lockByReferencia(referencia).orElse(null);
+    if (pago == null || pago.getEstado() != EstadoPago.PENDIENTE) return;
+    if (!corresponde(pago, referencia, verificado)) return;
+    aplicar(pago, new PaymentResult(paymentId, verificado));
+  }
+
+  private void aplicar(Pago pago, PaymentResult resultado) {
     String estado = resultado.payment().status();
     boolean aprobado = "approved".equals(estado);
-    if (!aprobado && !rechazo(estado)) return mapper.toResponse(pago);
+    if (!aprobado && !rechazo(estado)) return;
 
     pago.setPaymentId(resultado.id());
     pago.setEstado(aprobado ? EstadoPago.APROBADO : EstadoPago.RECHAZADO);
@@ -96,7 +117,6 @@ public class PagoService {
         java.util.UUID.randomUUID(), 1, aprobado ? "pago.validado" : "pago.fallido",
         pago.getIdVenta(), pago.getIdCliente(), pago.getMonto(), pago.getMetodo().name(),
         java.util.UUID.randomUUID().toString(), List.of(), java.time.Instant.now()));
-    return mapper.toResponse(pago);
   }
 
   private boolean corresponde(Pago pago, String referencia, VerifiedPayment confirmado) {

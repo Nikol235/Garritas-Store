@@ -80,7 +80,11 @@ app:
   pagos:
     metodo-rechazado: ${PAGO_METODO_RECHAZADO:TRANSFERENCIA}
   mercadopago:
-    enabled: ${MP_CHECKOUT_ENABLED:false}
-    sandbox: ${MP_USE_SANDBOX:true}
+    # auto: Checkout Pro si hay MP_ACCESS_TOKEN. MP_MODE=live solo con credenciales de producción.
+    enabled: ${MP_CHECKOUT_ENABLED:auto}
+    mode: ${MP_MODE:test}
     access-token: "${MP_ACCESS_TOKEN:}"
     back-url: ${MP_BACK_URL:https://garritas-frontend-production.up.railway.app}
+    # URL pública HTTPS del gateway: https://<gateway>/api/v1/pagos/webhook
+    notification-url: "${MP_NOTIFICATION_URL:}"
+    webhook-secret: "${MP_WEBHOOK_SECRET:}"
